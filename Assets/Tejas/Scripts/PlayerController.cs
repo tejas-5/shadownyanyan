@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround; // Assign the ground layer here
     private bool isGrounded;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
