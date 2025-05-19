@@ -6,9 +6,10 @@ public class LightScaleEffect : MonoBehaviour
     public float maxDistance = 5f; // Maximum distance for scaling effect
     public float minScale = 0.5f; // Minimum scale factor
     public float maxScale = 2f; // Maximum scale factor
-
     void Update()
     {
+
+        
         // Calculate the distance between the object and the light source
         float distance = Vector2.Distance(transform.position, lightSource.position);
 
@@ -20,5 +21,6 @@ public class LightScaleEffect : MonoBehaviour
 
         // Apply the new scale to the object
         transform.localScale = new Vector3(scaleFactor, scaleFactor, 1);
+        
     }
 }

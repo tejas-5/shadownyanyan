@@ -18,7 +18,7 @@ public class CharacterSwitcher : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             // 1. Save the current character's position
             Vector2 currentPosition = characters[currentCharacter].transform.position;
