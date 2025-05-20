@@ -1,11 +1,12 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class ShadowController : MonoBehaviour
 {
     [Header("References")]
-    public Transform realObject;      // The ÅgrealÅh counterpart
+    public Transform realObject;      // The ‚Äúreal‚Äù counterpart
     public Transform lightSource;     // Your PointLight transform
+    public Collider2D lightTrigger;   // Assign the light's trigger collider here
 
     [Header("Projection Settings")]
     [Tooltip("How much the shadow scales per unit distance.")]
@@ -19,44 +20,27 @@ public class ShadowController : MonoBehaviour
     void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
-        // Optionally start hidden
         sprite.enabled = false;
-    }
-
-    // Called when entering the lightÅfs trigger
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject == lightSource.gameObject)
-            isInLight = true;
-    }
-
-    // Called when exiting the lightÅfs trigger
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject == lightSource.gameObject)
-            isInLight = false;
     }
 
     void Update()
     {
-        if (!isInLight)
-        {
-            sprite.enabled = false;
-            return;
-        }
+        // Check if the real object is within the light's trigger area
+        isInLight = lightTrigger != null && lightTrigger.OverlapPoint(realObject.position);
 
-        sprite.enabled = true;
-
-        // 1) Direction from light to real object
-        Vector3 dir = (realObject.position - lightSource.position);
+        // Always update position and scale based on real object and light
+        Vector3 dir = realObject.position - lightSource.position;
         float distance = dir.magnitude;
 
-        // 2) Position shadow slightly farther along that ray
+        // Project shadow position away from the light
         Vector3 projectedPos = realObject.position + dir.normalized * offsetDistance;
         transform.position = projectedPos;
 
-        // 3) Scale shadow proportional to distance
+        // Adjust scale based on distance from light
         float newScale = 1f + distance * scaleMultiplier;
         transform.localScale = new Vector3(newScale, newScale, 1f);
+
+        // Update visibility
+        sprite.enabled = isInLight;
     }
 }
