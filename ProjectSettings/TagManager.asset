@@ -4,20 +4,20 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - ShadowBox
+  - LightZone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Character1
-  - Character2
-  - Ground
-  - Env1
-  - Env2
+  - RealPlayer
+  - ShadowPlayer
+  - RealEnvironment
+  - ShadowEnvironment
   - Wall
+  - 
   - 
   - 
   - 
