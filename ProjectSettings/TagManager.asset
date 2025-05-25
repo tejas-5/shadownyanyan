@@ -6,6 +6,9 @@ TagManager:
   tags:
   - LightZone
   - shadow
+  - Ground
+  - PuzzlePiece
+  - Ladder
   layers:
   - Default
   - TransparentFX
