@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - PuzzlePiece
   - Ladder
+  - Enemy
   layers:
   - Default
   - TransparentFX
