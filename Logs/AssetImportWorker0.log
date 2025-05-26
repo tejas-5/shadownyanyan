@@ -1529,6 +1529,7 @@ Total: 8.597500 ms (FindLiveObjects: 0.907500 ms CreateObjectMapping: 0.511600 m
 
 Prepare: number of updated asset objects reloaded= 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ========================================================================
 Received Prepare
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
@@ -1589,5 +1590,7 @@ Memory consumption went from 161.0 MB to 155.8 MB.
 Total: 5.525900 ms (FindLiveObjects: 0.460000 ms CreateObjectMapping: 0.294600 ms MarkObjects: 3.151400 ms  DeleteObjects: 1.619000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
