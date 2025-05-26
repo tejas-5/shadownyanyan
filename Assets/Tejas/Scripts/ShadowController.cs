@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(BoxCollider2D))] // Or change to Collider2D if you're not using specifically BoxCollider2D
 public class ShadowController : MonoBehaviour
 {
     [Header("References")]
@@ -15,12 +16,16 @@ public class ShadowController : MonoBehaviour
     public float offsetDistance = 0.5f;
 
     private SpriteRenderer sprite;
+    private Collider2D shadowCollider;
     private bool isInLight = false;
 
     void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
+        shadowCollider = GetComponent<Collider2D>();
+
         sprite.enabled = false;
+        shadowCollider.enabled = false;
     }
 
     void Update()
@@ -40,7 +45,8 @@ public class ShadowController : MonoBehaviour
         float newScale = 1f + distance * scaleMultiplier;
         transform.localScale = new Vector3(newScale, newScale, 1f);
 
-        // Update visibility
+        // Update visibility and collider status
         sprite.enabled = isInLight;
+        shadowCollider.enabled = isInLight;
     }
 }

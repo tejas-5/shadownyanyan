@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameSwitcher : MonoBehaviour
 {
@@ -30,9 +30,6 @@ public class GameSwitcher : MonoBehaviour
         realPC = realPlayer.GetComponent<PlayerController>();
         shadowPC = shadowPlayer.GetComponent<PlayerController>();
         shadowFollower = shadowPlayer.GetComponent<ShadowFollower>();
-
-        if (realPC == null || shadowPC == null || shadowFollower == null)
-            Debug.LogError("Make sure both players have PlayerController and the shadow has ShadowFollower.");
     }
 
     void Start()
@@ -40,11 +37,16 @@ public class GameSwitcher : MonoBehaviour
         realListener = realCam.GetComponent<AudioListener>();
         shadowListener = shadowCam.GetComponent<AudioListener>();
 
-        // Initialize last real pos
         _lastRealPos = realPlayer.transform.position;
 
+        // Force all GameObjects active first
+        realPlayer.SetActive(true);
+        shadowPlayer.SetActive(true);
+
+        // Default to real player view
         SetView(0);
     }
+
 
     void Update()
     {
@@ -54,7 +56,6 @@ public class GameSwitcher : MonoBehaviour
 
     void SetView(int newIndex)
     {
-        // Save real's spot when leaving real
         if (currentIndex == 0)
             _lastRealPos = realPlayer.transform.position;
 
@@ -69,26 +70,26 @@ public class GameSwitcher : MonoBehaviour
         realPC.enabled = showReal;
         shadowPC.enabled = !showReal;
 
-        // Shadow follows only in real view
+        // Shadow follows only when in real view
         shadowFollower.followReal = showReal;
 
-        // Position newly active character
+        // Reposition player switching
         if (showReal)
         {
             realPlayer.transform.position = _lastRealPos;
         }
         else
         {
-            // Shadow spawns at where real was last
             shadowPlayer.transform.position = _lastRealPos;
         }
 
-        // Audio Listeners
+        // Audio
         realListener.enabled = showReal;
         shadowListener.enabled = !showReal;
 
-        // Toggle GameObject active states
-        realPlayer.SetActive(showReal);
-        shadowPlayer.SetActive(!showReal);
+        // Make sure both players are active
+        realPlayer.SetActive(true);
+        shadowPlayer.SetActive(true);
     }
+
 }
