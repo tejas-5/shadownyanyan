@@ -54,6 +54,7 @@ public class GameSwitcher : MonoBehaviour
             SetView(1 - currentIndex);
     }
 
+
     void SetView(int newIndex)
     {
         if (currentIndex == 0)
@@ -73,12 +74,8 @@ public class GameSwitcher : MonoBehaviour
         // Shadow follows only when in real view
         shadowFollower.followReal = showReal;
 
-        // Reposition player switching
-        if (showReal)
-        {
-            realPlayer.transform.position = _lastRealPos;
-        }
-        else
+        // Reposition only the controlled player
+        if (!showReal)
         {
             shadowPlayer.transform.position = _lastRealPos;
         }
@@ -87,9 +84,8 @@ public class GameSwitcher : MonoBehaviour
         realListener.enabled = showReal;
         shadowListener.enabled = !showReal;
 
-        // Make sure both players are active
-        realPlayer.SetActive(true);
-        shadowPlayer.SetActive(true);
+        // Keep both players always active and visible
     }
+
 
 }

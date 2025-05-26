@@ -5,6 +5,9 @@ public class ShadowFollower : MonoBehaviour
     [Tooltip("The RealPlayer Transform to follow")]
     public Transform realPlayer;
 
+    [Tooltip("Offset from the real player's position")]
+    public Vector3 positionOffset = new Vector3(-0.5f, 0f, 0f);
+
     [HideInInspector]
     public bool followReal = false;
 
@@ -12,8 +15,7 @@ public class ShadowFollower : MonoBehaviour
     {
         if (followReal)
         {
-            // Immediately snap shadow on top of the real player
-            transform.position = realPlayer.position;
+            transform.position = realPlayer.position + positionOffset;
         }
     }
 }
