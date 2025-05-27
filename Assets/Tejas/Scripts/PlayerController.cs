@@ -7,9 +7,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
-    // Ground check setup (box)
-    public Transform groundCheck; // Assign in Inspector (center of box at character's feet)
-    public Vector2 checkSize = new Vector2(0.5f, 0.1f); // Width and height of the box
+    public Transform groundCheck; 
+    public Vector2 checkSize = new Vector2(0.5f, 0.1f); 
     public LayerMask whatIsGround;
     private bool isGrounded;
 
@@ -30,14 +29,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Box-based ground check
         isGrounded = Physics2D.OverlapBox(groundCheck.position, checkSize, 0f, whatIsGround);
 
-        // Move horizontally
         rb.linearVelocity = new Vector2(movement.x * speed, rb.linearVelocity.y);
     }
 
-    // Draw box gizmo in editor
     void OnDrawGizmosSelected()
     {
         if (groundCheck == null) return;
