@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIButton: MonoBehaviour
+public class UIButton : MonoBehaviour
 {
     public void StartgameButton()
     {
@@ -9,9 +9,9 @@ public class UIButton: MonoBehaviour
         SceneManager.LoadScene("Test");
     }
 
-    public void ExicGameButton()
+    public void ExitGameButton()
     {
-        Debug.Log("GameExic");
         Application.Quit();
+        Debug.Log("Exit");
     }
 }
