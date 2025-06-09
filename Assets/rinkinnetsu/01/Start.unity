@@ -1029,8 +1029,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1794765411}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: ExicGameButton
+        m_TargetAssemblyTypeName: UIButton, Assembly-CSharp
+        m_MethodName: ExitGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
