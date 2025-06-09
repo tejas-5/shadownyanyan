@@ -1,0 +1,1323 @@
+Using pre-set license
+Built from '6000.0/staging' branch; Version is '6000.0.47f1 (2ad1ed33fd3b) revision 2806253'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26100) 64bit Professional' Language: 'ja' Physical Memory: 65388 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/student/Documents/github/shadownyanyan
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+57399
+-job-worker-count
+9
+-background-job-worker-count
+8
+-gc-helper-count
+1
+Successfully changed project path to: C:/Users/student/Documents/github/shadownyanyan
+C:/Users/student/Documents/github/shadownyanyan
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [14876]  Target information:
+
+Player connection [14876]  * "[IP] 172.16.1.121 [Port] 0 [Flags] 2 [Guid] 784501747 [EditorId] 784501747 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-Q4BMN0V) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [14876] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [14876] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 9
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 2.15 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.47f1 (2ad1ed33fd3b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/student/Documents/github/shadownyanyan/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2216)
+    Vendor:   NVIDIA
+    VRAM:     10053 MB
+    Driver:   32.0.15.6590
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56956
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002250 seconds.
+- Loaded All Assemblies, in  0.259 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.221 seconds
+Domain Reload Profiling: 479ms
+	BeginReloadAssembly (93ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (101ms)
+		LoadAssemblies (91ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (99ms)
+			TypeCache.Refresh (98ms)
+				TypeCache.ScanAssembly (89ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (221ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (191ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (37ms)
+			ProcessInitializeOnLoadAttributes (99ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.572 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.02 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.618 seconds
+Domain Reload Profiling: 1188ms
+	BeginReloadAssembly (112ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (402ms)
+		LoadAssemblies (278ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (190ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (122ms)
+			BuildScriptInfoCaches (46ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (618ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (526ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (130ms)
+			ProcessInitializeOnLoadAttributes (310ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 222 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6973 unused Assets / (4.6 MB). Loaded Objects now: 7685.
+Memory consumption went from 187.2 MB to 182.6 MB.
+Total: 6.098500 ms (FindLiveObjects: 0.531500 ms CreateObjectMapping: 0.455600 ms MarkObjects: 3.347200 ms  DeleteObjects: 1.762800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3618518.075882 seconds.
+  path: Assets/nana/Player
+  artifactKey: Guid(1c5fdd33ed57ab349858ff61c77c60c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Player using Guid(1c5fdd33ed57ab349858ff61c77c60c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '58249b98958e79ae38aee37881aad7a4') in 0.0037876 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043633 seconds.
+  path: Assets/nana/Player/Tile.png
+  artifactKey: Guid(2d4655223bed39041bef6824d233a731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Player/Tile.png using Guid(2d4655223bed39041bef6824d233a731) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e99e7d7acca00926c70d6c8d5e60f2ad') in 0.4296041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 192
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.216457 seconds.
+  path: Assets/nana/map.unity
+  artifactKey: Guid(f5b9b4321b11c4a43ad5cf93f76cd04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/map.unity using Guid(f5b9b4321b11c4a43ad5cf93f76cd04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed43c2f4e61035e67cb2374ddaad441a') in 0.0005553 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.608 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.20 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.818 seconds
+Domain Reload Profiling: 1427ms
+	BeginReloadAssembly (163ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (386ms)
+		LoadAssemblies (299ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (162ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (141ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (819ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (654ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (176ms)
+			ProcessInitializeOnLoadAttributes (409ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 1.13 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6971 unused Assets / (4.7 MB). Loaded Objects now: 7859.
+Memory consumption went from 159.4 MB to 154.7 MB.
+Total: 6.716400 ms (FindLiveObjects: 0.719400 ms CreateObjectMapping: 0.492300 ms MarkObjects: 3.565000 ms  DeleteObjects: 1.938800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 178.296041 seconds.
+  path: Assets/nana
+  artifactKey: Guid(2673917e2b9ffbb4b81ee6c44df1ba7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana using Guid(2673917e2b9ffbb4b81ee6c44df1ba7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9d3504aea7e435c3c5b072efa952b86c') in 0.0063817 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.920805 seconds.
+  path: Assets/nana/Level1.unity
+  artifactKey: Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level1.unity using Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4aba862c9f3511d3750d4582055cd1c') in 0.0005769 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.690443 seconds.
+  path: Assets/Tejas/Frictionless.physicsMaterial2D
+  artifactKey: Guid(2040dfff99aed1e4eb8e103e53e5f93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tejas/Frictionless.physicsMaterial2D using Guid(2040dfff99aed1e4eb8e103e53e5f93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '64717d8335388d41336a7dd760357c9e') in 0.016099 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1142.745200 seconds.
+  path: Assets/Tejas/Test.unity
+  artifactKey: Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tejas/Test.unity using Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '35093d24778c8dbd9ce3f758f3154e50') in 0.0007572 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.571 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.743 seconds
+Domain Reload Profiling: 1315ms
+	BeginReloadAssembly (159ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (361ms)
+		LoadAssemblies (283ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (144ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (127ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (743ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (585ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (159ms)
+			ProcessInitializeOnLoadAttributes (361ms)
+			ProcessInitializeOnLoadMethodAttributes (54ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 1.01 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6971 unused Assets / (5.3 MB). Loaded Objects now: 7861.
+Memory consumption went from 159.4 MB to 154.1 MB.
+Total: 7.654200 ms (FindLiveObjects: 0.710900 ms CreateObjectMapping: 0.520700 ms MarkObjects: 3.790700 ms  DeleteObjects: 2.631200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 71.373423 seconds.
+  path: Assets/tsuruyosi/test_Scene.unity
+  artifactKey: Guid(b47c72ddae5400749a7397d835974fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tsuruyosi/test_Scene.unity using Guid(b47c72ddae5400749a7397d835974fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '65413e269fe2d66bed7b0b9e1251337a') in 0.0071112 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.561 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.753 seconds
+Domain Reload Profiling: 1315ms
+	BeginReloadAssembly (153ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (357ms)
+		LoadAssemblies (280ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (145ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (128ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (754ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (590ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (164ms)
+			ProcessInitializeOnLoadAttributes (362ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 1.36 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6971 unused Assets / (4.7 MB). Loaded Objects now: 7863.
+Memory consumption went from 159.4 MB to 154.7 MB.
+Total: 6.572500 ms (FindLiveObjects: 0.532600 ms CreateObjectMapping: 0.524800 ms MarkObjects: 3.586300 ms  DeleteObjects: 1.928000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.570 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.750 seconds
+Domain Reload Profiling: 1321ms
+	BeginReloadAssembly (152ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (367ms)
+		LoadAssemblies (286ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (149ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (131ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (750ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (590ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (166ms)
+			ProcessInitializeOnLoadAttributes (357ms)
+			ProcessInitializeOnLoadMethodAttributes (55ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 1.16 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6971 unused Assets / (4.6 MB). Loaded Objects now: 7865.
+Memory consumption went from 159.4 MB to 154.8 MB.
+Total: 6.432400 ms (FindLiveObjects: 0.533000 ms CreateObjectMapping: 0.562900 ms MarkObjects: 3.542800 ms  DeleteObjects: 1.792600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.817 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.10 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.871 seconds
+Domain Reload Profiling: 3689ms
+	BeginReloadAssembly (372ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (136ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (2277ms)
+		LoadAssemblies (2392ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (173ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (153ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (871ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (577ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (161ms)
+			ProcessInitializeOnLoadAttributes (352ms)
+			ProcessInitializeOnLoadMethodAttributes (53ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 1.35 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6971 unused Assets / (4.9 MB). Loaded Objects now: 7867.
+Memory consumption went from 159.4 MB to 154.5 MB.
+Total: 7.402100 ms (FindLiveObjects: 0.601100 ms CreateObjectMapping: 0.562000 ms MarkObjects: 3.757600 ms  DeleteObjects: 2.480200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 387.981277 seconds.
+  path: Assets/nana/Level1.unity
+  artifactKey: Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level1.unity using Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '101e1ae6878136ff330aeace499ff3d2') in 0.0186228 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 408.551148 seconds.
+  path: Assets/nana/Level2.unity
+  artifactKey: Guid(fbd92468b8179b543bd8d6c0750d42aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level2.unity using Guid(fbd92468b8179b543bd8d6c0750d42aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c5818b523c31c00f5b629e984749297b') in 0.0007097 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 134.916845 seconds.
+  path: Assets/nana/Level1.unity
+  artifactKey: Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level1.unity using Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '81012442140010be104c8534b75d3384') in 0.000687 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 458.325118 seconds.
+  path: Assets/nana/Level2.unity
+  artifactKey: Guid(fbd92468b8179b543bd8d6c0750d42aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level2.unity using Guid(fbd92468b8179b543bd8d6c0750d42aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cab8b5866102eeaed9d75317b790c804') in 0.0007876 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.013208 seconds.
+  path: Assets/nana/Level1.unity
+  artifactKey: Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level1.unity using Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b5d00d6aadb3602fa210b8fd722df410') in 0.0005069 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 172.719387 seconds.
+  path: Assets/Tejas/Prefabs
+  artifactKey: Guid(ab2654b4b3e9abc47a44d1f83a6305bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tejas/Prefabs using Guid(ab2654b4b3e9abc47a44d1f83a6305bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef4cf71a5f92921782534f0d4f9619ad') in 0.0007754 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.146003 seconds.
+  path: Assets/Tejas/Scripts
+  artifactKey: Guid(4819f4c55d9996648b572b039578daaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tejas/Scripts using Guid(4819f4c55d9996648b572b039578daaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0f819c26ce7036c85e7c680de331e58b') in 0.0004486 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.740071 seconds.
+  path: Assets/Tejas/Test
+  artifactKey: Guid(241c62595a85d4f48a3281b895de6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tejas/Test using Guid(241c62595a85d4f48a3281b895de6db9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4980380bf27386296df4110c7070ae04') in 0.0004451 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.068009 seconds.
+  path: Assets/Tejas/Test/LightingData.asset
+  artifactKey: Guid(65337f2c5490a0f4c98c148a8784d3fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tejas/Test/LightingData.asset using Guid(65337f2c5490a0f4c98c148a8784d3fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '519f88a604689e19a6790f5b5ca1f08e') in 0.0162992 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.039691 seconds.
+  path: Assets/nana/Level1.unity
+  artifactKey: Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level1.unity using Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ce400da9419334462cd9a1bc88d42a68') in 0.000504 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.571 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.703 seconds
+Domain Reload Profiling: 1275ms
+	BeginReloadAssembly (157ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (364ms)
+		LoadAssemblies (281ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (149ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (131ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (703ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (558ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (155ms)
+			ProcessInitializeOnLoadAttributes (341ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6971 unused Assets / (4.5 MB). Loaded Objects now: 7869.
+Memory consumption went from 159.4 MB to 154.8 MB.
+Total: 7.409500 ms (FindLiveObjects: 0.579700 ms CreateObjectMapping: 0.485500 ms MarkObjects: 4.323400 ms  DeleteObjects: 2.019900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 454.909253 seconds.
+  path: Assets/Tejas/Test.unity
+  artifactKey: Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tejas/Test.unity using Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '896a91f54bd1955d783c249e29416a61') in 0.0064422 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.916688 seconds.
+  path: Assets/nana/Level1.unity
+  artifactKey: Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Level1.unity using Guid(ed46286b81046e446a2dad08c42c16ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fcf2250da9f8c3e04188628f9e5af1c8') in 0.0004957 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 144.790494 seconds.
+  path: Assets/nana/Scripts
+  artifactKey: Guid(38491b9f171962b43aa160cd8e4f85df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Scripts using Guid(38491b9f171962b43aa160cd8e4f85df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b5b80894eec6acccc3446f994369d9e') in 0.0006753 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.838729 seconds.
+  path: Assets/nana/Scripts/PuzzleChecker.cs
+  artifactKey: Guid(3981e31584f658147b40851821a710b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Scripts/PuzzleChecker.cs using Guid(3981e31584f658147b40851821a710b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '655d77a5e469b150846c095ea5c36fde') in 0.0005044 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 433.726267 seconds.
+  path: Assets/nana/Palette
+  artifactKey: Guid(68a88ed474d3df04a8696664db9234ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Palette using Guid(68a88ed474d3df04a8696664db9234ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4c20c03676ddcc6d5fec1e5849788c30') in 0.0008632 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.020630 seconds.
+  path: Assets/nana/puzzle
+  artifactKey: Guid(a80a5e873918a4c4ab6f0fc2c358277a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/puzzle using Guid(a80a5e873918a4c4ab6f0fc2c358277a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '080bbb074d4e0caad06a5124c1de0d58') in 0.0005689 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.077925 seconds.
+  path: Assets/nana/puzzle/1.png
+  artifactKey: Guid(dc71ed0d07a610945882f65e146fc1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/puzzle/1.png using Guid(dc71ed0d07a610945882f65e146fc1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '43ff603dfe203746f08c4db6d38fff27') in 0.0645096 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/nana/puzzle/3.png
+  artifactKey: Guid(cb97df84ee999a84dba479b91261e32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/puzzle/3.png using Guid(cb97df84ee999a84dba479b91261e32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca94de74f3e17e7f7a57910e0e46247d') in 0.0168512 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.036488 seconds.
+  path: Assets/nana/Palette/Test.prefab
+  artifactKey: Guid(fb898eac152155e4d943ea220f402b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Palette/Test.prefab using Guid(fb898eac152155e4d943ea220f402b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66955703a03a45e752485b6441d156bb') in 0.3617662 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 275
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.284643 seconds.
+  path: Assets/nana/Tiles
+  artifactKey: Guid(3dbb5ea8345c2c04e87bc7ddbd17b1b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles using Guid(3dbb5ea8345c2c04e87bc7ddbd17b1b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d2d2ede434ef9d85f13f407bb8f7159') in 0.0004952 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059777 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_1.asset
+  artifactKey: Guid(10b52dd7ca449fc4ea8f55f603ff8173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_1.asset using Guid(10b52dd7ca449fc4ea8f55f603ff8173) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fb952cd26e09b599020f3f452de61ca2') in 0.0692154 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_44.asset
+  artifactKey: Guid(3836614d24a43a148b4eebf82c258110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_44.asset using Guid(3836614d24a43a148b4eebf82c258110) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '660db7f23a16de62acbb25d891101695') in 0.0098692 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_51.asset
+  artifactKey: Guid(0e6ee5b88f71f7c48b10e53351acbfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_51.asset using Guid(0e6ee5b88f71f7c48b10e53351acbfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a14a36c437ce4eb6babd3a5a1d7472f1') in 0.0116629 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_81.asset
+  artifactKey: Guid(a2fd00cb18950c04c9e63cb90fb8771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_81.asset using Guid(a2fd00cb18950c04c9e63cb90fb8771d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '10067af5bbf415ede0b8e2c8327ba759') in 0.0118028 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_64.asset
+  artifactKey: Guid(f5f11fa35d37a7145a99a149f4c1a016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_64.asset using Guid(f5f11fa35d37a7145a99a149f4c1a016) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b2e7a5c3544d7b0c782843a1c3335cf') in 0.0095116 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_29.asset
+  artifactKey: Guid(c564659861c5d9c45b87ba10c66c8f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_29.asset using Guid(c564659861c5d9c45b87ba10c66c8f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '69a2823dde1f17267e411101a7b10c40') in 0.0104405 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_47.asset
+  artifactKey: Guid(a0b3fa4857528d145a9f91430e5e288d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_47.asset using Guid(a0b3fa4857528d145a9f91430e5e288d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f9b8b3098fb2d58fed1c3c0c919ab9ec') in 0.0116404 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_26.asset
+  artifactKey: Guid(623de84f2c734934fb30303d70c6f00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_26.asset using Guid(623de84f2c734934fb30303d70c6f00a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '80da6ac831f20adcb174b7f749e2ce26') in 0.0130255 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_24.asset
+  artifactKey: Guid(a88ec7fd7d011f9408c3ca1c958d11cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_24.asset using Guid(a88ec7fd7d011f9408c3ca1c958d11cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c62611fe71e968a82c888e6828f7d580') in 0.0143942 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_80.asset
+  artifactKey: Guid(6b3f47c6fde29a64da629f4f3038650c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_80.asset using Guid(6b3f47c6fde29a64da629f4f3038650c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dabda8fb6e637969aff03c33dfa3576d') in 0.0105919 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_55.asset
+  artifactKey: Guid(5b5023f09cf2d914caca7b16a2a46c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_55.asset using Guid(5b5023f09cf2d914caca7b16a2a46c64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5a0d51b02c060fc263c280a0f4ba4f4b') in 0.0114388 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_50.asset
+  artifactKey: Guid(6f536cbcb9bf0bb43862a400b3be7072) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_50.asset using Guid(6f536cbcb9bf0bb43862a400b3be7072) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '595fd1d3b639638229b6899c94b14e4e') in 0.0140556 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_42.asset
+  artifactKey: Guid(d444246d71cb5294ab0ff9d829f8b7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_42.asset using Guid(d444246d71cb5294ab0ff9d829f8b7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b1960f57dd772628c449ca90094bcd8') in 0.0119874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_36.asset
+  artifactKey: Guid(060fe98b2b2ecdc48acdceb875aa8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_36.asset using Guid(060fe98b2b2ecdc48acdceb875aa8bb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8426bb760721bb485df4256c236c88bd') in 0.0122037 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_52.asset
+  artifactKey: Guid(2253379f0c09fba4a805476fd4166083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_52.asset using Guid(2253379f0c09fba4a805476fd4166083) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3207536380563834461830c4186b9588') in 0.0101689 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_59.asset
+  artifactKey: Guid(d6163963d6c27144ab9d58b8884e82e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_59.asset using Guid(d6163963d6c27144ab9d58b8884e82e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1dd668f04f29b024a40cb176faa604e7') in 0.0115386 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_25.asset
+  artifactKey: Guid(2e71ff8c41cf7524e88acdccec567b4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_25.asset using Guid(2e71ff8c41cf7524e88acdccec567b4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d6bae813997489e62744ca2bbfed01b') in 0.0104246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_43.asset
+  artifactKey: Guid(f160286aa75efe243ac27204c0cd4835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_43.asset using Guid(f160286aa75efe243ac27204c0cd4835) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f81b9edada0d4295c89e0cc6f509b987') in 0.0119467 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_14.asset
+  artifactKey: Guid(e092e93a524088f4c97ad55729042a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_14.asset using Guid(e092e93a524088f4c97ad55729042a67) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ec7dec5dbe9f221a8c170d9028abc46a') in 0.0097149 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_19.asset
+  artifactKey: Guid(3a631065b29db0241882a6047bfd1132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_19.asset using Guid(3a631065b29db0241882a6047bfd1132) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c4d77a0323be2de4914cb371d161f54c') in 0.0104097 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_73.asset
+  artifactKey: Guid(8a5c505cf4eece440b3d2febfb00cf02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_73.asset using Guid(8a5c505cf4eece440b3d2febfb00cf02) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'acf01a933aa36f9c7b2223c3cf3b8e10') in 0.0104234 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_61.asset
+  artifactKey: Guid(ed5d62f3805d0374b93fec989af0e2f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_61.asset using Guid(ed5d62f3805d0374b93fec989af0e2f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb36871e5fcf3f9fc0958be02bd79a28') in 0.0091099 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_34.asset
+  artifactKey: Guid(b75dff04756764d4ca2d1b8268eeaaff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_34.asset using Guid(b75dff04756764d4ca2d1b8268eeaaff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '351c03d4491b04de9f04975299c4f2ca') in 0.0101915 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_20.asset
+  artifactKey: Guid(1c332a71c6a167944a6e79bfca7762fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_20.asset using Guid(1c332a71c6a167944a6e79bfca7762fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2066c4c7ec54e2966f95a0825c833ae') in 0.0094757 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_35.asset
+  artifactKey: Guid(56d0d6708c68a02419fe14e656b14127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_35.asset using Guid(56d0d6708c68a02419fe14e656b14127) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ff3886da74d34d44e8ad54f86a549cde') in 0.0096863 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_3.asset
+  artifactKey: Guid(b854051331ce3dd43bad57b7657f830b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_3.asset using Guid(b854051331ce3dd43bad57b7657f830b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca1b0f059f7960bf24568edc8ebe9fd2') in 0.0093246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_69.asset
+  artifactKey: Guid(404bdaab88791944eb0174fa0ab66484) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_69.asset using Guid(404bdaab88791944eb0174fa0ab66484) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9819c9736157394a57d08e3dd924027b') in 0.0112635 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_27.asset
+  artifactKey: Guid(2e475793fb4afe041a7ef647dfcda334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_27.asset using Guid(2e475793fb4afe041a7ef647dfcda334) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3af8a4f0ec318f22f74ca8f32c39abe0') in 0.0115592 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_13.asset
+  artifactKey: Guid(b783e34928c6dbc44b49e59105a3ec53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_13.asset using Guid(b783e34928c6dbc44b49e59105a3ec53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b38f60a570249ede0d867b02dd6fa179') in 0.0096062 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_4.asset
+  artifactKey: Guid(b5fdc33929c8cb148975ef817758c46b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_4.asset using Guid(b5fdc33929c8cb148975ef817758c46b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6bdf6baf3c6fc9d668e513f54d1dfbcf') in 0.0108028 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_32.asset
+  artifactKey: Guid(218eeb515bb507b489a35926998c5532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_32.asset using Guid(218eeb515bb507b489a35926998c5532) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a80f5d3e529c7af4b56c76afe946d35') in 0.0111587 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_8.asset
+  artifactKey: Guid(58e60bdd259e7394f8c1a3dc7be0af31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_8.asset using Guid(58e60bdd259e7394f8c1a3dc7be0af31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dae045de3041b9ad2d33fb961ffb7388') in 0.0106076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_65.asset
+  artifactKey: Guid(f52c3983092f6b74d9b5f9588fee75c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_65.asset using Guid(f52c3983092f6b74d9b5f9588fee75c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '073b5fb07b5e8be2474a8a0e845e716b') in 0.0077697 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_66.asset
+  artifactKey: Guid(0b3b457a149fb4a44a8ee1e23fdf720e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_66.asset using Guid(0b3b457a149fb4a44a8ee1e23fdf720e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f52ee4b18c49a959cb3db1fc3a26d9bd') in 0.011117 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_40.asset
+  artifactKey: Guid(01f74ef02375bb0469e7462cac838484) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_40.asset using Guid(01f74ef02375bb0469e7462cac838484) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8491610e43d10c101b7b8bc2e5b397f4') in 0.0111412 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_9.asset
+  artifactKey: Guid(a89e09273e974a34f8e0629d39f59a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_9.asset using Guid(a89e09273e974a34f8e0629d39f59a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '89ef900339e15772569f3aa67ac02fc4') in 0.0090533 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_63.asset
+  artifactKey: Guid(f349e0fb036314747824cc282dff0ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_63.asset using Guid(f349e0fb036314747824cc282dff0ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9d857e46a173e9e3f216b7caccf5426f') in 0.0092543 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_21.asset
+  artifactKey: Guid(595dab2aa42482641b0bf75ea133bf6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_21.asset using Guid(595dab2aa42482641b0bf75ea133bf6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b7d278ec26cdb6b51969d5e8aef3b77a') in 0.0088629 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_70.asset
+  artifactKey: Guid(76851746844e91444b5294c800e1a05f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_70.asset using Guid(76851746844e91444b5294c800e1a05f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ad4b568533f3354cf0da1ed79b421763') in 0.0083279 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_53.asset
+  artifactKey: Guid(5e9739d5bd80ec243864652f87f21843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_53.asset using Guid(5e9739d5bd80ec243864652f87f21843) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f505c5150530ce021cf51f82802e1d43') in 0.010438 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_33.asset
+  artifactKey: Guid(d889d74971b89984d91deba506a8ef57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_33.asset using Guid(d889d74971b89984d91deba506a8ef57) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '02745db52729234edfcaf54be445492a') in 0.0107309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.093311 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_82.asset
+  artifactKey: Guid(2ccd425772587894ab39db40c40f72a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_82.asset using Guid(2ccd425772587894ab39db40c40f72a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa0dd077ab5c508b966245f7af5b8b05') in 0.0095352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_97.asset
+  artifactKey: Guid(d4be413108f46544da21f738ccfd4873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_97.asset using Guid(d4be413108f46544da21f738ccfd4873) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0bca118aeab7d3375b24b63afd58d021') in 0.0103665 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_91.asset
+  artifactKey: Guid(4df4722cdafdc8a419ed801ddfd88294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_91.asset using Guid(4df4722cdafdc8a419ed801ddfd88294) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '813bf4bc0ac0622955108bc35c70ef32') in 0.0101945 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_110.asset
+  artifactKey: Guid(972ca997735af79409baf1fcf862ef61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_110.asset using Guid(972ca997735af79409baf1fcf862ef61) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '14141bcffe228453a0ab7e67413e5e4f') in 0.0092077 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_128.asset
+  artifactKey: Guid(43ada26f1c03ec54195e787f22bfe1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_128.asset using Guid(43ada26f1c03ec54195e787f22bfe1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f513e1920d01de170ff20e97972ae02b') in 0.010076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_121.asset
+  artifactKey: Guid(b107d1ada61051b499957546f9cc82fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_121.asset using Guid(b107d1ada61051b499957546f9cc82fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a60fe02bc0b7449f245dbdd2ab28a4a1') in 0.00967 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_101.asset
+  artifactKey: Guid(5facbb28116ce1d4db1f0285690de019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_101.asset using Guid(5facbb28116ce1d4db1f0285690de019) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21f08a416314db3daf0f631067f1207d') in 0.0096561 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_102.asset
+  artifactKey: Guid(f36498228f943cb40a0406876755cf95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_102.asset using Guid(f36498228f943cb40a0406876755cf95) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7bbafd5cf38f95f7cdd88fb3b0738356') in 0.008786 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_111.asset
+  artifactKey: Guid(44fdd1b9555876a4b8c272580df7a705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_111.asset using Guid(44fdd1b9555876a4b8c272580df7a705) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a127629783ebeb734bd8f69267c40f7a') in 0.0092865 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_98.asset
+  artifactKey: Guid(be48928bd4be8774a955037a18485221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_98.asset using Guid(be48928bd4be8774a955037a18485221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eaa8cfd1e4be11ff34b83eef573354ba') in 0.0090578 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_87.asset
+  artifactKey: Guid(5a277d7f75effcc46b3b4b9ffed3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_87.asset using Guid(5a277d7f75effcc46b3b4b9ffed3b723) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a4bdbbed8ddbf18b7c40b88bb2380107') in 0.0111509 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_123.asset
+  artifactKey: Guid(df597c00150ac824093a6d60d8255ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_123.asset using Guid(df597c00150ac824093a6d60d8255ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8c129ff6cdd4d24ff3be87891643416a') in 0.0106963 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_129.asset
+  artifactKey: Guid(3382aae218aee064e8fcb80c586b3e0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_129.asset using Guid(3382aae218aee064e8fcb80c586b3e0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91270b5a55e8696bff5c3b15649b2aa3') in 0.012273 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_103.asset
+  artifactKey: Guid(aa3e47519a959b7458c3092700bed368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_103.asset using Guid(aa3e47519a959b7458c3092700bed368) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '924686e400a8ac27cab5349a985ed9a1') in 0.0100516 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_107.asset
+  artifactKey: Guid(5c20d222b6f1acc4bb7c1c49be150c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_107.asset using Guid(5c20d222b6f1acc4bb7c1c49be150c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c0a71e983f6173264103a76c66ecc088') in 0.0110936 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_92.asset
+  artifactKey: Guid(6e8bd5f6316fd404c832e8a1d9ff34fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_92.asset using Guid(6e8bd5f6316fd404c832e8a1d9ff34fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd0d88ec1f0cdc6104f8a0afbbcf443e4') in 0.0083225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_130.asset
+  artifactKey: Guid(11f811639f1a00845ab78e3aa5ffc5b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_130.asset using Guid(11f811639f1a00845ab78e3aa5ffc5b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '718d79e3763189ec6d289555d4290ca0') in 0.008555 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_119.asset
+  artifactKey: Guid(1c7306505b852f24faa9ec79ca6e7b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_119.asset using Guid(1c7306505b852f24faa9ec79ca6e7b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '197730c092b78d2dcd849af976d66584') in 0.0081358 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_95.asset
+  artifactKey: Guid(6ec9dec7e1fcada4f98541571607ad0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_95.asset using Guid(6ec9dec7e1fcada4f98541571607ad0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a7ce58f1b957b93a6834e650811dfd4') in 0.0101125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_84.asset
+  artifactKey: Guid(e67cb5cce64d1444687d06778cb89fe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_84.asset using Guid(e67cb5cce64d1444687d06778cb89fe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '177f17b4f19fbac25fee2f9d4604f48c') in 0.0095052 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_94.asset
+  artifactKey: Guid(cdba87a33a424534fba8322b4203fd53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_94.asset using Guid(cdba87a33a424534fba8322b4203fd53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '31724014e3b2b7b6e9f035ee17e68cf2') in 0.0126905 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_125.asset
+  artifactKey: Guid(5183354d475e6954d82bcbcd7f5f640f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_125.asset using Guid(5183354d475e6954d82bcbcd7f5f640f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a62dfc1225d240907d53dd91fae5e8fc') in 0.0093683 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_114.asset
+  artifactKey: Guid(1879155938c8b004387bfc1c700f1456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_114.asset using Guid(1879155938c8b004387bfc1c700f1456) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7fdb9515b3c8f9bb94a14d71f5992af5') in 0.0101879 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_115.asset
+  artifactKey: Guid(72d3989add53a8c40b011fad1eb901d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_115.asset using Guid(72d3989add53a8c40b011fad1eb901d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09f4e526db7ae921917aaa3f9b08b53a') in 0.0103053 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/nana/Tiles/Dungeon Tile Set_96.asset
+  artifactKey: Guid(279011c785cef994f83a6668516c3185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Tiles/Dungeon Tile Set_96.asset using Guid(279011c785cef994f83a6668516c3185) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67d027fca86ff95d26375f615afb11ab') in 0.0107485 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

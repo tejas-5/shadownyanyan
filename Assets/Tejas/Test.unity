@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realPlayer: {fileID: 1863118586}
-  positionOffset: {x: -0.5, y: 0, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
   followReal: 0
 --- !u!1 &1409211170
 GameObject:
