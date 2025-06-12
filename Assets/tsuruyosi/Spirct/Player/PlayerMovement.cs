@@ -4,7 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] ShadowSwitch shadowSwitch;
     [SerializeField] float speed;
-    int directionScale = 1; //Player‚ÌŒü‚«
+    public bool isDirection; //Player‚ÌŒü‚«
+    public int directionScale = 1; //Player‚ÌŒü‚«
 
     private void Start()
     {
@@ -27,12 +28,14 @@ public class PlayerMovement : MonoBehaviour
         {
             inputVector.x = 1;
             transform.localScale = new Vector2(directionScale, 1); //Œü‚«
+            isDirection = true;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             inputVector.x = -1;
             transform.localScale = new Vector2(-directionScale, 1); //Œü‚«
+            isDirection = false;
         }
 
         inputVector = inputVector.normalized;
