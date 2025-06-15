@@ -6,7 +6,7 @@ public class ShadowFollower : MonoBehaviour
     public Transform realPlayer;
 
     [Tooltip("Offset from the real player's position")]
-    public Vector3 positionOffset = new Vector3(-0.5f, 0f, 0f);
+    public Vector3 positionOffset = new Vector3(0f, 0f, 0f);
 
     [HideInInspector]
     public bool followReal = false;
