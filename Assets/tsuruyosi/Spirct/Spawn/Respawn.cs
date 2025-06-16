@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
+    [SerializeField] ShadowSwitch shadowSwitch;
     [SerializeField] float positionY = -5;
     private Vector3 tmp;
     private Vector3 player;
 
-    bool isRespawn;
+    public bool isRespawn;
     void Start()
     {
         tmp = GameObject.FindWithTag("Respawn").transform.position;　//リスポーン地点の位置取得
@@ -24,6 +25,7 @@ public class Respawn : MonoBehaviour
         {
             //スポーン地点に移動
             GameObject.FindWithTag("Player").transform.position = new Vector3(tmp.x, tmp.y + 2, tmp.z);
+            shadowSwitch.isMove = false;
         }
     }
 
