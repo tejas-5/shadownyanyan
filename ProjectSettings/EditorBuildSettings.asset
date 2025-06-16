@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/rinkinnetsu/01/Start.unity
+    guid: 25786c162be6fba4faeef14361e636d5
+  - enabled: 1
     path: Assets/rinkinnetsu/01/Levels.unity
     guid: 0db59939ad0c66948820f5e0e87aa1f3
   - enabled: 1
-    path: Assets/rinkinnetsu/01/Start.unity
-    guid: 25786c162be6fba4faeef14361e636d5
+    path: Assets/rinkinnetsu/01/Option.unity
+    guid: a17aabee0b08def4dbfff1a6d4450a3b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
