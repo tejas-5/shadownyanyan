@@ -10,7 +10,7 @@ public class Respawn : MonoBehaviour
     public bool isRespawn;
     void Start()
     {
-        tmp = GameObject.FindWithTag("Respawn").transform.position;　//リスポーン地点の位置取得
+        tmp = GameObject.FindWithTag("Respawn").transform.position;//リスポーン地点の位置取得
     }
 
     void Update()
