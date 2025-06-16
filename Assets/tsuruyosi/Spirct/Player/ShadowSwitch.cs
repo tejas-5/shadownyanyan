@@ -6,11 +6,14 @@ public class ShadowSwitch : MonoBehaviour
     public bool isMove;
     public bool b_move;
 
+    float x;
+    float y;
+    float z;
     private Vector3 player;
-    private Vector3 shadow;
+    private Transform shadow;
     void Start()
     {
-        shadow = GameObject.FindWithTag("shadow").transform.position;
+        //shadow = GetComponent.FindWithTag("shadow").<Transform>();
         isMove = false;
         b_move = false;
         Shadow.SetActive(false);
@@ -22,6 +25,7 @@ public class ShadowSwitch : MonoBehaviour
         {
             if (isMove == false)
             {
+                shadowtrans();
                 isMove = true;
             }else if(isMove == true)
             {
@@ -36,7 +40,6 @@ public class ShadowSwitch : MonoBehaviour
         }
         else if (isMove == false)
         {
-            shadowtrans();
             b_move = false;
             Shadow.SetActive(false);
         }
@@ -45,8 +48,9 @@ public class ShadowSwitch : MonoBehaviour
     void shadowtrans()
     {
         player = GameObject.FindWithTag("Player").transform.position;
-        shadow.x = player.x;
-        shadow.y = player.y;
-        shadow.x = player.z;
+        x = player.x;
+        y = player.y;
+        x = player.z;
+        //shadow.
     }
 }
