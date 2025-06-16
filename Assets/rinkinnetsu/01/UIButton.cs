@@ -5,8 +5,8 @@ public class UIButton : MonoBehaviour
 {
     public void StartgameButton()
     {
-        Debug.Log("GameStart");
-        SceneManager.LoadScene("Test");
+        Debug.Log("play");
+        SceneManager.LoadScene("Levels");
     }
 
     public void ExitGameButton()
