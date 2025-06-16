@@ -64,10 +64,10 @@ public class GameSwitcher : MonoBehaviour
 
         shadowFollower.followReal = showReal;
 
-        if (!showReal)
-        {
-            shadowPlayer.transform.position = _lastRealPos;
-        }
+        //if (!showReal)
+        //{
+        //    shadowPlayer.transform.position = _lastRealPos;
+        //}
         realListener.enabled = showReal;
         shadowListener.enabled = !showReal;
     }
