@@ -18,7 +18,7 @@ MonoBehaviour:
   m_PlatformId: 4e3c793746204150860bf175a9a41a05
   m_PlatformBuildProfile:
     rid: 5114647921994235979
-  m_OverrideGlobalSceneList: 1
+  m_OverrideGlobalSceneList: 0
   m_Scenes:
   - m_enabled: 1
     m_path: "Assets/rinkinnetsu/01/\u30EA\u30B9\u30BF\u30FC\u30C8.unity"
