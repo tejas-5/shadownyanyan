@@ -8,7 +8,7 @@ public class ShadowMovement : MonoBehaviour
 
     private Vector3 player;
 
-    public bool b_move; //PlayerÇ∆âeÇÃëÄçÏÅ@OnOff
+    public bool b_move; //PlayerÇ∆âe Ç«Ç¡ÇøÇ™à⁄ìÆÇ∑ÇÈÇÃÇ©Å@OnOff
 
     private void Start()
     {
@@ -17,15 +17,13 @@ public class ShadowMovement : MonoBehaviour
 
     void Update()
     {
-        player = GameObject.FindWithTag("Player").transform.position;
-
-        if (shadowSwitch.b_move == true)
+        if (shadowSwitch.isMove == true)
         {
             Move();
         }
-        else if(shadowSwitch.b_move == false)
+        else if(shadowSwitch.isMove == false)
         {
-            GameObject.FindWithTag("shadow").transform.position = new Vector3(player.x, player.y, player.z);
+            //GameObject.FindWithTag("shadow").transform.position = new Vector3(player.x, player.y, player.z);
             transform.localScale = new Vector2(playerMovement.directionScale, 1);
         }
     }
@@ -66,5 +64,6 @@ public class ShadowMovement : MonoBehaviour
         transform.position += inputVector * speed * Time.deltaTime;
 
     }
+
 
 }

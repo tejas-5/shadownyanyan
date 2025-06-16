@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 575702093}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 8, y: -2.5, z: 0}
+  m_LocalPosition: {x: -0.14, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 0.7558, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -566,6 +566,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1350263479}
+  - {fileID: 1311039054}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1237734461
@@ -617,6 +618,7 @@ GameObject:
   - component: {fileID: 1311039058}
   - component: {fileID: 1311039056}
   - component: {fileID: 1311039055}
+  - component: {fileID: 1311039061}
   m_Layer: 7
   m_Name: shadow
   m_TagString: shadow
@@ -639,7 +641,7 @@ Transform:
   m_Children:
   - {fileID: 1548845435}
   - {fileID: 1808169040}
-  m_Father: {fileID: 1350263479}
+  m_Father: {fileID: 1178389141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1311039055
 MonoBehaviour:
@@ -798,6 +800,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1311039061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311039053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9759dd845541b04a9afc91a93ee3497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawn: {fileID: 1350263484}
+  positionY: -5
 --- !u!1 &1350263474
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +972,6 @@ Transform:
   m_Children:
   - {fileID: 938126065}
   - {fileID: 716845649}
-  - {fileID: 1311039054}
   m_Father: {fileID: 1178389141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1350263480
@@ -993,6 +1008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ec1b78a82a2c14d91d0df54c722b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shadow: {fileID: 1311039053}
+  isMove: 0
   b_move: 0
 --- !u!114 &1350263483
 MonoBehaviour:
@@ -1022,7 +1039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3ce5c8d8971374fb69d17845267855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shadowSwitch: {fileID: 1350263481}
   positionY: -5
+  isRespawn: 0
 --- !u!114 &1350263485
 MonoBehaviour:
   m_ObjectHideFlags: 0

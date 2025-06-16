@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(shadowSwitch.b_move == false)
+        if(shadowSwitch.isMove == false)
         {
             Move();
         }
