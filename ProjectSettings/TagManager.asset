@@ -12,6 +12,11 @@ TagManager:
   - Enemy
   - transfrom
   - start
+  - Switch
+  - Lift
+  - Shadow
+  - Key
+  - Door
   layers:
   - Default
   - TransparentFX
