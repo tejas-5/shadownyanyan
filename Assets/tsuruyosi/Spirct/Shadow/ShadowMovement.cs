@@ -23,13 +23,12 @@ public class ShadowMovement : MonoBehaviour
         }
         else if(shadowSwitch.isMove == false)
         {
-            //GameObject.FindWithTag("shadow").transform.position = new Vector3(player.x, player.y, player.z);
             transform.localScale = new Vector2(playerMovement.directionScale, 1);
         }
     }
 
     private void Move()
-    {
+    {        
         Vector3 inputVector = new Vector3(0, 0, 0);
         if(playerMovement.isDirection == true)
         {
