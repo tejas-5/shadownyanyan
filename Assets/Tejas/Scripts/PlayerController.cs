@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool jumpPressed = false;
     private SwitchController currentSwitch;
- 
+
 
 
     void Start()

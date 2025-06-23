@@ -31,9 +31,9 @@ TagManager:
   - Wall
   - kibako
   - Box
-  - 
-  - 
-  - 
+  - Light
+  - RealWorld
+  - ShadowWorld
   - 
   - 
   - 
@@ -53,6 +53,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: RealWorld
+    uniqueID: 123629311
+    locked: 0
+  - name: ShadowWorld
+    uniqueID: 3812832539
+    locked: 0
+  - name: Light
+    uniqueID: 2374791421
     locked: 0
   m_RenderingLayers:
   - Default
