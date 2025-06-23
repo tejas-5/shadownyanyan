@@ -8,6 +8,11 @@ public class UIButton : MonoBehaviour
         Debug.Log("play");
         SceneManager.LoadScene("Levels");
     }
+    public void OptionButton()
+    {
+        Debug.Log("Option");
+        SceneManager.LoadScene("Option");
+    }
 
     public void ExitGameButton()
     {

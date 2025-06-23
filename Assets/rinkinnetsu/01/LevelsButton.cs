@@ -18,4 +18,9 @@ public class LevelsButton : MonoBehaviour
         Debug.Log("3");
         SceneManager.LoadScene("map");
     }
+    public void returnButton()
+    {
+        Debug.Log("return");
+        SceneManager.LoadScene("Start");
+    }
 }
