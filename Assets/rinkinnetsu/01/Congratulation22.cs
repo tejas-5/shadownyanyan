@@ -13,6 +13,11 @@ public class Congratulation22 : MonoBehaviour
         Debug.Log("Replay");
         SceneManager.LoadScene("Level2");
     }
+    public void Replay3GameButton()
+    {
+        Debug.Log("Replay");
+        SceneManager.LoadScene("map");
+    }
     public void ExitButton()
     {
         Application.Quit();
