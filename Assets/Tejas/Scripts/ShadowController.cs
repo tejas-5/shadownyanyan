@@ -32,16 +32,25 @@ public class ShadowController : MonoBehaviour
     {
         isInLight = lightTrigger != null && lightTrigger.OverlapPoint(realObject.position);
 
+        if (isInLight)
+        {
+            sprite.enabled = true;
+            shadowCollider.enabled = true;
+        }
+        else
+        {
+            sprite.enabled = false;
+            shadowCollider.enabled = false;
+        }
+
+        // คำนวณตำแหน่งเงา
         Vector3 dir = realObject.position - lightSource.position;
         float distance = dir.magnitude;
-
         Vector3 projectedPos = realObject.position + dir.normalized * offsetDistance;
         transform.position = projectedPos;
 
+        // ปรับขนาดเงา
         float newScale = 1f + distance * scaleMultiplier;
         transform.localScale = new Vector3(newScale, newScale, 1f);
-
-        sprite.enabled = isInLight;
-        shadowCollider.enabled = isInLight;
     }
 }
