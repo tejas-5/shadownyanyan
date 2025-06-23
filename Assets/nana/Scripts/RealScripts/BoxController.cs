@@ -2,22 +2,28 @@
 
 public class BoxController : MonoBehaviour
 {
-    public GameObject shadowVersion;  // ตัวเงาของกล่อง
+    public GameObject shadowVersion;
 
-    private void Start()
+    private SpriteRenderer spriteRenderer;
+    private Rigidbody2D rb;
+    private Collider2D col;
+
+    private void Awake()
     {
-        SetMode(true);  // เริ่มจากโลกจริง
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
     }
 
-    // เรียกเมื่อต้องการสลับโลก
     public void SetMode(bool isRealWorld)
     {
-        // ถ้าอยู่ในโลกจริง:
-        GetComponent<SpriteRenderer>().enabled = isRealWorld;
-        GetComponent<Rigidbody2D>().simulated = isRealWorld;
-        GetComponent<Collider2D>().enabled = isRealWorld;
+        spriteRenderer.enabled = isRealWorld;
+        rb.simulated = isRealWorld;
+        col.enabled = isRealWorld;
 
-        // เงากล่องทำงานตรงข้าม
-        shadowVersion.SetActive(!isRealWorld);
+        // ไม่ปิด GameObject เงา!
+        shadowVersion.GetComponent<SpriteRenderer>().enabled = !isRealWorld;
+        shadowVersion.GetComponent<Collider2D>().enabled = !isRealWorld;
+        shadowVersion.GetComponent<Rigidbody2D>().simulated = !isRealWorld;
     }
 }
