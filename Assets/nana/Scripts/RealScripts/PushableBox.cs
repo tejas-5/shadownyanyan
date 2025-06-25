@@ -10,6 +10,6 @@ public class PushableBox : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        rb.mass = 5f; // หนักหน่อยเพื่อไม่ให้ลื่นไถลง่าย
+        rb.mass = 10f; // หนักหน่อยเพื่อไม่ให้ลื่นไถลง่าย
     }
 }

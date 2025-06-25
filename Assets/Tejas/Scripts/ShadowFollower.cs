@@ -2,37 +2,30 @@
 
 public class ShadowFollower : MonoBehaviour
 {
-    [Tooltip("The RealPlayer Transform to follow")]
-    public Transform realPlayer;
+    public Transform target;
+    public Vector3 offset = new Vector3(-0.5f, -0.1f, 0);
+    public float followSpeed = 10f;
 
-    [Tooltip("Offset from the real player's position")]
-    public Vector3 positionOffset = new Vector3(0f, 0f, 0f);
+    private bool following = true;
 
-    [HideInInspector]
-    public bool followReal = false;
-
-    void LateUpdate()
+    void Update()
     {
-        if (followReal)
+        if (following && target != null)
         {
-            transform.position = realPlayer.position + positionOffset;
+            Debug.Log("Following to " + target.name);  // 👈 ดูว่า target คืออะไร
+
+            transform.position = target.position + offset;
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    public void StopFollowing()
     {
-        if (col.gameObject.CompareTag("Lift"))
-        {
-            transform.SetParent(col.transform); // ติดลิฟต์
-        }
+        following = false;
     }
 
-    void OnCollisionExit2D(Collision2D col)
+    // 👇 เพิ่มเมธอดนี้
+    public void SetFollowing(bool value)
     {
-        if (col.gameObject.CompareTag("Lift"))
-        {
-            transform.SetParent(null); // หลุดจากลิฟต์
-        }
+        following = value;
     }
-
 }
