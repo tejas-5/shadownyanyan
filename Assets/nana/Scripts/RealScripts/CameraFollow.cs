@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public float smoothSpeed = 5f;
-    public float fixedY = -6.5f;
+    public float fixedY = -10f;  // Adjust this based on your scene
     public float fixedZ = -10f;
 
     [Header("Limit X Movement")]
@@ -13,9 +14,15 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
-        if (target == null) return;
+        if (target == null)
+        {
+            Debug.LogWarning("CameraFollow: No target assigned!");
+            return;
+        }
 
-        // ตำแหน่งที่กล้องควรอยู่
+        // Log the camera's target and its position
+        Debug.Log("Camera following: " + target.name + " at " + target.position);
+
         float targetX = target.position.x;
 
         if (limitX)
@@ -23,7 +30,7 @@ public class CameraFollow : MonoBehaviour
             targetX = Mathf.Clamp(targetX, minX, maxX);
         }
 
-        Vector3 desiredPosition = new Vector3(targetX, fixedY, fixedZ);
+        Vector3 desiredPosition = new Vector3(target.position.x, target.position.y, fixedZ);
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
     }
@@ -31,5 +38,6 @@ public class CameraFollow : MonoBehaviour
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
+        Debug.Log("CameraFollow: Set target to " + (target != null ? target.name : "null"));
     }
 }

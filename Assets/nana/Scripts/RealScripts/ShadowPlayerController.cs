@@ -1,51 +1,32 @@
 ﻿using UnityEngine;
 
 public class ShadowPlayerController : MonoBehaviour
-{
-    public float speed = 5f;
-    public float jumpForce = 10f;
 
+{
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public LayerMask groundLayer;
     public Transform groundCheck;
-    public Vector2 checkSize = new Vector2(0.5f, 0.1f);
-    public LayerMask whatIsGround;  // ??? Layer ShadowWorld ??????????????????
+    public float groundRadius = 0.2f;
 
     private Rigidbody2D rb;
-    private Vector2 movement;
     private bool isGrounded;
-    private bool jumpPressed = false;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
+        float move = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
-            jumpPressed = true;
-        }
-    }
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
 
-    void FixedUpdate()
-    {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, checkSize, 0f, whatIsGround);
-        rb.linearVelocity = new Vector2(movement.x * speed, rb.linearVelocity.y);
-
-        if (jumpPressed)
+        if (isGrounded && Input.GetKeyDown(KeyCode.W))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            jumpPressed = false;
         }
     }
-
-    void OnDrawGizmosSelected()
-    {
-        if (groundCheck == null) return;
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(groundCheck.position, checkSize);
-    }
 }
-

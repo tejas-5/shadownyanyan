@@ -2,73 +2,53 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 10f;
+    public bool isRealPlayer = true;  // ✅ เพิ่มตรงนี้
 
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public LayerMask groundLayer;
     public Transform groundCheck;
-    public Vector2 checkSize = new Vector2(0.5f, 0.1f);
-    public LayerMask whatIsGround;
+    public float groundRadius = 0.2f;
 
     private Rigidbody2D rb;
-    private Vector2 movement;
     private bool isGrounded;
-    private bool jumpPressed = false;
-    private SwitchController currentSwitch;
 
-
-
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    void Start()
+    {
+        if (isRealPlayer) // ✅ เช็คว่าเฉพาะตัวจริงเท่านั้นที่จะ Ignore กล่องเงา
+        {
+            GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+            foreach (GameObject obj in allObjects)
+            {
+                if (obj.name.Contains("ShadowPlatform"))
+                {
+                    Collider2D shadowCol = obj.GetComponent<Collider2D>();
+                    Collider2D playerCol = GetComponent<Collider2D>();
+
+                    if (shadowCol != null && playerCol != null)
+                    {
+                        Physics2D.IgnoreCollision(playerCol, shadowCol, true);
+                    }
+                }
+            }
+        }
+    }
+
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
+        float move = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
-            jumpPressed = true;
-        }
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
 
-        if (Input.GetKeyDown(KeyCode.E) && currentSwitch != null)
-        {
-            currentSwitch.ToggleLift();
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Switch"))
-        {
-            currentSwitch = col.GetComponent<SwitchController>();
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.CompareTag("Switch"))
-        {
-            currentSwitch = null;
-        }
-    }
-
-    void FixedUpdate()
-    {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, checkSize, 0f, whatIsGround);
-        rb.linearVelocity = new Vector2(movement.x * speed, rb.linearVelocity.y);
-
-        if (jumpPressed)
+        if (isGrounded && Input.GetKeyDown(KeyCode.W))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            jumpPressed = false;
         }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        if (groundCheck == null) return;
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(groundCheck.position, checkSize);
     }
 }

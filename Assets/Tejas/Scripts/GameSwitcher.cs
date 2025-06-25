@@ -62,7 +62,7 @@ public class GameSwitcher : MonoBehaviour
         realPC.enabled = showReal;
         shadowPC.enabled = !showReal;
 
-        shadowFollower.followReal = showReal;
+        shadowFollower.SetFollowing(showReal);
 
         //if (!showReal)
         //{
