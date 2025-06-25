@@ -63,5 +63,14 @@ TagManager:
   - name: Light
     uniqueID: 2374791421
     locked: 0
+  - name: Player
+    uniqueID: 1440757115
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 1649321871
+    locked: 0
+  - name: ShadowObject
+    uniqueID: 1277426793
+    locked: 0
   m_RenderingLayers:
   - Default

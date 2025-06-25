@@ -2,46 +2,47 @@
 
 public class LiftController : MonoBehaviour
 {
-    public Transform topPoint;
-    public Transform bottomPoint;
+    public Transform[] waypoints;
     public float speed = 2f;
+    private int currentWaypoint = 0;
+    private bool isActive = false; // สถานะลิฟต์
 
-    private bool goingUp = false;
-    private bool moving = false;
-
-
-    void Update()
+    void FixedUpdate()
     {
-        if (!moving) return;
+        if (!isActive) return; // หยุดทำงานถ้าลิฟต์ปิด
 
-        Vector3 target = goingUp ? topPoint.position : bottomPoint.position;
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        // เคลื่อนที่ไปยัง waypoint
+        Vector2 targetPos = waypoints[currentWaypoint].position;
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.fixedDeltaTime);
 
-        if (Vector3.Distance(transform.position, target) < 0.01f)
+        // เปลี่ยนจุดหมายเมื่อถึง
+        if (Vector2.Distance(transform.position, targetPos) < 0.1f)
         {
-            moving = false; // หยุดเมื่อถึงจุดหมาย
+            currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
         }
-
-        Debug.Log($"GoingUp: {goingUp}, Moving: {moving}");
-        Debug.Log($"Lift Pos: {transform.position}, Target: {(goingUp ? topPoint.position : bottomPoint.position)}");
-
     }
 
+    // เมธอดสำหรับเปิด/ปิดลิฟต์
     public void Toggle()
     {
-        goingUp = !goingUp;
-        moving = true;
+        isActive = !isActive;
+        Debug.Log(isActive ? "ลิฟต์เปิดทำงาน" : "ลิฟต์ปิดแล้ว");
     }
 
-    void OnDrawGizmosSelected()
+    // ทำให้ผู้เล่นเคลื่อนที่ไปกับลิฟต์
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (topPoint != null && bottomPoint != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Gizmos.color = Color.green;
-            Gizmos.DrawSphere(topPoint.position, 0.2f);
+            collision.transform.SetParent(transform);
+        }
+    }
 
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(bottomPoint.position, 0.2f);
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
         }
     }
 }
