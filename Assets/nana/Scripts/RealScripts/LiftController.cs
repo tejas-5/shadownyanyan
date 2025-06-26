@@ -3,7 +3,7 @@
 public class LiftController : MonoBehaviour
 {
     public Transform[] waypoints;
-    public float speed = 2f;
+    public float speed = 5f;
     private int currentWaypoint = 0;
     private bool isActive = false; // สถานะลิฟต์
 

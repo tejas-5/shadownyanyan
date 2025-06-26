@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class WorldSwitcher : MonoBehaviour
 {
@@ -15,20 +16,16 @@ public class WorldSwitcher : MonoBehaviour
         if (cameraFollow == null)
             cameraFollow = Camera.main.GetComponent<CameraFollow>();
 
-        // Ensure both players are active so they can be moved
+        // เปิดใช้งานทั้งสองตัว
         realPlayer.SetActive(true);
         shadowPlayer.SetActive(true);
 
-        // Set initial control: real player is active, shadow is inactive
+        // ตั้งให้ควบคุมแค่ตัวจริง
         SetPlayerControl(realPlayer, true);
         SetPlayerControl(shadowPlayer, false);
 
-        // Position shadow player on top of real player
+        // ให้เงาตามตัวจริง
         shadowPlayer.transform.position = realPlayer.transform.position;
-
-        isControllingReal = true;
-        isFollowing = true;
-        hasSeparated = false;
 
         if (cameraFollow != null)
             cameraFollow.SetTarget(realPlayer.transform);
@@ -36,44 +33,48 @@ public class WorldSwitcher : MonoBehaviour
 
     void Update()
     {
-        // Keep shadow following real player before separation
-        if (isFollowing && shadowPlayer.activeSelf)
+        // เงาตามผู้เล่นก่อนแยกร่าง
+        if (isFollowing)
         {
             shadowPlayer.transform.position = realPlayer.transform.position;
         }
 
-        // Space key: switch control or separate
+        // SPACE = สลับร่าง
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Pressed SPACE");
-
             if (!hasSeparated)
             {
+                // แยกร่างครั้งแรก
                 hasSeparated = true;
                 isFollowing = false;
                 isControllingReal = false;
 
                 SetPlayerControl(realPlayer, false);
                 SetPlayerControl(shadowPlayer, true);
+                StartCoroutine(TemporarilyIgnoreBoxCollision(shadowPlayer));
 
                 cameraFollow?.SetTarget(shadowPlayer.transform);
             }
             else
             {
+                // สลับไปมาระหว่างร่าง
                 isControllingReal = !isControllingReal;
 
-                SetPlayerControl(realPlayer, isControllingReal);
-                SetPlayerControl(shadowPlayer, !isControllingReal);
+                GameObject activePlayer = isControllingReal ? realPlayer : shadowPlayer;
+                GameObject inactivePlayer = isControllingReal ? shadowPlayer : realPlayer;
 
-                cameraFollow?.SetTarget(isControllingReal ? realPlayer.transform : shadowPlayer.transform);
+                SetPlayerControl(activePlayer, true);
+                SetPlayerControl(inactivePlayer, false);
+
+                StartCoroutine(TemporarilyIgnoreBoxCollision(activePlayer));
+
+                cameraFollow?.SetTarget(activePlayer.transform);
             }
         }
 
-        // R key: reset back to original state
+        // R = รีเซ็ต
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("Pressed R");
-
             isFollowing = true;
             hasSeparated = false;
             isControllingReal = true;
@@ -94,5 +95,46 @@ public class WorldSwitcher : MonoBehaviour
 
         if (pc != null) pc.enabled = active;
         if (rb != null) rb.simulated = active;
+    }
+
+    // 🎯 โค้ดนี้สำคัญ! ป้องกันการชนกับกล่องชั่วคราว
+    IEnumerator TemporarilyIgnoreBoxCollision(GameObject player)
+    {
+        Collider2D playerCol = player.GetComponent<Collider2D>();
+        if (playerCol == null)
+        {
+            Debug.LogWarning("⚠️ Player ไม่มี Collider2D!");
+            yield break;
+        }
+
+        // ✅ หากเป็นผู้เล่นตัวจริงเท่านั้นถึงจะ Ignore กล่อง
+        if (player.CompareTag("Player"))
+        {
+            GameObject[] boxes = GameObject.FindGameObjectsWithTag("PushableBox");
+
+            foreach (GameObject box in boxes)
+            {
+                if (box == null) continue;
+
+                Collider2D boxCol = box.GetComponent<Collider2D>();
+                if (boxCol != null)
+                {
+                    Physics2D.IgnoreCollision(playerCol, boxCol, true);
+                }
+            }
+
+            yield return new WaitForSeconds(0.1f);
+
+            foreach (GameObject box in boxes)
+            {
+                if (box == null) continue;
+
+                Collider2D boxCol = box.GetComponent<Collider2D>();
+                if (boxCol != null)
+                {
+                    Physics2D.IgnoreCollision(playerCol, boxCol, false);
+                }
+            }
+        }
     }
 }
