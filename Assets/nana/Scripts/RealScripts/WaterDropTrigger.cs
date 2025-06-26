@@ -1,15 +1,31 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WaterDropTrigger : MonoBehaviour
 {
-    public Transform playerStartPoint;
+    public Transform respawnPoint;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Start()
     {
-        if (collision.CompareTag("Player"))
+        // ถ้ายังไม่ได้กำหนด respawnPoint → ใช้ตำแหน่งตอนเริ่มต้น
+        if (respawnPoint == null)
         {
-            collision.transform.position = playerStartPoint.position;
-            Debug.Log("Player hit water drop! Respawn to start.");
+            GameObject defaultPoint = new GameObject($"{gameObject.name}_RespawnPoint");
+            defaultPoint.transform.position = transform.position;
+            respawnPoint = defaultPoint.transform;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("WaterDrop"))
+        {
+            Debug.Log(gameObject.name + " hit water, respawning...");
+            Respawn();
+        }
+    }
+
+    void Respawn()
+    {
+        transform.position = respawnPoint.position;
     }
 }
