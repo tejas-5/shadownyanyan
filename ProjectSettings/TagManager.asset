@@ -18,6 +18,8 @@ TagManager:
   - Key
   - Door
   - PushableBox
+  - Obstacle
+  - WaterDrop
   layers:
   - Default
   - TransparentFX
