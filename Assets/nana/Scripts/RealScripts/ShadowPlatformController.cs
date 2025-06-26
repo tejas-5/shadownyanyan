@@ -2,28 +2,25 @@
 
 public class ShadowPlatformController : MonoBehaviour
 {
-    private Collider2D col;
+    private Collider2D shadowPlatformCollider;
 
     void Awake()
     {
-        col = GetComponent<Collider2D>();
-    }
+        shadowPlatformCollider = GetComponent<Collider2D>();
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        // ป้องกันไม่ให้ Player ตัวจริงเหยียบกล่องเงา
-        if (collision.collider != null && collision.gameObject.name.Contains("Real"))
-        {
-            Physics2D.IgnoreCollision(collision.collider, col, true);
-        }
-    }
+        // หาผู้เล่นที่มี tag เป็น "Player" (หรือเปลี่ยนเป็น "RealPlayer" ถ้าคุณตั้งไว้แบบนั้น)
+        GameObject[] allPlayers = GameObject.FindGameObjectsWithTag("Player");
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        // กลับมา detect อีกครั้งตอนออกจากการชน
-        if (collision.collider != null && collision.gameObject.name.Contains("Real"))
+        foreach (var player in allPlayers)
         {
-            Physics2D.IgnoreCollision(collision.collider, col, false);
+            var playerCol = player.GetComponent<Collider2D>();
+            if (playerCol != null)
+            {
+                // Ignore การชนระหว่างกล่องเงากับผู้เล่นตัวจริง
+                Physics2D.IgnoreCollision(playerCol, shadowPlatformCollider, true);
+            }
         }
+
+        // ❌ ไม่ Ignore เงา (ShadowPlayer) เด็ดขาด — เงายังสามารถชนกับกล่องเงาได้
     }
 }
