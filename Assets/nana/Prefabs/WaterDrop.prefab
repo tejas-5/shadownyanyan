@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4924355613024130848}
   - component: {fileID: 6786931806976116784}
-  - component: {fileID: 9160927157321762405}
-  - component: {fileID: 6551353770966635356}
-  - component: {fileID: -8431357441482442759}
+  - component: {fileID: 3888680388554554505}
+  - component: {fileID: 7522447194048642125}
+  - component: {fileID: 3407618033904441505}
   m_Layer: 14
   m_Name: WaterDrop
   m_TagString: WaterDrop
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8965134635129053849}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6096, y: -4.6422, z: 0}
-  m_LocalScale: {x: 0.1173, y: 0.1173, z: 0.1173}
+  m_LocalPosition: {x: -3.6096, y: -4.6424, z: 0}
+  m_LocalScale: {x: 0.1173, y: 0.11710059, z: 0.1173}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,8 +90,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9160927157321762405
-BoxCollider2D:
+--- !u!58 &3888680388554554505
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,18 +125,8 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
---- !u!50 &6551353770966635356
+  m_Radius: 1.03
+--- !u!50 &7522447194048642125
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -163,7 +153,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-8431357441482442759
+--- !u!114 &3407618033904441505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,14 +162,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8965134635129053849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59be02abaf1e7744fb7ea51c9b2cd60d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1216b1aca78ae1042854f57dc0021eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropPrefab: {fileID: 8965134635129053849}
-  dropCount: 10
-  spacing: 0.5
-  fallSpeed: 5
-  resetY: 2.86
-  startY: 2.5
-  spawnX: -3.88
-  spawnZ: -0.058

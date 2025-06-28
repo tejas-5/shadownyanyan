@@ -4,21 +4,19 @@
 [RequireComponent(typeof(BoxCollider2D))]
 public class PushableBox : MonoBehaviour
 {
-    public bool hasLight = true;  // สถานะไฟ เปิด/ปิดกล่องเงา
+    public bool hasLight = true;  // ไฟส่องอยู่หรือไม่
 
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        rb.mass = 10f;
-    }
 
-    // ฟังก์ชันสำหรับเปิด/ปิดไฟ
-    public void SetLightStatus(bool status)
-    {
-        hasLight = status;
+        // ตั้งค่าความหนักและแรงเสียดทาน
+        rb.mass = 10f;        // หนักพอดี
+        rb.linearDamping = 2f;         // มีแรงต้าน พอหยุดได้เมื่อเลิกผลัก
+        rb.angularDamping = 10f;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -28,13 +26,11 @@ public class PushableBox : MonoBehaviour
         {
             if (!player.isRealPlayer)
             {
-                // ถ้าเป็นเงา ให้ box เป็น Static เพื่อไม่ให้ขยับ
-                rb.bodyType = RigidbodyType2D.Static;
+                rb.bodyType = RigidbodyType2D.Static;  // ห้ามผลักโดยเงา
             }
             else
             {
-                // ถ้าเป็นตัวจริง ให้ box เป็น Dynamic เพื่อให้ผลักได้
-                rb.bodyType = RigidbodyType2D.Dynamic;
+                rb.bodyType = RigidbodyType2D.Dynamic;  // ให้ผลักได้
             }
         }
     }
@@ -42,9 +38,9 @@ public class PushableBox : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         PlayerController player = collision.collider.GetComponent<PlayerController>();
-        if (player != null)
+        if (player != null && player.isRealPlayer)
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.linearVelocity = Vector2.zero; // หยุดกล่องทันทีเมื่อเลิกชน
         }
     }
 }

@@ -2,17 +2,19 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public bool isRealPlayer = true;  // ✅ เพิ่มตรงนี้
+    public bool isRealPlayer = true;
 
     public float moveSpeed = 5f;
+    public float climbSpeed = 3f;      // เพิ่ม climbSpeed
     public float jumpForce = 10f;
-    public LayerMask groundLayer;
     public Transform groundCheck;
-    public float groundRadius = 0.2f;
+    public float groundRadius = 0.3f;
 
     private Rigidbody2D rb;
     private Collider2D col;
     private bool isGrounded;
+    private bool hasJumped = false;
+    private bool isClimbing = false;
 
     void Awake()
     {
@@ -22,65 +24,64 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if (isRealPlayer) // ✅ เช็คว่าเฉพาะตัวจริงเท่านั้นที่จะ Ignore กล่องเงา
+        if (isRealPlayer)
         {
             GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
             foreach (GameObject obj in allObjects)
             {
-                if (obj.name.Contains("ShadowPlatform"))
+                if (obj.CompareTag("Shadow"))
                 {
                     Collider2D shadowCol = obj.GetComponent<Collider2D>();
-                    Collider2D playerCol = GetComponent<Collider2D>();
-
-                    if (shadowCol != null && playerCol != null)
+                    if (shadowCol != null && col != null)
                     {
-                        Physics2D.IgnoreCollision(playerCol, shadowCol, true);
+                        Physics2D.IgnoreCollision(col, shadowCol, true);
                     }
                 }
             }
+        }
+    }
+
+    public void EnableClimbing(bool canClimb)
+    {
+        isClimbing = canClimb;
+        rb.gravityScale = canClimb ? 0 : 1;
+        if (canClimb)
+        {
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
     void Update()
     {
-        float move = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
-        // เช็คว่าชนพื้นจริงๆ โดยใช้ OverlapCircle รอบๆ จุด groundCheck
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        // เช็คว่ากระโดดได้แค่ครั้งเดียวก่อนแตะพื้นใหม่
+        Collider2D groundHit = Physics2D.OverlapCircle(groundCheck.position, groundRadius);
+        bool wasGrounded = isGrounded;
+        isGrounded = groundHit != null;
 
-        // กระโดดได้เฉพาะตอนแตะพื้นจริงเท่านั้น
-        if (isGrounded && Input.GetKeyDown(KeyCode.W))
+        if (isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            hasJumped = false;  // แตะพื้นแล้ว reset สถานะกระโดด
         }
 
-        void OnDrawGizmosSelected()
+        if (isClimbing)
         {
-            if (groundCheck != null)
-            {
-                Gizmos.color = Color.red;
-                Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
-            }
+            // ปีนขึ้นลงบันได
+            rb.linearVelocity = new Vector2(moveX * moveSpeed, moveY * climbSpeed);
         }
-
-        // ตัวอย่างเช็คกล่องข้างหน้า (แก้ไขให้เหมาะกับเกม)
-        if (move != 0 && isRealPlayer)
+        else
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * move, 0.7f, LayerMask.GetMask("PushableBox"));
-            if (hit.collider != null)
+            // เดินตามปกติ
+            rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+
+            // กระโดด
+            if (Input.GetKeyDown(KeyCode.W) && isGrounded && !hasJumped)
             {
-                PushableBox box = hit.collider.GetComponent<PushableBox>();
-                if (box != null)
-                {
-                    // ถ้าเป็นกล่องเงา และไม่มีไฟ ก็ห้ามขยับ
-                    if (!box.hasLight)
-                    {
-                        move = 0; // หยุดการเคลื่อนที่ผู้เล่นไปชนกล่องเงานี้
-                    }
-                }
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                hasJumped = true; // บอกว่ากระโดดแล้ว ต้องรอแตะพื้นก่อนถึงจะกระโดดอีก
             }
         }
     }
 }
-   
