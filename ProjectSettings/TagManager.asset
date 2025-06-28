@@ -8,7 +8,6 @@ TagManager:
   - shadow
   - Ground
   - PuzzlePiece
-  - Ladder
   - Enemy
   - transfrom
   - start
@@ -20,6 +19,8 @@ TagManager:
   - PushableBox
   - Obstacle
   - WaterDrop
+  - ShadowLadder
+  - RealLadder
   layers:
   - Default
   - TransparentFX
