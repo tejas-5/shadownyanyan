@@ -19,8 +19,8 @@ TagManager:
   - PushableBox
   - Obstacle
   - WaterDrop
-  - ShadowLadder
-  - RealLadder
+  - ShadowGround
+  - ShadowBox
   layers:
   - Default
   - TransparentFX
@@ -38,7 +38,7 @@ TagManager:
   - Light
   - RealWorld
   - ShadowWorld
-  - 
+  - DarkZone
   - 
   - 
   - 
@@ -70,7 +70,7 @@ TagManager:
   - name: Player
     uniqueID: 1440757115
     locked: 0
-  - name: New Layer 5
+  - name: DarkOverlay
     uniqueID: 1649321871
     locked: 0
   - name: ShadowObject
