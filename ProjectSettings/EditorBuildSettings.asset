@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/nana/Level2.unity
     guid: fbd92468b8179b543bd8d6c0750d42aa
   - enabled: 1
+    path: Assets/nana/Level3.unity
+    guid: 73e7ff6488382764eb833d90837abf40
+  - enabled: 1
     path: Assets/nana/map.unity
     guid: f5b9b4321b11c4a43ad5cf93f76cd04c
   - enabled: 1
