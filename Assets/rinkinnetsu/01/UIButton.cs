@@ -8,6 +8,11 @@ public class UIButton : MonoBehaviour
         Debug.Log("play");
         SceneManager.LoadScene("Levels");
     }
+    public void wanfagameButton()
+    {
+        Debug.Log("Game Rules");
+        SceneManager.LoadScene("wanfa");
+    }
     public void OptionButton()
     {
         Debug.Log("Option");

@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/rinkinnetsu/01/Congratulation22.unity
     guid: 99c9d6284e2f4264fb346f815597ee92
+  - enabled: 1
+    path: Assets/rinkinnetsu/01/wanfa.unity
+    guid: 1bef99dfb53c4e545983441adfe7c484
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
