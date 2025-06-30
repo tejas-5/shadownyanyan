@@ -3952,7 +3952,7 @@ Transform:
   m_GameObject: {fileID: 1312553029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.3, y: -4.08, z: -0.05879159}
+  m_LocalPosition: {x: -6.23, y: -4.08, z: -0.05879159}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5096,7 +5096,7 @@ Transform:
   m_GameObject: {fileID: 1562844417}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.3499975, y: -4.064, z: -0.05879159}
+  m_LocalPosition: {x: -6.2159996, y: -4.064, z: -0.05879159}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5758,7 +5758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72aa415af6020343a90c4b743cba5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Level3
+  nextSceneName: Congratulation22
 --- !u!212 &1793255054
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5876,7 +5876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a93e73eb5acaa24fbeb01ba2490a1bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conveyorSpeed: 5
+  pushSpeed: 3
+  pushDirection: {x: 1, y: 0}
 --- !u!50 &1941634583
 Rigidbody2D:
   serializedVersion: 5
