@@ -21,6 +21,7 @@ TagManager:
   - WaterDrop
   - ShadowGround
   - ShadowBox
+  - Platform
   layers:
   - Default
   - TransparentFX
