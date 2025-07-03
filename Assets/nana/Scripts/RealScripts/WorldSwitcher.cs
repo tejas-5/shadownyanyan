@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class WorldSwitcher : MonoBehaviour
 {
     public GameObject realPlayer;
     public GameObject shadowPlayer;
     public CameraFollow cameraFollow;
+    
 
     private bool isControllingReal = true;
     private bool isFollowing = true;
@@ -96,6 +98,8 @@ public class WorldSwitcher : MonoBehaviour
         if (pc != null) pc.enabled = active;
         if (rb != null) rb.simulated = active;
     }
+
+  
 
     // 🎯 โค้ดนี้สำคัญ! ป้องกันการชนกับกล่องชั่วคราว
     IEnumerator TemporarilyIgnoreBoxCollision(GameObject player)
