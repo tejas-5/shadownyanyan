@@ -4,55 +4,53 @@
 [RequireComponent(typeof(BoxCollider2D))]
 public class PushableBox : MonoBehaviour
 {
-    public bool hasLight = true;  // ไฟส่องอยู่หรือไม่
-
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // ตั้งค่าความหนักและแรงเสียดทาน
+        // ตั้งค่าเริ่มต้น
         rb.mass = 10f;
         rb.linearDamping = 2f;
         rb.angularDamping = 10f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        rb.bodyType = RigidbodyType2D.Dynamic; // ตั้งเริ่มต้นให้ Dynamic
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
+
+    void FixedUpdate()
+    {
+        if (rb.bodyType == RigidbodyType2D.Kinematic)
+        {
+            rb.linearVelocity = Vector2.zero; // ป้องกันกล่องลื่นไหล
+        }
+    } 
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayerController player = collision.collider.GetComponent<PlayerController>();
-        if (player != null)
+        // เช็ค tag แทน
+        if (collision.collider.CompareTag("Shadow"))
         {
-            if (!player.isRealPlayer)
-            {
-                // แก้ไข: ไม่ตั้ง Static แต่ใช้ Kinematic หรือ Dynamic
-                rb.bodyType = RigidbodyType2D.Kinematic;  // เงาไม่ผลักกล่องได้ แต่ยังมี Collider ทำงาน
-            }
-            else
-            {
-                rb.bodyType = RigidbodyType2D.Dynamic;  // ให้ผลักได้
-            }
+            // ถ้าเป็นเงา → ไม่ให้ดันได้
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+        else if (collision.collider.CompareTag("Player"))
+        {
+            // ถ้าเป็นผู้เล่นจริง → ดันได้
+            rb.bodyType = RigidbodyType2D.Dynamic;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        PlayerController player = collision.collider.GetComponent<PlayerController>();
-        if (player != null)
+        if (collision.collider.CompareTag("Shadow"))
         {
-            // เมื่อเงาออกจากกล่อง กลับไป Dynamic
-            if (!player.isRealPlayer)
-            {
-                rb.bodyType = RigidbodyType2D.Dynamic;
-            }
-            // เมื่อผู้เล่นจริงเลิกชน หยุดกล่องทันที
-            else if (player.isRealPlayer)
-            {
-                rb.linearVelocity = Vector2.zero;
-                rb.angularVelocity = 0f;
-            }
+            rb.bodyType = RigidbodyType2D.Dynamic; // กลับมา dynamic หลังจากเงาออก
+        }
+        else if (collision.collider.CompareTag("Player"))
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
         }
     }
 }
