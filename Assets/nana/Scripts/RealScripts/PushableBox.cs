@@ -13,10 +13,11 @@ public class PushableBox : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // ตั้งค่าความหนักและแรงเสียดทาน
-        rb.mass = 10f;        // หนักพอดี
-        rb.linearDamping = 2f;         // มีแรงต้าน พอหยุดได้เมื่อเลิกผลัก
+        rb.mass = 10f;
+        rb.linearDamping = 2f;
         rb.angularDamping = 10f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.bodyType = RigidbodyType2D.Dynamic; // ตั้งเริ่มต้นให้ Dynamic
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -26,7 +27,8 @@ public class PushableBox : MonoBehaviour
         {
             if (!player.isRealPlayer)
             {
-                rb.bodyType = RigidbodyType2D.Static;  // ห้ามผลักโดยเงา
+                // แก้ไข: ไม่ตั้ง Static แต่ใช้ Kinematic หรือ Dynamic
+                rb.bodyType = RigidbodyType2D.Kinematic;  // เงาไม่ผลักกล่องได้ แต่ยังมี Collider ทำงาน
             }
             else
             {
@@ -38,9 +40,19 @@ public class PushableBox : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         PlayerController player = collision.collider.GetComponent<PlayerController>();
-        if (player != null && player.isRealPlayer)
+        if (player != null)
         {
-            rb.linearVelocity = Vector2.zero; // หยุดกล่องทันทีเมื่อเลิกชน
+            // เมื่อเงาออกจากกล่อง กลับไป Dynamic
+            if (!player.isRealPlayer)
+            {
+                rb.bodyType = RigidbodyType2D.Dynamic;
+            }
+            // เมื่อผู้เล่นจริงเลิกชน หยุดกล่องทันที
+            else if (player.isRealPlayer)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ public class MovingPlatformInZone : MonoBehaviour
 {
     public Transform pointA;      // Start point
     public Transform pointB;      // End point
-    public float speed = 3f;      // Movement speed
+    public float speed = 4f;      // Movement speed
 
     private Vector3 targetPos;
 

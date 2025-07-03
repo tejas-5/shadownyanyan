@@ -21,12 +21,6 @@ public class DoorController2 : MonoBehaviour
 
     private void Update()
     {
-        if (!isOpening && KeyPickup2.shadowHasKey)
-        {
-            isOpening = true;
-            Debug.Log("เปิดประตูเพราะ Shadow มีคีย์แล้ว!");
-        }
-
         if (isOpening && doorVisual != null)
         {
             doorVisual.transform.position = Vector3.MoveTowards(
@@ -34,6 +28,16 @@ public class DoorController2 : MonoBehaviour
                 targetPos,
                 moveSpeed * Time.deltaTime
             );
+        }
+    }
+
+    // ✅ เรียกตอน Shadow เดินมาหน้าประตูแล้วมีกุญแจ
+    public void TryOpenDoor()
+    {
+        if (!isOpening && KeyPickup2.shadowHasKey)
+        {
+            isOpening = true;
+            Debug.Log("✅ ประตูเปิดแล้ว เพราะ Shadow มีกุญแจและเดินมาหน้าประตู");
         }
     }
 }
