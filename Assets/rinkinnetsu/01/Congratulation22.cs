@@ -6,7 +6,7 @@ public class Congratulation22 : MonoBehaviour
     public void NextLevelGameButton()
     {
         Debug.Log("Next Level");
-        SceneManager.LoadScene("map");
+        SceneManager.LoadScene("Level3");
     }
     public void ReplayGameButton()
     {
