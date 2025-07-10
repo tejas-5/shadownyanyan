@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/nana/Level3.unity
     guid: 73e7ff6488382764eb833d90837abf40
   - enabled: 1
+    path: Assets/nana/ScriptsLevel3/PuzzleScene.unity
+    guid: b18e22b14e17c164db9271d1cc024402
+  - enabled: 1
     path: Assets/nana/map.unity
     guid: f5b9b4321b11c4a43ad5cf93f76cd04c
   - enabled: 1

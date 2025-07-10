@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      green-square-emoji-clipart-lg_0: -5447792242103995031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
