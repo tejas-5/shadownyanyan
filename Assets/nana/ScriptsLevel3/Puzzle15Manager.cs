@@ -1,19 +1,15 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+﻿using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 
 public class Puzzle15Manager : MonoBehaviour
 {
     public GameObject tilePrefab;
-    public Transform gridParent; // PuzzlePanel
-    public GameObject bridge;
-    public GameObject puzzleCanvas;
+    public Transform gridParent;
 
     private List<Tile> tiles = new List<Tile>();
-    private Vector2Int emptyPos;
-
-    private const int size = 4;
+    private const int size = 4; // 3x3 grid for 8-puzzle
 
     void Start()
     {
@@ -23,65 +19,16 @@ public class Puzzle15Manager : MonoBehaviour
 
     void GenerateTiles()
     {
-        List<int> numbers = new List<int>();
-        for (int i = 1; i <= 15; i++)
-        {
-            numbers.Add(i);
-        }
-
-        // ✅ สุ่มลำดับเลข
-        for (int i = 0; i < numbers.Count; i++)
-        {
-            int rnd = Random.Range(i, numbers.Count);
-            int temp = numbers[i];
-            numbers[i] = numbers[rnd];
-            numbers[rnd] = temp;
-        }
-
-        int count = 0;
-        for (int i = 0; i < 16; i++)
+        int count = 1;
+        for (int i = 0; i < size * size; i++)
         {
             GameObject tileObj = Instantiate(tilePrefab, gridParent);
-            Tile tile = tileObj.AddComponent<Tile>();
-
-            int number = (i == 15) ? 0 : numbers[count++];
-            tile.Init(this, number, new Vector2Int(i % 4, i / 4));
+            Tile tile = tileObj.GetComponent<Tile>();
+            int number = (i == size * size - 1) ? 0 : count++;
+            Vector2Int pos = new Vector2Int(i % size, i / size);
+            tile.Init(this, number, pos);
             tiles.Add(tile);
         }
-
-        tiles[15].SetEmpty(); // ช่องสุดท้ายเป็นช่องว่าง
-    }
-
-    void ShuffleTiles()
-    {
-        // สลับตำแหน่งแบบง่าย (ไม่รับประกัน solvable)
-        for (int i = 0; i < 100; i++)
-        {
-            List<Tile> movable = tiles.FindAll(t => t.IsAdjacent(emptyPos));
-            Tile randomTile = movable[Random.Range(0, movable.Count)];
-            randomTile.OnClick(); // สลับกับช่องว่าง
-        }
-    }
-
-    public void SwapTiles(Tile clickedTile)
-    {
-        Tile emptyTile = tiles.Find(t => t.isEmpty);
-
-        // สลับ text
-        string tempText = clickedTile.text.text;
-        clickedTile.text.text = "";
-        emptyTile.text.text = tempText;
-
-        // ปรับค่า logic
-        emptyTile.isEmpty = false;
-        clickedTile.isEmpty = true;
-
-        // สลับตำแหน่งใน list
-        Vector2Int temp = clickedTile.pos;
-        clickedTile.pos = emptyTile.pos;
-        emptyTile.pos = temp;
-
-        CheckWin();
     }
 
     public Tile GetEmptyTile()
@@ -89,21 +36,77 @@ public class Puzzle15Manager : MonoBehaviour
         return tiles.Find(t => t.isEmpty);
     }
 
+    public void SwapTiles(Tile clickedTile)
+    {
+        Debug.Log($"Swapping tile {clickedTile.text.text} at pos {clickedTile.pos}");
+
+        Tile emptyTile = GetEmptyTile();
+
+        if (!clickedTile.IsAdjacent(emptyTile.pos))
+        {
+            Debug.Log("Tiles not adjacent. Swap canceled.");
+            return;
+        }
+
+        int clickedNumber = int.Parse(clickedTile.text.text);
+
+        clickedTile.SetEmpty();
+        emptyTile.SetNumber(clickedNumber);
+
+        emptyTile = clickedTile;
+
+        Vector2Int tempPos = clickedTile.pos;
+        clickedTile.pos = emptyTile.pos;
+        emptyTile.pos = tempPos;
+
+        Debug.Log($"Swapped. New positions: clickedTile {clickedTile.pos}, emptyTile {emptyTile.pos}");
+
+        CheckWin();
+    }
+
+    void ShuffleTiles()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            Tile emptyTile = GetEmptyTile();
+            List<Tile> adjacentTiles = new List<Tile>();
+
+            // Find adjacent tiles to empty
+            foreach (var tile in tiles)
+            {
+                if (tile.IsAdjacent(emptyTile.pos))
+                {
+                    adjacentTiles.Add(tile);
+                }
+            }
+
+            if (adjacentTiles.Count > 0)
+            {
+                Tile tileToMove = adjacentTiles[Random.Range(0, adjacentTiles.Count)];
+                SwapTiles(tileToMove);
+            }
+        }
+    }
+
     void CheckWin()
     {
-        for (int i = 0; i < tiles.Count - 1; i++)
+        for (int i = 0; i < tiles.Count - 1; i++) // last tile is empty
         {
-            if (tiles[i].text.text != (i + 1).ToString())
+            if (tiles[i].isEmpty) return;
+
+            int expected = i + 1;
+            if (tiles[i].text.text != expected.ToString())
                 return;
         }
 
-        // ช่องสุดท้ายควรเป็นว่าง
-        if (tiles[tiles.Count - 1].text.text == "")
-        {
-            Debug.Log("You Win!");
-            bridge.SetActive(true);
-            puzzleCanvas.SetActive(false);
-            Time.timeScale = 1f;
-        }
+        // ถ้าชนะ
+        Debug.Log("You Win!");
+
+        // ✅ บันทึกว่าผ่านแล้ว
+        PlayerPrefs.SetInt("PuzzleCompleted", 1);
+        PlayerPrefs.Save();
+
+        // ✅ กลับไป Main Scene
+        SceneManager.LoadScene("Level3");
     }
 }

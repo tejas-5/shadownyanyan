@@ -1,13 +1,13 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Tile : MonoBehaviour
 {
+    public TextMeshProUGUI text;
     public Vector2Int pos;
-    public TMP_Text text;
     public bool isEmpty = false;
+
     private Puzzle15Manager manager;
 
     public void Init(Puzzle15Manager manager, int number, Vector2Int position)
@@ -15,39 +15,56 @@ public class Tile : MonoBehaviour
         this.manager = manager;
         this.pos = position;
 
-        text = GetComponentInChildren<TMP_Text>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
 
-        if (number < 16)
+        if (number == 0)
         {
-            text.text = number.ToString();
+            text.text = "";
+            isEmpty = true;
+            GetComponent<Button>().interactable = false; // empty tile can't be clicked
         }
         else
         {
-            SetEmpty();
+            text.text = number.ToString();
+            isEmpty = false;
+            GetComponent<Button>().interactable = true;
         }
 
+        GetComponent<Button>().onClick.RemoveAllListeners();
         GetComponent<Button>().onClick.AddListener(OnClick);
     }
 
     public void OnClick()
     {
-        Tile emptyTile = manager.GetEmptyTile();
+        Debug.Log($"Clicked tile pos: {pos}, Empty tile pos: {manager.GetEmptyTile().pos}");
 
-        if (IsAdjacent(emptyTile.pos))
+        if (IsAdjacent(manager.GetEmptyTile().pos))
         {
+            Debug.Log("Tiles are adjacent, swapping...");
             manager.SwapTiles(this);
+        }
+        else
+        {
+            Debug.Log("Tiles not adjacent, can't move.");
         }
     }
 
-    public bool IsAdjacent(Vector2Int other)
+    public bool IsAdjacent(Vector2Int otherPos)
     {
-        return (Mathf.Abs(pos.x - other.x) + Mathf.Abs(pos.y - other.y)) == 1;
+        return Mathf.Abs(pos.x - otherPos.x) + Mathf.Abs(pos.y - otherPos.y) == 1;
     }
 
     public void SetEmpty()
     {
         isEmpty = true;
-        if (text != null)
-            text.text = "";
+        text.text = "";
+        GetComponent<Button>().interactable = false;
+    }
+
+    public void SetNumber(int number)
+    {
+        isEmpty = (number == 0);
+        text.text = isEmpty ? "" : number.ToString();
+        GetComponent<Button>().interactable = !isEmpty;
     }
 }
