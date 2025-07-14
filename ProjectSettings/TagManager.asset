@@ -23,6 +23,7 @@ TagManager:
   - ShadowBox
   - Platform
   - Slot
+  - PuzzleTrigger
   layers:
   - Default
   - TransparentFX
