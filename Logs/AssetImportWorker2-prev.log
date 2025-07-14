@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.47f1 (2ad1ed33fd3b) revision 2806253'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26100) 64bit Professional' Language: 'ja' Physical Memory: 65388 MB
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ja' Physical Memory: 65388 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -15,7 +15,11 @@ C:/Users/student/Documents/GitHub/shadownyanyan
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
+<<<<<<< HEAD
 50528
+=======
+55763
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,12 +63,21 @@ C:/Users/student/Documents/GitHub/shadownyanyan
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< HEAD
 Player connection [25848]  Target information:
 
 Player connection [25848]  * "[IP] 172.16.1.58 [Port] 0 [Flags] 2 [Guid] 3471078203 [EditorId] 3471078203 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KNJ04A6) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
 Player connection [25848] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [25848] Host joined alternative multi-casting on [225.0.0.222:34997]...
+=======
+Player connection [26272]  Target information:
+
+Player connection [26272]  * "[IP] 172.16.2.32 [Port] 0 [Flags] 2 [Guid] 300814546 [EditorId] 300814546 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-I5OBLME) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26272] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26272] Host joined alternative multi-casting on [225.0.0.222:34997]...
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +89,11 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.89 ms, found 4 plugins.
+=======
+Refreshing native plugins compatible for Editor in 3.44 ms, found 4 plugins.
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.47f1 (2ad1ed33fd3b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Resources/UnitySubsystems
@@ -87,11 +104,12 @@ Direct3D:
     Renderer: NVIDIA GeForce RTX 3080 (ID=0x2216)
     Vendor:   NVIDIA
     VRAM:     10053 MB
-    Driver:   32.0.15.6590
+    Driver:   32.0.15.6094
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56988
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -103,11 +121,28 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.256 seconds
 Domain Reload Profiling: 541ms
 	BeginReloadAssembly (99ms)
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56568
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.004850 seconds.
+- Loaded All Assemblies, in  0.488 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 252 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.677 seconds
+Domain Reload Profiling: 1162ms
+	BeginReloadAssembly (177ms)
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 	RebuildCommonClasses (27ms)
 	RebuildNativeTypeToScriptingClass (8ms)
 	initialDomainReloadingComplete (41ms)
@@ -129,6 +164,29 @@ Domain Reload Profiling: 541ms
 			BeforeProcessingInitializeOnLoad (43ms)
 			ProcessInitializeOnLoadAttributes (117ms)
 			ProcessInitializeOnLoadMethodAttributes (39ms)
+=======
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (191ms)
+		LoadAssemblies (174ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (186ms)
+			TypeCache.Refresh (185ms)
+				TypeCache.ScanAssembly (170ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (677ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (622ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (353ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (140ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,11 +198,21 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 - Loaded All Assemblies, in  0.655 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 Refreshing native plugins compatible for Editor in 1.08 ms, found 4 plugins.
+=======
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+- Loaded All Assemblies, in  1.250 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.82 ms, found 4 plugins.
+Native extension for Android target not found
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Package Manager log level set to [2]
@@ -155,13 +223,20 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.699 seconds
 Domain Reload Profiling: 1350ms
 	BeginReloadAssembly (126ms)
+=======
+- Finished resetting the current domain, in  0.977 seconds
+Domain Reload Profiling: 2221ms
+	BeginReloadAssembly (450ms)
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (240ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 		CreateAndSetChildDomain (23ms)
 	RebuildCommonClasses (27ms)
 	RebuildNativeTypeToScriptingClass (8ms)
@@ -3260,16 +3335,60 @@ Memory consumption went from 162.3 MB to 157.2 MB.
 Total: 7.729900 ms (FindLiveObjects: 0.626200 ms CreateObjectMapping: 0.894100 ms MarkObjects: 3.911800 ms  DeleteObjects: 2.297000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+=======
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (689ms)
+		LoadAssemblies (459ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (358ms)
+			TypeCache.Refresh (256ms)
+				TypeCache.ScanAssembly (234ms)
+			BuildScriptInfoCaches (85ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (977ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (741ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (134ms)
+			ProcessInitializeOnLoadAttributes (448ms)
+			ProcessInitializeOnLoadMethodAttributes (133ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 1.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 225 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7033 unused Assets / (4.4 MB). Loaded Objects now: 7776.
+Memory consumption went from 199.8 MB to 195.4 MB.
+Total: 8.797600 ms (FindLiveObjects: 0.912800 ms CreateObjectMapping: 0.479700 ms MarkObjects: 5.203900 ms  DeleteObjects: 2.198400 ms)
+
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 ========================================================================
 Received Prepare
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 - Loaded All Assemblies, in  0.595 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 Refreshing native plugins compatible for Editor in 1.52 ms, found 4 plugins.
+=======
+- Loaded All Assemblies, in  0.982 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 2.63 ms, found 4 plugins.
+Native extension for Android target not found
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -3279,6 +3398,7 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.712 seconds
 Domain Reload Profiling: 1307ms
 	BeginReloadAssembly (158ms)
@@ -3438,18 +3558,67 @@ Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 7026 unused Assets / (5.0 MB). Loaded Objects now: 8064.
 Memory consumption went from 162.3 MB to 157.3 MB.
 Total: 8.374300 ms (FindLiveObjects: 0.720000 ms CreateObjectMapping: 0.789100 ms MarkObjects: 4.128400 ms  DeleteObjects: 2.735800 ms)
+=======
+- Finished resetting the current domain, in  1.124 seconds
+Domain Reload Profiling: 2102ms
+	BeginReloadAssembly (277ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (34ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (604ms)
+		LoadAssemblies (464ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (270ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (241ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1124ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (820ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (184ms)
+			ProcessInitializeOnLoadAttributes (502ms)
+			ProcessInitializeOnLoadMethodAttributes (102ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (32ms)
+Refreshing native plugins compatible for Editor in 2.48 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7030 unused Assets / (4.6 MB). Loaded Objects now: 7779.
+Memory consumption went from 164.9 MB to 160.3 MB.
+Total: 10.966200 ms (FindLiveObjects: 1.079000 ms CreateObjectMapping: 0.863300 ms MarkObjects: 6.128600 ms  DeleteObjects: 2.893800 ms)
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   Time since last request: 1266.128383 seconds.
   path: Assets/nana/ScriptsLevel3/Tile.cs
   artifactKey: Guid(d4655143113c03e45b25c41ce8199976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/nana/ScriptsLevel3/Tile.cs using Guid(d4655143113c03e45b25c41ce8199976) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3b216734a57fca2b3601f7f7e51b1fd6') in 0.1043988 seconds
+=======
+  Time since last request: 603356.075933 seconds.
+  path: Assets/nana/Scripts/RealScripts
+  artifactKey: Guid(f57d49c4969afd349b5b942e8eac010a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Scripts/RealScripts using Guid(f57d49c4969afd349b5b942e8eac010a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '84963df59792baa34fe2cd51ca12c53f') in 0.0143141 seconds
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   Time since last request: 4.304065 seconds.
   path: Assets/nana/ScriptsLevel3/Puzzle15Manager.cs
   artifactKey: Guid(b636e1e9a1417684bb22e0a08987d91b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -18537,3 +18706,11 @@ Memory consumption went from 165.4 MB to 160.8 MB.
 Total: 6.813700 ms (FindLiveObjects: 0.649700 ms CreateObjectMapping: 0.490000 ms MarkObjects: 3.649200 ms  DeleteObjects: 2.024000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+=======
+  Time since last request: 3.203728 seconds.
+  path: Assets/nana/Scripts/RealScripts/PlayerCollisionManager.cs
+  artifactKey: Guid(d59b123d8755c0a4daed87f84ba352c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/nana/Scripts/RealScripts/PlayerCollisionManager.cs using Guid(d59b123d8755c0a4daed87f84ba352c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5d83b89f825f66b5f74d436208c327e9') in 0.0007257 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+>>>>>>> 2de25ddca97d20f0744feb1aa9de3907c3b1824d
