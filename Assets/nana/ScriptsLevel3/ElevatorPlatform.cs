@@ -1,22 +1,28 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class ElevatorPlatform : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("ติดลิฟต์แล้ว");
-            collision.transform.SetParent(this.transform);
+            collision.transform.SetParent(transform); // ติดลิฟต์
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("ออกจากลิฟต์แล้ว");
-            collision.transform.SetParent(null);
+            StartCoroutine(DetachAfterFrame(collision.transform)); // ถอดหลังจาก 1 เฟรม
         }
     }
+
+    IEnumerator DetachAfterFrame(Transform player)
+    {
+        yield return null; // ป้องกัน error จากการ set active
+        player.SetParent(null);
+    }
+
 }
