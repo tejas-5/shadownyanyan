@@ -12,8 +12,8 @@ public class PushableBox : MonoBehaviour
 
         // ตั้งค่าเริ่มต้น
         rb.mass = 10f;
-        rb.linearDamping = 2f;
-        rb.angularDamping = 10f;
+        rb.linearDamping = 2f;           // linear damping
+        rb.angularDamping = 10f;   // angular damping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
@@ -23,12 +23,12 @@ public class PushableBox : MonoBehaviour
         if (rb.bodyType == RigidbodyType2D.Kinematic)
         {
             rb.linearVelocity = Vector2.zero; // ป้องกันกล่องลื่นไหล
+            rb.angularVelocity = 0f;
         }
-    } 
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // เช็ค tag แทน
         if (collision.collider.CompareTag("Shadow"))
         {
             // ถ้าเป็นเงา → ไม่ให้ดันได้
@@ -45,10 +45,12 @@ public class PushableBox : MonoBehaviour
     {
         if (collision.collider.CompareTag("Shadow"))
         {
-            rb.bodyType = RigidbodyType2D.Dynamic; // กลับมา dynamic หลังจากเงาออก
+            // เงาออกจากกล่อง กล่องกลับมาเคลื่อนที่ได้
+            rb.bodyType = RigidbodyType2D.Dynamic;
         }
         else if (collision.collider.CompareTag("Player"))
         {
+            // ผู้เล่นจริงออกจากกล่อง หยุดกล่อง
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }

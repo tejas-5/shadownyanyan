@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class WorldSwitcher : MonoBehaviour
 {
     public GameObject realPlayer;
     public GameObject shadowPlayer;
     public CameraFollow cameraFollow;
-    
 
     private bool isControllingReal = true;
     private bool isFollowing = true;
@@ -22,11 +20,11 @@ public class WorldSwitcher : MonoBehaviour
         realPlayer.SetActive(true);
         shadowPlayer.SetActive(true);
 
-        // ตั้งให้ควบคุมแค่ตัวจริง
+        // เริ่มควบคุมผู้เล่นจริง
         SetPlayerControl(realPlayer, true);
         SetPlayerControl(shadowPlayer, false);
 
-        // ให้เงาตามตัวจริง
+        // ให้เงาเริ่มต้นอยู่ที่ตำแหน่งเดียวกัน
         shadowPlayer.transform.position = realPlayer.transform.position;
 
         if (cameraFollow != null)
@@ -35,7 +33,7 @@ public class WorldSwitcher : MonoBehaviour
 
     void Update()
     {
-        // เงาตามผู้เล่นก่อนแยกร่าง
+        // เงาตามตัวจริงก่อนแยกร่าง
         if (isFollowing)
         {
             shadowPlayer.transform.position = realPlayer.transform.position;
@@ -59,7 +57,7 @@ public class WorldSwitcher : MonoBehaviour
             }
             else
             {
-                // สลับไปมาระหว่างร่าง
+                // สลับร่างไปมา
                 isControllingReal = !isControllingReal;
 
                 GameObject activePlayer = isControllingReal ? realPlayer : shadowPlayer;
@@ -74,7 +72,7 @@ public class WorldSwitcher : MonoBehaviour
             }
         }
 
-        // R = รีเซ็ต
+        // R = รีเซ็ตร่าง
         if (Input.GetKeyDown(KeyCode.R))
         {
             isFollowing = true;
@@ -93,15 +91,13 @@ public class WorldSwitcher : MonoBehaviour
     void SetPlayerControl(GameObject obj, bool active)
     {
         var pc = obj.GetComponent<PlayerController>();
-        var rb = obj.GetComponent<Rigidbody2D>();
-
         if (pc != null) pc.enabled = active;
-        if (rb != null) rb.simulated = active;
+
+        // ❌ อย่าปิด Rigidbody2D.simulated เพราะจะทำให้ Collider หายไป!
+        // Rigidbody2D ยังเปิดไว้เพื่อไม่ให้ตกทะลุ platform/lift
     }
 
-  
-
-    // 🎯 โค้ดนี้สำคัญ! ป้องกันการชนกับกล่องชั่วคราว
+    // 🎯 ป้องกันการชนกับกล่องชั่วคราวหลังสลับร่าง
     IEnumerator TemporarilyIgnoreBoxCollision(GameObject player)
     {
         Collider2D playerCol = player.GetComponent<Collider2D>();
@@ -111,7 +107,7 @@ public class WorldSwitcher : MonoBehaviour
             yield break;
         }
 
-        // ✅ หากเป็นผู้เล่นตัวจริงเท่านั้นถึงจะ Ignore กล่อง
+        // ✅ หากเป็น Player จริง (ไม่ใช่เงา) ให้ Ignore กล่องชั่วคราว
         if (player.CompareTag("Player"))
         {
             GameObject[] boxes = GameObject.FindGameObjectsWithTag("PushableBox");
@@ -127,7 +123,7 @@ public class WorldSwitcher : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.1f); // ปรับเวลาได้
 
             foreach (GameObject box in boxes)
             {
