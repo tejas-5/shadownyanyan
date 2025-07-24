@@ -29,6 +29,30 @@ public class WorldSwitcher : MonoBehaviour
 
         if (cameraFollow != null)
             cameraFollow.SetTarget(realPlayer.transform);
+
+
+        // ❌ ห้าม Player จริง ชนกับกล่องเงา
+        IgnoreCollisionByTag("Player", "ShadowBox");
+    }
+
+    void IgnoreCollisionByTag(string tagA, string tagB)
+    {
+        GameObject[] objsA = GameObject.FindGameObjectsWithTag(tagA);
+        GameObject[] objsB = GameObject.FindGameObjectsWithTag(tagB);
+
+        foreach (var objA in objsA)
+        {
+            var colA = objA.GetComponent<Collider2D>();
+            if (colA == null) continue;
+
+            foreach (var objB in objsB)
+            {
+                var colB = objB.GetComponent<Collider2D>();
+                if (colB == null) continue;
+
+                Physics2D.IgnoreCollision(colA, colB, true);
+            }
+        }
     }
 
     void Update()
