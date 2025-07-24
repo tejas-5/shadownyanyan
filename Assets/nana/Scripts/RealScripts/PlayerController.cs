@@ -3,85 +3,54 @@
 public class PlayerController : MonoBehaviour
 {
     public bool isRealPlayer = true;
-
     public float moveSpeed = 5f;
-    public float climbSpeed = 3f;      // เพิ่ม climbSpeed
     public float jumpForce = 10f;
     public Transform groundCheck;
-    public float groundRadius = 0.3f;
+    public LayerMask groundLayer;
 
     private Rigidbody2D rb;
     private Collider2D col;
     private bool isGrounded;
-    private bool hasJumped = false;
-    private bool isClimbing = false;
-
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
-    }
 
     void Start()
     {
-        if (isRealPlayer)
+        rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+
+        if (!isRealPlayer)
         {
-            GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
-            foreach (GameObject obj in allObjects)
+            // 👉 ห้าม Player เงา ชนกับกล่องจริง
+            GameObject[] realBoxes = GameObject.FindGameObjectsWithTag("PushableBox");
+            foreach (var box in realBoxes)
             {
-                if (obj.CompareTag("Shadow"))
-                {
-                    Collider2D shadowCol = obj.GetComponent<Collider2D>();
-                    if (shadowCol != null && col != null)
-                    {
-                        Physics2D.IgnoreCollision(col, shadowCol, true);
-                    }
-                }
+                Collider2D boxCol = box.GetComponent<Collider2D>();
+                if (boxCol != null)
+                    Physics2D.IgnoreCollision(col, boxCol);
             }
         }
-    }
-
-    public void EnableClimbing(bool canClimb)
-    {
-        isClimbing = canClimb;
-        rb.gravityScale = canClimb ? 0 : 1;
-        if (canClimb)
+        else
         {
-            rb.linearVelocity = Vector2.zero;
+            // 👉 ห้าม Player จริง ชนกับกล่องเงา
+            GameObject[] shadowBoxes = GameObject.FindGameObjectsWithTag("ShadowBox");
+            foreach (var box in shadowBoxes)
+            {
+                Collider2D boxCol = box.GetComponent<Collider2D>();
+                if (boxCol != null)
+                    Physics2D.IgnoreCollision(col, boxCol);
+            }
         }
     }
 
     void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
 
-        // เช็คว่ากระโดดได้แค่ครั้งเดียวก่อนแตะพื้นใหม่
-        Collider2D groundHit = Physics2D.OverlapCircle(groundCheck.position, groundRadius);
-        bool wasGrounded = isGrounded;
-        isGrounded = groundHit != null;
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
-        if (isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
-            hasJumped = false;  // แตะพื้นแล้ว reset สถานะกระโดด
-        }
-
-        if (isClimbing)
-        {
-            // ปีนขึ้นลงบันได
-            rb.linearVelocity = new Vector2(moveX * moveSpeed, moveY * climbSpeed);
-        }
-        else
-        {
-            // เดินตามปกติ
-            rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
-
-            // กระโดด
-            if (Input.GetKeyDown(KeyCode.W) && isGrounded && !hasJumped)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-                hasJumped = true; // บอกว่ากระโดดแล้ว ต้องรอแตะพื้นก่อนถึงจะกระโดดอีก
-            }
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
 }

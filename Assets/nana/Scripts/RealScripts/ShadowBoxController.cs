@@ -1,84 +1,38 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using System.Collections.Generic;
 
 public class ShadowBoxController : MonoBehaviour
 {
-    public List<Light2D> shadowLights = new List<Light2D>();
-    public float effectiveLightRadius = 5f;
-    public float shadowOffsetX = 1f;
+    public Transform realBox; // กล่องจริง
+    public Light2D lightSource;
+    public float lightRadius = 5f;
+    public float offsetX = 1.5f;
 
-    private Collider2D col;
-    private SpriteRenderer sprite;
+    SpriteRenderer sr;
 
-    // อ้างอิงกล่องจริง
-    public Transform realBoxTransform;
-    private Rigidbody2D realBoxRb;
-
-    void Awake()
+    void Start()
     {
-        col = GetComponent<Collider2D>();
-        sprite = GetComponent<SpriteRenderer>();
-        SetVisible(false);
-
-        if (realBoxTransform != null)
-        {
-            realBoxRb = realBoxTransform.GetComponent<Rigidbody2D>();
-            if (realBoxRb == null)
-                Debug.LogError("RealBox Rigidbody2D not found!");
-        }
-        else
-        {
-            Debug.LogError("realBoxTransform not assigned!");
-        }
+        sr = GetComponent<SpriteRenderer>();
+        if (!realBox || !lightSource) { Debug.LogError("❌ Assign realBox & lightSource!"); enabled = false; return; }
+        sr.enabled = false;
     }
 
     void Update()
     {
-        bool isLit = false;
-        foreach (Light2D light in shadowLights)
+        float dist = Vector2.Distance(realBox.position, lightSource.transform.position);
+        if (dist > lightRadius)
         {
-            if (light != null && light.enabled)
-            {
-                float dist = Vector2.Distance(light.transform.position, transform.position);
-                if (dist <= effectiveLightRadius)
-                {
-                    isLit = true;
-                    break;
-                }
-            }
+            sr.enabled = false;
+            return;
         }
-        SetVisible(isLit);
 
-        if (realBoxRb != null && realBoxTransform != null)
-        {
-            Vector3 shadowPos = realBoxTransform.position;
+        sr.enabled = true;
 
-            float vx = realBoxRb.linearVelocity.x;
+        // 👉 เงาเลื่อนไปด้านซ้ายหรือขวาเท่านั้น
+        Vector2 fromLight = (realBox.position - lightSource.transform.position).normalized;
+        float xDir = Mathf.Sign(fromLight.x);
+        Vector3 shadowPos = realBox.position + new Vector3(xDir * offsetX, 0, 0);
 
-            if (vx > 0.05f)
-            {
-                shadowPos.x += shadowOffsetX;
-                sprite.flipX = false;
-            }
-            else if (vx < -0.05f)
-            {
-                shadowPos.x -= shadowOffsetX;
-                sprite.flipX = true;
-            }
-            else
-            {
-                // กล่องจริงไม่ขยับ เงาอยู่ตรงกลาง
-                shadowPos.x = realBoxTransform.position.x;
-            }
-
-            transform.position = shadowPos;
-        }
-    }
-
-    void SetVisible(bool visible)
-    {
-        col.enabled = visible;
-        sprite.enabled = visible;
+        transform.position = shadowPos;
     }
 }
