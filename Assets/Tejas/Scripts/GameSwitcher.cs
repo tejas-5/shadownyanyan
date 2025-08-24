@@ -19,7 +19,7 @@ public class GameSwitcher : MonoBehaviour
 
     private Vector3 _lastRealPos;
 
-    private int currentIndex = 0; 
+    private int currentIndex = 0;
 
     void Awake()
     {
@@ -50,25 +50,20 @@ public class GameSwitcher : MonoBehaviour
 
     void SetView(int newIndex)
     {
-        if (currentIndex == 0)
-            _lastRealPos = realPlayer.transform.position;
-
         currentIndex = newIndex;
         bool showReal = (currentIndex == 0);
 
         realCam.enabled = showReal;
         shadowCam.enabled = !showReal;
 
-        realPC.enabled = showReal;
-        shadowPC.enabled = !showReal;
+        // แทนการ enable/disable script
+        realPC.canControl = showReal;
+        shadowPC.canControl = !showReal;
 
         shadowFollower.SetFollowing(showReal);
 
-        //if (!showReal)
-        //{
-        //    shadowPlayer.transform.position = _lastRealPos;
-        //}
         realListener.enabled = showReal;
         shadowListener.enabled = !showReal;
     }
+
 }

@@ -1,56 +1,95 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Player Settings")]
     public bool isRealPlayer = true;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+
+    [Header("Ground Check")]
     public Transform groundCheck;
-    public LayerMask groundLayer;
+    public float groundCheckRadius = 0.15f;
+
+    [Header("Debug")]
+    public bool isGrounded = false; // แสดงใน Inspector
+    public bool canControl = true;  // ปิดเมื่อไม่ใช่ตัว active
 
     private Rigidbody2D rb;
-    private Collider2D col;
-    private bool isGrounded;
+    private Collider2D playerCol;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
+        playerCol = GetComponent<Collider2D>();
 
+        // สร้าง GroundCheck อัตโนมัติถ้าไม่มี
+        if (groundCheck == null)
+        {
+            GameObject go = new GameObject("GroundCheck");
+            go.transform.parent = transform;
+            go.transform.localPosition = new Vector3(0, -0.5f, 0);
+            groundCheck = go.transform;
+        }
+
+        // Shadow Player → Ignore horizontal collision กับ RealBox
         if (!isRealPlayer)
         {
-            // 👉 ห้าม Player เงา ชนกับกล่องจริง
-            GameObject[] realBoxes = GameObject.FindGameObjectsWithTag("PushableBox");
+            GameObject[] realBoxes = GameObject.FindGameObjectsWithTag("RealBox");
             foreach (var box in realBoxes)
             {
                 Collider2D boxCol = box.GetComponent<Collider2D>();
                 if (boxCol != null)
-                    Physics2D.IgnoreCollision(col, boxCol);
-            }
-        }
-        else
-        {
-            // 👉 ห้าม Player จริง ชนกับกล่องเงา
-            GameObject[] shadowBoxes = GameObject.FindGameObjectsWithTag("ShadowBox");
-            foreach (var box in shadowBoxes)
-            {
-                Collider2D boxCol = box.GetComponent<Collider2D>();
-                if (boxCol != null)
-                    Physics2D.IgnoreCollision(col, boxCol);
+                    Physics2D.IgnoreCollision(playerCol, boxCol, true); // ignore collision
             }
         }
     }
 
     void Update()
     {
+        if (!canControl) return;
+
+        // horizontal movement
         float moveX = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-
+        // jump
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+    }
+
+    void FixedUpdate()
+    {
+        // ตรวจ grounded อัตโนมัติ
+        string[] tagsToCheck = isRealPlayer
+            ? new string[] { "Ground", "PushableBox", "ShadowBox" }
+            : new string[] { "Ground", "RealBox", "ShadowBox" }; // Shadow Player สามารถยืนบนพื้นและกล่อง
+
+        Collider2D[] hits = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius);
+        isGrounded = false;
+
+        foreach (var hit in hits)
+        {
+            foreach (var tag in tagsToCheck)
+            {
+                if (hit.CompareTag(tag))
+                {
+                    isGrounded = true;
+                    break;
+                }
+            }
+            if (isGrounded) break;
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = isGrounded ? Color.green : Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
 }
