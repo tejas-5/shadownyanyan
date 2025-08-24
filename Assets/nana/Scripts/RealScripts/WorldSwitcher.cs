@@ -16,23 +16,29 @@ public class WorldSwitcher : MonoBehaviour
         if (cameraFollow == null)
             cameraFollow = Camera.main.GetComponent<CameraFollow>();
 
-        // เปิดใช้งานทั้งสองตัว
         realPlayer.SetActive(true);
         shadowPlayer.SetActive(true);
 
-        // เริ่มควบคุมผู้เล่นจริง
+        // 👉 วางเงาไว้ข้างหน้าผู้เล่นนิดหน่อย
+        shadowPlayer.transform.position = realPlayer.transform.position + Vector3.right * 1.5f;
+
+        // เริ่มต้นควบคุมผู้เล่นจริง
         SetPlayerControl(realPlayer, true);
         SetPlayerControl(shadowPlayer, false);
-
-        // ให้เงาเริ่มต้นอยู่ที่ตำแหน่งเดียวกัน
-        shadowPlayer.transform.position = realPlayer.transform.position;
 
         if (cameraFollow != null)
             cameraFollow.SetTarget(realPlayer.transform);
 
-
         // ❌ ห้าม Player จริง ชนกับกล่องเงา
         IgnoreCollisionByTag("Player", "ShadowBox");
+
+        // ✅ เพิ่มบรรทัดนี้ ป้องกันผู้เล่นกับเงาชนกัน
+        Collider2D realCol = realPlayer.GetComponent<Collider2D>();
+        Collider2D shadowCol = shadowPlayer.GetComponent<Collider2D>();
+        if (realCol != null && shadowCol != null)
+        {
+            Physics2D.IgnoreCollision(realCol, shadowCol, true);
+        }
     }
 
     void IgnoreCollisionByTag(string tagA, string tagB)
@@ -58,43 +64,25 @@ public class WorldSwitcher : MonoBehaviour
     void Update()
     {
         // เงาตามตัวจริงก่อนแยกร่าง
-        if (isFollowing)
+        //if (isFollowing)
         {
-            shadowPlayer.transform.position = realPlayer.transform.position;
-        }
+            //shadowPlayer.transform.position = realPlayer.transform.position;
+        }//
 
         // SPACE = สลับร่าง
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!hasSeparated)
-            {
-                // แยกร่างครั้งแรก
-                hasSeparated = true;
-                isFollowing = false;
-                isControllingReal = false;
+            isControllingReal = !isControllingReal;
 
-                SetPlayerControl(realPlayer, false);
-                SetPlayerControl(shadowPlayer, true);
-                StartCoroutine(TemporarilyIgnoreBoxCollision(shadowPlayer));
+            GameObject activePlayer = isControllingReal ? realPlayer : shadowPlayer;
+            GameObject inactivePlayer = isControllingReal ? shadowPlayer : realPlayer;
 
-                cameraFollow?.SetTarget(shadowPlayer.transform);
-            }
-            else
-            {
-                // สลับร่างไปมา
-                isControllingReal = !isControllingReal;
+            SetPlayerControl(activePlayer, true);
+            SetPlayerControl(inactivePlayer, false);
 
-                GameObject activePlayer = isControllingReal ? realPlayer : shadowPlayer;
-                GameObject inactivePlayer = isControllingReal ? shadowPlayer : realPlayer;
-
-                SetPlayerControl(activePlayer, true);
-                SetPlayerControl(inactivePlayer, false);
-
-                StartCoroutine(TemporarilyIgnoreBoxCollision(activePlayer));
-
-                cameraFollow?.SetTarget(activePlayer.transform);
-            }
+            cameraFollow?.SetTarget(activePlayer.transform);
         }
+        
 
         // R = รีเซ็ตร่าง
         if (Input.GetKeyDown(KeyCode.R))
