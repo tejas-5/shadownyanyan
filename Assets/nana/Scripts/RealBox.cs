@@ -34,8 +34,6 @@ public class RealBox : MonoBehaviour
                 }
             }
         }
-
-        // Real Player → Physics ปกติ, สามารถดันกล่องได้ตามปกติ
     }
 
     // Trigger สำหรับ LightZone

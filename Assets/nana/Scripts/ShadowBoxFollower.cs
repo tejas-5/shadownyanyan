@@ -15,12 +15,17 @@ public class ShadowBoxFollower : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<BoxCollider2D>(); // <-- Get collider
+        col = GetComponent<BoxCollider2D>();
 
         // ShadowBox Kinematic → ไม่ถูก Gravity ดึง ไม่ดันกล่อง
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.gravityScale = 0f;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        if (sr != null)
+            sr.enabled = false;
+        if (col != null)
+            col.enabled = false;
     }
 
     void LateUpdate()
