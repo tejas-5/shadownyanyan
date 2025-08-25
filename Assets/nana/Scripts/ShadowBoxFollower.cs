@@ -9,11 +9,13 @@ public class ShadowBoxFollower : MonoBehaviour
 
     private SpriteRenderer sr;
     private Rigidbody2D rb;
+    private BoxCollider2D col;        // <-- Add reference to BoxCollider2D
 
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<BoxCollider2D>(); // <-- Get collider
 
         // ShadowBox Kinematic → ไม่ถูก Gravity ดึง ไม่ดันกล่อง
         rb.bodyType = RigidbodyType2D.Kinematic;
@@ -36,6 +38,10 @@ public class ShadowBoxFollower : MonoBehaviour
 
         // ปรากฏเฉพาะตอน RealBox อยู่ในไฟ
         RealBox rbScript = realBox.GetComponent<RealBox>();
-        sr.enabled = rbScript != null && rbScript.isInLight;
+        bool shouldBeVisible = rbScript != null && rbScript.isInLight;
+
+        sr.enabled = shouldBeVisible;
+        if (col != null)
+            col.enabled = shouldBeVisible;
     }
 }

@@ -18,8 +18,9 @@ public class LightSwitch : MonoBehaviour
 
             if (light2D != null)
             {
-                // ถ้า intensity = 0 ตั้ง enabled เป็น false ให้แน่ใจ
-                light2D.enabled = light2D.intensity > 0;
+                // Start with light off
+                light2D.intensity = 0f;
+                light2D.enabled = false;
             }
         }
     }
@@ -35,7 +36,7 @@ public class LightSwitch : MonoBehaviour
                 if (isLightOn)
                 {
                     light2D.enabled = true;
-                    light2D.intensity = 1f; // ปรับเป็นค่าที่ต้องการ
+                    light2D.intensity = 1f;
                 }
                 else
                 {
@@ -47,7 +48,6 @@ public class LightSwitch : MonoBehaviour
             }
             else if (lightToTurnOn != null)
             {
-                // กรณีไม่มี Light2D ก็เปิด/ปิด GameObject แทน
                 isLightOn = !isLightOn;
                 lightToTurnOn.SetActive(isLightOn);
             }
