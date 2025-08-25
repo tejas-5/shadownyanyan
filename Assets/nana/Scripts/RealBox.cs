@@ -12,19 +12,25 @@ public class RealBox : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        // ตรวจ Shadow Player เฉพาะ vertical contact
+        // Shadow player logic
         if (collision.gameObject.CompareTag("Shadow"))
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                if (contact.normal.y > 0.9f) // Shadow Player ยืนบนกล่อง
+                // If Shadow is on top of the box (normal pointing upward)
+                if (contact.normal.y > 0.9f)
                 {
-                    // ล็อค horizontal ของ Shadow Player บนกล่อง
+                    // Stop Shadow's horizontal movement when standing on box
                     Rigidbody2D shadowRb = collision.rigidbody;
                     if (shadowRb != null)
                     {
                         shadowRb.linearVelocity = new Vector2(0, shadowRb.linearVelocity.y);
                     }
+                }
+                else
+                {
+                    // Prevent Shadow from pushing box: negate horizontal force
+                    rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
                 }
             }
         }
