@@ -1,30 +1,17 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public List<DialogueLine> dialogueLines;
-
+    public List<DialogueLine> lines;   // Inspector ให้ใส่บทพูดพร้อมเลือก Speaker
     private bool triggered = false;
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (triggered)
-            return;
-
-        if (other.CompareTag("Player"))
+        if (!triggered && other.CompareTag("Player"))
         {
             triggered = true;
-
-            DialogueManager manager = FindObjectOfType<DialogueManager>();
-            if (manager != null)
-            {
-                manager.StartDialogue(dialogueLines);
-            }
-            else
-            {
-                Debug.LogError("场景中没有DialogueManager");
-            }
+            FindObjectOfType<DialogueController>().StartDialogue(lines);
         }
     }
 }
