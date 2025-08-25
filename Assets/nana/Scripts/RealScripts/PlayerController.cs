@@ -62,10 +62,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // ตรวจ grounded อัตโนมัติ
         string[] tagsToCheck = isRealPlayer
             ? new string[] { "Ground", "PushableBox", "ShadowBox" }
-            : new string[] { "Ground", "RealBox", "ShadowBox" }; // Shadow Player สามารถยืนบนพื้นและกล่อง
+            : new string[] { "Ground", "RealBox", "ShadowBox" };
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius);
         isGrounded = false;
@@ -76,8 +75,12 @@ public class PlayerController : MonoBehaviour
             {
                 if (hit.CompareTag(tag))
                 {
-                    isGrounded = true;
-                    break;
+                    // Check if hit collider is below player
+                    if (hit.bounds.max.y <= groundCheck.position.y + 0.05f) // add slight tolerance
+                    {
+                        isGrounded = true;
+                        break;
+                    }
                 }
             }
             if (isGrounded) break;

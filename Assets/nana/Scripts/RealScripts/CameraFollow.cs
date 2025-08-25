@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour
         }
 
         // Log the camera's target and its position
-        Debug.Log("Camera following: " + target.name + " at " + target.position);
+        //Debug.Log("Camera following: " + target.name + " at " + target.position);
 
         float targetX = target.position.x;
 
@@ -38,6 +38,6 @@ public class CameraFollow : MonoBehaviour
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
-        Debug.Log("CameraFollow: Set target to " + (target != null ? target.name : "null"));
+        //Debug.Log("CameraFollow: Set target to " + (target != null ? target.name : "null"));
     }
 }

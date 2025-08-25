@@ -4,7 +4,7 @@ public class WaterDrop : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("TriggerEnter2D ถูกเรียก โดย: " + other.name);
+        //Debug.Log("TriggerEnter2D ถูกเรียก โดย: " + other.name);
 
         if (other.CompareTag("Player") || other.CompareTag("Shadow"))
         {
