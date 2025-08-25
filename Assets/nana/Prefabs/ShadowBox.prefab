@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realBox: {fileID: 0}
+  followHeight: 0
   offset: {x: 1.5, y: 0, z: 0}
 --- !u!50 &213266010478576266
 Rigidbody2D:
