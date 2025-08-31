@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7403742483581914577}
   - component: {fileID: 7141787394695541961}
   - component: {fileID: 8004595388448436718}
+  - component: {fileID: 4167438093603046630}
   m_Layer: 15
   m_Name: ShadowPlayer
   m_TagString: Shadow
@@ -196,6 +197,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bcd106efc0e1264b8bed0f392252c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4167438093603046630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457561733160602199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0051a51c29f9fb469dd735ed24be256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectedPieces: []
 --- !u!1 &9072164595221112875
 GameObject:
   m_ObjectHideFlags: 0
