@@ -5,7 +5,7 @@ public class PuzzlePiece : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (isCollected) return;
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Shadow"))
         {
             isCollected = true;
             // ปิดการชนไม่ให้ชนซ้ำ

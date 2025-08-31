@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         string[] tagsToCheck = isRealPlayer
-            ? new string[] { "Ground", "PushableBox", "ShadowBox","Lift" }
-            : new string[] { "Ground", "RealBox", "ShadowBox", "Lift" };
+            ? new string[] { "Ground", "PushableBox", "ShadowBox","Lift" , "ShadowGround" }
+            : new string[] { "Ground", "RealBox", "ShadowBox", "Lift", "ShadowGround" };
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(groundCheck.position, groundCheckRadius);
         isGrounded = false;

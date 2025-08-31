@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2164061272779771832}
   - component: {fileID: 7547944987279941553}
   - component: {fileID: 8864424647458593175}
+  - component: {fileID: 7168465643919754163}
   m_Layer: 14
   m_Name: RealPlayer
   m_TagString: Player
@@ -240,3 +241,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bcd106efc0e1264b8bed0f392252c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7168465643919754163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093014960622849804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0051a51c29f9fb469dd735ed24be256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectedPieces: []
