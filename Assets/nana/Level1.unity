@@ -1506,13 +1506,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 1
-    text: "\u3084\u30FC\u3063\u3068\u76EE\u3092\u3055\u307E\u3057\u305F\u3002\u5FC3\u914D\u3057\u305F\u3093\u3060\u3088"
+    text: "\u3084\u30FC\u3063\u3068\u76EE\u3092\u3055\u307E\u3057\u305F\u3002\n\u5FC3\u914D\u3057\u305F\u3093\u3060\u3088"
   - speaker: 0
     text: "\u2026\u2026\uFF1F"
   - speaker: 1
     text: "\u50D5\u304C\u8AB0\u304B\u3063\u3066\uFF1F"
   - speaker: 1
-    text: "\u541B\u306E\u5F71\u3055\uFF01\u3000\u30AF\u30ED\u3063\u3066\u547C\u3093\u3067\u3088\u3002\u30B9\u30AD\u30A2"
+    text: "\u541B\u306E\u5F71\u3055\uFF01\n\u30AF\u30ED\u3063\u3066\u547C\u3093\u3067\u3088\u3002\n\u30B9\u30AD\u30A2"
   - speaker: 0
     text: "\uFF1F"
   - speaker: 1
@@ -1527,8 +1527,8 @@ MonoBehaviour:
     text: "\u8A18\u61B6\u304C\u306A\u3044\u306E\u304B\u2026\u2026"
   - speaker: 1
     text: "\u5927\u4E08\u592B\u3001\u50D5\u304C\u4ED8\u3044\u3066\u308B\u304B\u3089\uFF01"
-  - speaker: 0
-    text: "\u4F53\u304C\u52D5\u3051\u308B\u304B\u3001\u8A66\u3057\u3066\u307F\u3088\u3046\u3002\u300CD\u300D\u3068\u300CA\u300D\u3067\u79FB\u52D5\u3001\u3053\u306E\u5148\u306B\u9032\u3093\u3067\u307F\u3088\u3002\u30B8\u30E3\u30F3\u30D7\u306F\u300CW\u300D\u3067\u3067\u304D\u308B\u304B\u3089\u306D\u3002"
+  - speaker: 1
+    text: "\u4F53\u304C\u52D5\u3051\u308B\u304B\u3001\u8A66\u3057\u3066\u307F\u3088\u3046\u3002\n\u300CD\u300D\u3068\u300CA\u300D\u3067\u79FB\u52D5\u3001\u3053\u306E\u5148\u306B\u9032\u3093\u3067\u307F\u3088\u3002\n\u30B8\u30E3\u30F3\u30D7\u306F\u300CW\u300D\u3067\u3067\u304D\u308B\u304B\u3089\u306D\u3002"
 --- !u!4 &502849882
 Transform:
   m_ObjectHideFlags: 0
@@ -1538,7 +1538,7 @@ Transform:
   m_GameObject: {fileID: 502849879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.73, y: -10.08, z: -0.05513254}
+  m_LocalPosition: {x: -19.804, y: -10.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3143,7 +3143,7 @@ Transform:
   m_GameObject: {fileID: 1057021727}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.72, y: -10.11, z: -0.09155715}
+  m_LocalPosition: {x: 7.72, y: -10.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4306,8 +4306,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -155, y: 16}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -155, y: 135}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1376976053
 CanvasRenderer:
@@ -4364,15 +4364,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4402,7 +4402,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -236.83215, w: 0}
+  m_margin: {x: 0, y: -57.337463, z: -236.83215, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5839,15 +5839,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5907,8 +5907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: 16}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -15, y: 150}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1811087429
 PrefabInstance:
@@ -6235,6 +6235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerText: {fileID: 1376976054}
   shadowText: {fileID: 1809006322}
+  playerObject: {fileID: 713702946}
+  shadowObject: {fileID: 1012315440}
 --- !u!4 &2041011340
 Transform:
   m_ObjectHideFlags: 0
@@ -6244,7 +6246,7 @@ Transform:
   m_GameObject: {fileID: 2041011338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.10383, y: -7.491158, z: -0.05513254}
+  m_LocalPosition: {x: -19.10383, y: -7.491158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6351,7 +6353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8513276879328561260, guid: 95d01e683faab6d45b11a3fcf980bb01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.47
+      value: -22.258
       objectReference: {fileID: 0}
     - target: {fileID: 8513276879328561260, guid: 95d01e683faab6d45b11a3fcf980bb01, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6566,7 +6568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2677806594637194401, guid: fd44916e440efec41a897a3d83407f65, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.76
+      value: -21.426
       objectReference: {fileID: 0}
     - target: {fileID: 2677806594637194401, guid: fd44916e440efec41a897a3d83407f65, type: 3}
       propertyPath: m_LocalPosition.y
