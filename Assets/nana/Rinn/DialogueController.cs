@@ -7,13 +7,16 @@ public class DialogueController : MonoBehaviour
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI shadowText;
 
+    public GameObject playerObject;    // <-- Assign in Inspector
+    public GameObject shadowObject;    // <-- Assign in Inspector
+
     private List<DialogueLine> dialogues;
     private int currentIndex = 0;
     private bool isActive = false;
 
     void Update()
     {
-        if (isActive && Input.GetKeyDown(KeyCode.Space))
+        if (isActive && Input.GetMouseButtonDown(0))
         {
             NextDialogue();
         }
@@ -41,10 +44,18 @@ public class DialogueController : MonoBehaviour
         playerText.text = "";
         shadowText.text = "";
 
-        if (dialogues[currentIndex].speaker == DialogueLine.Speaker.Player)
-            playerText.text = dialogues[currentIndex].text;
+        DialogueLine currentLine = dialogues[currentIndex];
+
+        if (currentLine.speaker == DialogueLine.Speaker.Player)
+        {
+            playerText.text = currentLine.text;
+            FocusOn(playerObject);
+        }
         else
-            shadowText.text = dialogues[currentIndex].text;
+        {
+            shadowText.text = currentLine.text;
+            FocusOn(shadowObject);
+        }
     }
 
     void EndDialogue()
@@ -52,5 +63,14 @@ public class DialogueController : MonoBehaviour
         playerText.text = "";
         shadowText.text = "";
         isActive = false;
+
+        // Optional: Reset camera or focus
+    }
+
+    void FocusOn(GameObject target)
+    {
+
+        // Example 2: If using Cinemachine or camera focus:
+        // cameraFollow.target = target.transform;
     }
 }
