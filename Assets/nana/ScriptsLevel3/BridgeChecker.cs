@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BridgeChecker : MonoBehaviour
 {
@@ -6,10 +6,9 @@ public class BridgeChecker : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.GetInt("PuzzleCompleted", 0) == 1)
-        {
-            bridge.SetActive(true);
-        }
+        int completed = PlayerPrefs.GetInt("PuzzleCompleted", 0);
+        Debug.Log("BridgeChecker: PuzzleCompleted = " + completed);
+
+        bridge.SetActive(completed == 1);
     }
 }
-
