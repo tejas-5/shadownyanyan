@@ -965,6 +965,14 @@ PrefabInstance:
       propertyPath: realBox
       value: 
       objectReference: {fileID: 1781428860}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: lightSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: 'lightSources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 60584293}
     - target: {fileID: 8853684246244342146, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
       propertyPath: m_Name
       value: ShadowBox (2)
@@ -1788,6 +1796,14 @@ PrefabInstance:
       propertyPath: realBox
       value: 
       objectReference: {fileID: 618995386}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: lightSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: 'lightSources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5698911934071134825}
     - target: {fileID: 8853684246244342146, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
       propertyPath: m_Name
       value: ShadowBox (1)
@@ -6523,6 +6539,14 @@ PrefabInstance:
       propertyPath: realBox
       value: 
       objectReference: {fileID: 645985374}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: lightSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: 'lightSources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 379334755}
     - target: {fileID: 8853684246244342146, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
       propertyPath: m_Name
       value: ShadowBox
@@ -6646,6 +6670,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf579400aef8eab4dbf2c1cb82b4bd6c, type: 3}
+--- !u!4 &5698911934071134825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3928930408203819457, guid: bf579400aef8eab4dbf2c1cb82b4bd6c, type: 3}
+  m_PrefabInstance: {fileID: 5698911934071134824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
