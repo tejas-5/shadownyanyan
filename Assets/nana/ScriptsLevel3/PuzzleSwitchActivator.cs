@@ -1,26 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class PuzzleSwitchActivator : MonoBehaviour
 {
     private bool playerInRange = false;
-
-    // กำหนดว่าต้องเก็บครบกี่แผ่น
     public int requiredNumbers = 5;
 
     void Update()
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            // เช็คว่าผู้เล่นเก็บครบหรือยัง
-            PlayerNumberHolder holder = FindObjectOfType<PlayerNumberHolder>();
-            if (holder != null && holder.CollectedCount() >= requiredNumbers)
+            // หาทุก Inventory ของ Player และ Shadow
+            PlayerInventory[] inventories = FindObjectsOfType<PlayerInventory>();
+
+            int totalCollected = inventories.Sum(inv => inv.CollectedCount());
+
+            if (totalCollected >= requiredNumbers)
             {
                 SceneManager.LoadScene("PuzzleScene");
             }
             else
             {
-                Debug.Log("ยังเก็บตัวเลขไม่ครบ!");
+                Debug.Log("ยังเก็บตัวเลขไม่ครบ! เก็บแล้ว: " + totalCollected);
             }
         }
     }
