@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 7547944987279941553}
   - component: {fileID: 8864424647458593175}
   - component: {fileID: 7168465643919754163}
+  - component: {fileID: 986547571381449159}
   m_Layer: 14
   m_Name: RealPlayer
   m_TagString: Player
@@ -249,6 +250,7 @@ MonoBehaviour:
   groundCheckRadius: 0.15
   isGrounded: 0
   canControl: 1
+  animator: {fileID: 0}
 --- !u!114 &7547944987279941553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,3 +289,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectedPieces: []
   holdPoint: {fileID: 0}
+--- !u!95 &986547571381449159
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093014960622849804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf63f9c583cd88945b483e44975b894e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
