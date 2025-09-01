@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = false; // แสดงใน Inspector
     public bool canControl = true;  // ปิดเมื่อไม่ใช่ตัว active
 
+    public Animator animator;
+
     private Rigidbody2D rb;
     private Collider2D playerCol;
 
@@ -49,15 +51,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!canControl) return;
-
-        // horizontal movement
         float moveX = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
 
-        // jump
+        // Jump
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+        // Update Animator
+        animator.SetFloat("MoveX", Mathf.Abs(moveX));
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     void FixedUpdate()
