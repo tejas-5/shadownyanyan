@@ -163,6 +163,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -597,7 +610,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_0": -4556894714957085208
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_1": 2273657606332717116
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_10": -445954087913857783
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_11": -4578489331069443934
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_12": -6148788339436096562
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_13": -5700516668496795544
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_14": -5156404505141532992
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_15": -4699496316790541827
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_16": 7584669912894828817
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_17": -8737568529454658721
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_18": 4127996177462205275
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_2": -7879780975091378236
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_3": -5287840790877242759
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_4": -8571260726138259531
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_5": 2263746341442326653
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_6": -5618428379420742962
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_7": -3087462281748168752
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_8": -3920581781512301119
+      "\u767D\u732B\u30B8\u30E3\u30F3\u30D708_9": -5577269283459966639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
