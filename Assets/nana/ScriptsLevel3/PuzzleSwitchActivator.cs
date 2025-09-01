@@ -11,13 +11,12 @@ public class PuzzleSwitchActivator : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            // หาทุก Inventory ของ Player และ Shadow
             PlayerInventory[] inventories = FindObjectsOfType<PlayerInventory>();
-
             int totalCollected = inventories.Sum(inv => inv.CollectedCount());
 
             if (totalCollected >= requiredNumbers)
             {
+                // โหลด PuzzleScene แยก
                 SceneManager.LoadScene("PuzzleScene");
             }
             else

@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-
+using System.Collections.Generic;
 
 public class Puzzle15Manager : MonoBehaviour
 {
     public GameObject tilePrefab;
     public Transform gridParent;
-
     private List<Tile> tiles = new List<Tile>();
-    private const int size = 4; // 3x3 grid for 8-puzzle
+    private const int size = 4;
 
     void Start()
     {
@@ -38,28 +36,16 @@ public class Puzzle15Manager : MonoBehaviour
 
     public void SwapTiles(Tile clickedTile)
     {
-        Debug.Log($"Swapping tile {clickedTile.text.text} at pos {clickedTile.pos}");
-
         Tile emptyTile = GetEmptyTile();
-
-        if (!clickedTile.IsAdjacent(emptyTile.pos))
-        {
-            Debug.Log("Tiles not adjacent. Swap canceled.");
-            return;
-        }
+        if (!clickedTile.IsAdjacent(emptyTile.pos)) return;
 
         int clickedNumber = int.Parse(clickedTile.text.text);
-
         clickedTile.SetEmpty();
         emptyTile.SetNumber(clickedNumber);
-
-        emptyTile = clickedTile;
 
         Vector2Int tempPos = clickedTile.pos;
         clickedTile.pos = emptyTile.pos;
         emptyTile.pos = tempPos;
-
-        Debug.Log($"Swapped. New positions: clickedTile {clickedTile.pos}, emptyTile {emptyTile.pos}");
 
         CheckWin();
     }
@@ -70,43 +56,29 @@ public class Puzzle15Manager : MonoBehaviour
         {
             Tile emptyTile = GetEmptyTile();
             List<Tile> adjacentTiles = new List<Tile>();
-
-            // Find adjacent tiles to empty
             foreach (var tile in tiles)
-            {
-                if (tile.IsAdjacent(emptyTile.pos))
-                {
-                    adjacentTiles.Add(tile);
-                }
-            }
+                if (tile.IsAdjacent(emptyTile.pos)) adjacentTiles.Add(tile);
 
             if (adjacentTiles.Count > 0)
-            {
-                Tile tileToMove = adjacentTiles[Random.Range(0, adjacentTiles.Count)];
-                SwapTiles(tileToMove);
-            }
+                SwapTiles(adjacentTiles[Random.Range(0, adjacentTiles.Count)]);
         }
     }
 
     void CheckWin()
     {
-        for (int i = 0; i < tiles.Count - 1; i++) // last tile is empty
+        for (int i = 0; i < tiles.Count - 1; i++)
         {
             if (tiles[i].isEmpty) return;
-
-            int expected = i + 1;
-            if (tiles[i].text.text != expected.ToString())
-                return;
+            if (tiles[i].text.text != (i + 1).ToString()) return;
         }
 
-        // ถ้าชนะ
         Debug.Log("You Win!");
 
-        // ✅ บันทึกว่าผ่านแล้ว
+        // บันทึกว่าผ่านแล้ว
         PlayerPrefs.SetInt("PuzzleCompleted", 1);
         PlayerPrefs.Save();
 
-        // ✅ กลับไป Main Scene
+        // กลับ Level3 อัตโนมัติ
         SceneManager.LoadScene("Level3");
     }
 }
