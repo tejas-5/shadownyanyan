@@ -9,11 +9,11 @@ C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker7
 -projectPath
 C:/Users/student/Documents/GitHub/shadownyanyan
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker7.log
 -srvPort
 63163
 -job-worker-count
@@ -59,12 +59,12 @@ C:/Users/student/Documents/GitHub/shadownyanyan
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [16912]  Target information:
+Player connection [35004]  Target information:
 
-Player connection [16912]  * "[IP] 172.16.1.175 [Port] 0 [Flags] 2 [Guid] 3326766388 [EditorId] 3326766388 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1GCQ262) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [35004]  * "[IP] 172.16.1.175 [Port] 0 [Flags] 2 [Guid] 1673091136 [EditorId] 1673091136 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-1GCQ262) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [16912] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [16912] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [35004] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [35004] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 11
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.14 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.70 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.47f1 (2ad1ed33fd3b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Resources/UnitySubsystems
@@ -92,43 +92,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56960
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002612 seconds.
-- Loaded All Assemblies, in  0.250 seconds
+Registered in 0.001924 seconds.
+- Loaded All Assemblies, in  0.232 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.211 seconds
-Domain Reload Profiling: 459ms
-	BeginReloadAssembly (90ms)
+- Finished resetting the current domain, in  0.194 seconds
+Domain Reload Profiling: 426ms
+	BeginReloadAssembly (83ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (23ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (96ms)
-		LoadAssemblies (88ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (90ms)
+		LoadAssemblies (81ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (94ms)
-			TypeCache.Refresh (93ms)
-				TypeCache.ScanAssembly (84ms)
+		AnalyzeDomain (88ms)
+			TypeCache.Refresh (87ms)
+				TypeCache.ScanAssembly (79ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (211ms)
+	FinalizeReload (194ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (181ms)
+		SetupLoadedEditorAssemblies (168ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (16ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (34ms)
-			ProcessInitializeOnLoadAttributes (96ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
+			BeforeProcessingInitializeOnLoad (31ms)
+			ProcessInitializeOnLoadAttributes (87ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,11 +140,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.546 seconds
+- Loaded All Assemblies, in  0.515 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 1.30 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.22 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Package Manager log level set to [2]
@@ -155,102 +155,46 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.489 seconds
-Domain Reload Profiling: 1032ms
-	BeginReloadAssembly (115ms)
+- Finished resetting the current domain, in  0.468 seconds
+Domain Reload Profiling: 980ms
+	BeginReloadAssembly (108ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (18ms)
-	RebuildCommonClasses (23ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (371ms)
-		LoadAssemblies (263ms)
+		CreateAndSetChildDomain (17ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (352ms)
+		LoadAssemblies (245ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (180ms)
-			TypeCache.Refresh (129ms)
-				TypeCache.ScanAssembly (116ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (122ms)
+				TypeCache.ScanAssembly (111ms)
 			BuildScriptInfoCaches (41ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (490ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (468ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (397ms)
+		SetupLoadedEditorAssemblies (381ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (77ms)
-			ProcessInitializeOnLoadAttributes (245ms)
-			ProcessInitializeOnLoadMethodAttributes (68ms)
-			AfterProcessingInitializeOnLoad (3ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (234ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (4ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 1.99 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.44 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 222 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7046 unused Assets / (4.2 MB). Loaded Objects now: 7760.
-Memory consumption went from 189.5 MB to 185.3 MB.
-Total: 5.190500 ms (FindLiveObjects: 0.430500 ms CreateObjectMapping: 0.252500 ms MarkObjects: 3.181000 ms  DeleteObjects: 1.324900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 5969046.825258 seconds.
-  path: Assets/Animation/白猫Jump.anim
-  artifactKey: Guid(adc578cf9171a67489e217ed6507a135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/白猫Jump.anim using Guid(adc578cf9171a67489e217ed6507a135) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a4c5c3ccda1112e503a60e054a1912f') in 0.0147886 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.058117 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/ジャンプ/白猫ジャンプ01.png
-  artifactKey: Guid(a7762c03db889084480ba5f090a2e5aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/ジャンプ/白猫ジャンプ01.png using Guid(a7762c03db889084480ba5f090a2e5aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '31751830b9e8197921a72dc2eb3c2aa0') in 0.0649259 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/ジャンプ/白猫ジャンプ10(01).png
-  artifactKey: Guid(e6cd697e859d45e4db35828940673a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/ジャンプ/白猫ジャンプ10(01).png using Guid(e6cd697e859d45e4db35828940673a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87e98493ac222f5e4a59f64d28767d19') in 0.0114833 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/ジャンプ/白猫ジャンプ04.png
-  artifactKey: Guid(adcc659514ee1f84d8209fbad8d5de89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/ジャンプ/白猫ジャンプ04.png using Guid(adcc659514ee1f84d8209fbad8d5de89) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f53461f3a37b6ff8f2f15aca6cbfe84') in 0.0110241 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.809073 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/歩き/白猫歩き02.png
-  artifactKey: Guid(9dd71c6dc1c00154994763e4eae91016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/歩き/白猫歩き02.png using Guid(9dd71c6dc1c00154994763e4eae91016) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0988291bfa168dd94078814d7672e419') in 0.029871 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000010 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/歩き/白猫歩き07.png
-  artifactKey: Guid(f6941a612ceee7247a971706edcca6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/歩き/白猫歩き07.png using Guid(f6941a612ceee7247a971706edcca6c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99862d4efe3171795ee70fa04ebf3da0') in 0.0080436 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/歩き/白猫歩き04.png
-  artifactKey: Guid(64aad998c990f5b41a085314f6e1eebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/歩き/白猫歩き04.png using Guid(64aad998c990f5b41a085314f6e1eebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '22a50a946ff063ae7e898d585732075f') in 0.0081809 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+Unloading 7046 unused Assets / (4.5 MB). Loaded Objects now: 7760.
+Memory consumption went from 189.6 MB to 185.0 MB.
+Total: 5.797900 ms (FindLiveObjects: 0.508500 ms CreateObjectMapping: 0.403700 ms MarkObjects: 3.287900 ms  DeleteObjects: 1.596300 ms)
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
