@@ -250,7 +250,7 @@ MonoBehaviour:
   groundCheckRadius: 0.15
   isGrounded: 0
   canControl: 1
-  animator: {fileID: 0}
+  animator: {fileID: 986547571381449159}
 --- !u!114 &7547944987279941553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +299,7 @@ Animator:
   m_GameObject: {fileID: 9093014960622849804}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf63f9c583cd88945b483e44975b894e, type: 2}
+  m_Controller: {fileID: 9100000, guid: c8f17bfdc64fa2c4787d76489115f6ef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

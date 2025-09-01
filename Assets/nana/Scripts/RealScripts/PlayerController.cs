@@ -51,12 +51,28 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
+
         float moveX = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+
+        // ตรวจสอบทิศทางการเดินและหันตัวละคร
+        if (moveX > 0)
+        {
+            // เดินไปขวา → หมุนตัวละครไปทางขวา
+            transform.rotation = Quaternion.Euler(0, 0, 0); // หันขวา (Rotation ที่ 0 องศา)
+        }
+        else if (moveX < 0)
+        {
+            // เดินไปซ้าย → หมุนตัวละครไปทางซ้าย
+            transform.rotation = Quaternion.Euler(0, 180, 0); // หันซ้าย (Rotation ที่ 180 องศา)
+        }
+
 
         // Jump
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+           
 
         // Update Animator
         animator.SetFloat("MoveX", Mathf.Abs(moveX));
