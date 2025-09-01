@@ -14,13 +14,12 @@ public class ShadowPlatformController : MonoBehaviour
             return;
         }
 
-        // หาเฉพาะผู้เล่นตัวจริงเท่านั้น (เช่น tag = "Player")
+        // หา Player จริง แล้ว ignore collision ทันที
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
         foreach (GameObject player in players)
         {
-            // ตรวจสอบว่าไม่ใช่เงา
-            if (player.name.ToLower().Contains("shadow")) continue;
+            if (player.name.ToLower().Contains("shadow")) continue; // ข้าม Shadow
 
             Collider2D playerCol = player.GetComponent<Collider2D>();
             if (playerCol != null)
@@ -29,6 +28,21 @@ public class ShadowPlatformController : MonoBehaviour
             }
         }
 
-        // ✅ ไม่ ignore กับ ShadowPlayer — เงายังสามารถยืนบน platform ได้
+        // เริ่มแรก ปิด platform ไว้ก่อน (เหมือนไม่มีทางเดิน)
+        shadowPlatformCollider.enabled = false;
+    }
+
+    // เรียกเมื่อมีไฟส่อง platform
+    public void ActivatePlatform()
+    {
+        shadowPlatformCollider.enabled = true;
+        Debug.Log("✨ Shadow Platform เปิดใช้งานเพราะไฟส่อง!");
+    }
+
+    // เรียกเมื่อไฟดับ
+    public void DeactivatePlatform()
+    {
+        shadowPlatformCollider.enabled = false;
+        Debug.Log("💤 Shadow Platform ปิดเพราะไม่มีไฟ!");
     }
 }
