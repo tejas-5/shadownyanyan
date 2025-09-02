@@ -928,6 +928,18 @@ PrefabInstance:
       propertyPath: realBox
       value: 
       objectReference: {fileID: 159478341}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: lightSources.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: 'lightSources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 611367942}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: 'lightSources.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2067491468}
     - target: {fileID: 8853684246244342146, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
       propertyPath: m_Name
       value: ShadowBox (1)
@@ -1083,7 +1095,7 @@ MonoBehaviour:
     rid: 7960168952012734464
   m_ShadowCastingSource: 2
   m_ShadowMesh:
-    m_Mesh: {fileID: 1970129151}
+    m_Mesh: {fileID: 2022739844}
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 3.2700043, y: 3.3150024, z: 0}
@@ -6118,7 +6130,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!43 &1970129151
+--- !u!43 &2022739844
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6737,6 +6749,18 @@ PrefabInstance:
       propertyPath: realBox
       value: 
       objectReference: {fileID: 1128263923}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: lightSources.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: 'lightSources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 951852628}
+    - target: {fileID: 8751641814086134191, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
+      propertyPath: 'lightSources.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1284808662}
     - target: {fileID: 8853684246244342146, guid: cceed8060d67a6f42894b8e345d1c0eb, type: 3}
       propertyPath: m_Name
       value: ShadowBox
