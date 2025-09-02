@@ -4,11 +4,17 @@ using System.Collections.Generic;
 
 public class DialogueController : MonoBehaviour
 {
+    [Header("UI References")]
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI shadowText;
 
-    public GameObject playerObject;    // <-- Assign in Inspector
-    public GameObject shadowObject;    // <-- Assign in Inspector
+    [Header("Speaker References")]
+    public GameObject playerObject;
+    public GameObject shadowObject;
+
+    [Header("Text Position Offsets")]
+    public Vector3 playerTextOffset = new Vector3(0, 2f, 0);   // editable in Inspector
+    public Vector3 shadowTextOffset = new Vector3(0, 2f, 0);   // editable in Inspector
 
     private List<DialogueLine> dialogues;
     private int currentIndex = 0;
@@ -19,6 +25,13 @@ public class DialogueController : MonoBehaviour
         if (isActive && Input.GetMouseButtonDown(0))
         {
             NextDialogue();
+        }
+
+        // Keep text following characters
+        if (isActive)
+        {
+            UpdateTextPosition(playerText, playerObject, playerTextOffset);
+            UpdateTextPosition(shadowText, shadowObject, shadowTextOffset);
         }
     }
 
@@ -49,12 +62,10 @@ public class DialogueController : MonoBehaviour
         if (currentLine.speaker == DialogueLine.Speaker.Player)
         {
             playerText.text = currentLine.text;
-            FocusOn(playerObject);
         }
         else
         {
             shadowText.text = currentLine.text;
-            FocusOn(shadowObject);
         }
     }
 
@@ -63,14 +74,14 @@ public class DialogueController : MonoBehaviour
         playerText.text = "";
         shadowText.text = "";
         isActive = false;
-
-        // Optional: Reset camera or focus
     }
 
-    void FocusOn(GameObject target)
+    void UpdateTextPosition(TextMeshProUGUI text, GameObject target, Vector3 offset)
     {
+        if (string.IsNullOrEmpty(text.text)) return;
 
-        // Example 2: If using Cinemachine or camera focus:
-        // cameraFollow.target = target.transform;
+        // Convert world position → screen position with offset
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(target.transform.position + offset);
+        text.transform.position = screenPos;
     }
 }
