@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour
         if (!triggered && other.CompareTag("Player"))
         {
             triggered = true;
-            FindObjectOfType<DialogueController>().StartDialogue(lines);
+            FindFirstObjectByType<DialogueController>().StartDialogue(lines);
         }
     }
 }
