@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7141787394695541961}
   - component: {fileID: 8004595388448436718}
   - component: {fileID: 4167438093603046630}
+  - component: {fileID: 8331447748345826147}
   m_Layer: 15
   m_Name: ShadowPlayer
   m_TagString: Shadow
@@ -63,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34, y: -9.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6162682109658339429}
@@ -190,13 +191,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.42, y: 8.81}
+    oldSize: {x: 0.842, y: 0.881}
     newSize: {x: 0.21, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 8, y: 8.6}
+  m_Size: {x: 0.77, y: 0.76}
   m_EdgeRadius: 0
 --- !u!114 &7141787394695541961
 MonoBehaviour:
@@ -243,6 +244,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectedPieces: []
   holdPoint: {fileID: 0}
+--- !u!95 &8331447748345826147
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457561733160602199}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c885eb6552c36448859af9d4fc1bb61, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9072164595221112875
 GameObject:
   m_ObjectHideFlags: 0
