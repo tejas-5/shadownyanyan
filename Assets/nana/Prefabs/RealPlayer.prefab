@@ -96,7 +96,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 36, y: -9.5, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3505019295601607640}
@@ -223,13 +223,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.51, y: 7.93}
+    oldSize: {x: 0.751, y: 0.793}
     newSize: {x: 0.21, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.5, y: 8}
+  m_Size: {x: 0.77, y: 0.76}
   m_EdgeRadius: 0
 --- !u!114 &2164061272779771832
 MonoBehaviour:
@@ -250,7 +250,6 @@ MonoBehaviour:
   groundCheckRadius: 0.15
   isGrounded: 0
   canControl: 1
-  animator: {fileID: 986547571381449159}
 --- !u!114 &7547944987279941553
 MonoBehaviour:
   m_ObjectHideFlags: 0
