@@ -34,7 +34,7 @@ public class PlatformFadeOut : MonoBehaviour
         int pieceCount = sorted.Count;
         if (pieceCount > 1)
         {
-            delayBetweenPieces = (20f - fadeDuration) / (pieceCount - 1);
+            delayBetweenPieces = (15f - fadeDuration) / (pieceCount - 1);
         }
 
         foreach (GameObject piece in sorted)
