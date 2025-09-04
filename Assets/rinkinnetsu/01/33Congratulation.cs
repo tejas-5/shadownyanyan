@@ -17,6 +17,6 @@ public class Congratulation33 : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
-        Debug.Log("Exit");
+        Debug.Log("");
     }
 }
