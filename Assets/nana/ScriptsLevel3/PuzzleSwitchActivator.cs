@@ -16,7 +16,15 @@ public class PuzzleSwitchActivator : MonoBehaviour
 
             if (totalCollected >= requiredNumbers)
             {
-                // โหลด PuzzleScene แยก
+                // ✅ บันทึกตำแหน่งผู้เล่น ก่อนเข้า Puzzle
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    GameManager.Instance.lastPlayerPosition = player.transform.position;
+                    GameManager.Instance.hasSavedPosition = true;
+                }
+
+                // โหลด PuzzleScene
                 SceneManager.LoadScene("PuzzleScene");
             }
             else

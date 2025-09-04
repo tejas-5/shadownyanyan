@@ -26,12 +26,14 @@ public class PlayerInventory : MonoBehaviour
 
     void UpdatePiecePositions()
     {
+        // ปรับให้สัมพันธ์กับความกว้าง sprite
+        float spacing = 2.3f; // ลองเริ่มที่ 1.2 หรือ 1.5 ดู (ใหญ่กว่ากว้างจริงนิดหน่อย)
+        float startX = -(collectedPieces.Count - 1) * spacing / 2f;
+
         for (int i = 0; i < collectedPieces.Count; i++)
         {
             GameObject piece = collectedPieces[i];
-            Vector3 offset = new Vector3((i - collectedPieces.Count / 2f) * 0.8f, 1.5f, 0f);
-
-            // ใช้ localPosition ให้มันจัดเรียงรอบ Player
+            Vector3 offset = new Vector3(startX + i * spacing, 1.5f, 0f);
             piece.transform.localPosition = offset;
         }
     }

@@ -1,51 +1,46 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
 public class Tile : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    public Vector2Int pos;
+    public Vector2Int pos;   // logical position
     public bool isEmpty = false;
+    public int number;       // สำหรับเช็ค win
 
     private Puzzle15Manager manager;
+    private Button button;
+
+    void Awake()
+    {
+        button = GetComponent<Button>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
+    }
 
     public void Init(Puzzle15Manager manager, int number, Vector2Int position)
     {
         this.manager = manager;
         this.pos = position;
 
-        text = GetComponentInChildren<TextMeshProUGUI>();
+        SetNumber(number);
 
-        if (number == 0)
-        {
-            text.text = "";
-            isEmpty = true;
-            GetComponent<Button>().interactable = false; // empty tile can't be clicked
-        }
-        else
-        {
-            text.text = number.ToString();
-            isEmpty = false;
-            GetComponent<Button>().interactable = true;
-        }
-
-        GetComponent<Button>().onClick.RemoveAllListeners();
-        GetComponent<Button>().onClick.AddListener(OnClick);
+        button.onClick.RemoveAllListeners();
+        button.onClick.AddListener(OnClick);
     }
 
     public void OnClick()
     {
-        Debug.Log($"Clicked tile pos: {pos}, Empty tile pos: {manager.GetEmptyTile().pos}");
+        if (manager == null) return;
 
-        if (IsAdjacent(manager.GetEmptyTile().pos))
+        Tile emptyTile = manager.GetEmptyTile();
+        bool canMove = IsAdjacent(emptyTile.pos);
+
+        Debug.Log($"Clicked tile {number} at {pos}, empty tile at {emptyTile.pos}, canMove: {canMove}");
+
+        if (canMove)
         {
-            Debug.Log("Tiles are adjacent, swapping...");
             manager.SwapTiles(this);
-        }
-        else
-        {
-            Debug.Log("Tiles not adjacent, can't move.");
         }
     }
 
@@ -56,15 +51,17 @@ public class Tile : MonoBehaviour
 
     public void SetEmpty()
     {
+        number = 0;
         isEmpty = true;
         text.text = "";
-        GetComponent<Button>().interactable = false;
+        button.interactable = false; // empty tile can't be clicked
     }
 
-    public void SetNumber(int number)
+    public void SetNumber(int num)
     {
-        isEmpty = (number == 0);
-        text.text = isEmpty ? "" : number.ToString();
-        GetComponent<Button>().interactable = !isEmpty;
+        number = num;
+        isEmpty = (num == 0);
+        text.text = isEmpty ? "" : num.ToString();
+        button.interactable = true; // all number tiles clickable
     }
 }
