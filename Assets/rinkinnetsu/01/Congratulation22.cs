@@ -18,9 +18,9 @@ public class Congratulation22 : MonoBehaviour
         Debug.Log("Replay");
         SceneManager.LoadScene("map");
     }
-    public void ExitButton()
+    public void returnButton()
     {
-        Application.Quit();
-        Debug.Log("Exit");
+        Debug.Log("return");
+        SceneManager.LoadScene("Start");
     }
 }
