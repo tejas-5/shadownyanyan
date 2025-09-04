@@ -4,34 +4,46 @@ using System.Collections.Generic;
 
 public class DialogueController : MonoBehaviour
 {
-    [Header("UI References")]
-    public TextMeshProUGUI playerText;
-    public TextMeshProUGUI shadowText;
+    [Header("Bubble Prefabs")]
+    public GameObject playerBubblePrefab;
+    public GameObject shadowBubblePrefab;
 
     [Header("Speaker References")]
     public GameObject playerObject;
     public GameObject shadowObject;
 
     [Header("Text Position Offsets")]
-    public Vector3 playerTextOffset = new Vector3(0, 2f, 0);   // editable in Inspector
-    public Vector3 shadowTextOffset = new Vector3(0, 2f, 0);   // editable in Inspector
+    public Vector3 playerTextOffset = new Vector3(0, 2f, 0);
+    public Vector3 shadowTextOffset = new Vector3(0, 2f, 0);
+
+    [Header("UI Root")]
+    public Canvas uiCanvas;   // ✅ assign Canvas หลักใน Inspector
 
     private List<DialogueLine> dialogues;
     private int currentIndex = 0;
     private bool isActive = false;
 
+    private List<GameObject> activeBubbles = new List<GameObject>();
+
     void Update()
     {
-        if (isActive && Input.GetMouseButtonDown(0))
+        if (!isActive) return;
+
+        if (Input.GetMouseButtonDown(0))
         {
             NextDialogue();
         }
 
-        // Keep text following characters
-        if (isActive)
+        // อัพเดทตำแหน่ง Bubble ให้ตามตัวละคร
+        foreach (var bubble in activeBubbles)
         {
-            UpdateTextPosition(playerText, playerObject, playerTextOffset);
-            UpdateTextPosition(shadowText, shadowObject, shadowTextOffset);
+            if (bubble == null) continue;
+
+            var follow = bubble.GetComponent<DialogueBubble>();
+            if (follow != null)
+            {
+                follow.UpdatePosition();
+            }
         }
     }
 
@@ -54,34 +66,35 @@ public class DialogueController : MonoBehaviour
 
     void ShowDialogue()
     {
-        playerText.text = "";
-        shadowText.text = "";
+        // ลบ Bubble ก่อนหน้า
+        foreach (var bubble in activeBubbles)
+            if (bubble != null) Destroy(bubble);
+        activeBubbles.Clear();
 
         DialogueLine currentLine = dialogues[currentIndex];
 
         if (currentLine.speaker == DialogueLine.Speaker.Player)
         {
-            playerText.text = currentLine.text;
+            GameObject bubble = Instantiate(playerBubblePrefab, uiCanvas.transform); // ✅ ใต้ Canvas
+            bubble.GetComponent<DialogueBubble>()
+                .Initialize(playerObject, playerTextOffset, currentLine.text);
+            activeBubbles.Add(bubble);
         }
         else
         {
-            shadowText.text = currentLine.text;
+            GameObject bubble = Instantiate(shadowBubblePrefab, uiCanvas.transform); // ✅ ใต้ Canvas
+            bubble.GetComponent<DialogueBubble>()
+                .Initialize(shadowObject, shadowTextOffset, currentLine.text);
+            activeBubbles.Add(bubble);
         }
     }
 
     void EndDialogue()
     {
-        playerText.text = "";
-        shadowText.text = "";
+        foreach (var bubble in activeBubbles)
+            if (bubble != null) Destroy(bubble);
+        activeBubbles.Clear();
+
         isActive = false;
-    }
-
-    void UpdateTextPosition(TextMeshProUGUI text, GameObject target, Vector3 offset)
-    {
-        if (string.IsNullOrEmpty(text.text)) return;
-
-        // Convert world position → screen position with offset
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(target.transform.position + offset);
-        text.transform.position = screenPos;
     }
 }

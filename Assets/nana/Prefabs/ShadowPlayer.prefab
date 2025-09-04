@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8004595388448436718}
   - component: {fileID: 4167438093603046630}
   - component: {fileID: 8331447748345826147}
+  - component: {fileID: 1891776409467361824}
   m_Layer: 15
   m_Name: ShadowPlayer
   m_TagString: Shadow
@@ -64,7 +65,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34, y: -9.5, z: 0}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_LocalScale: {x: 1.4500002, y: 1.4500002, z: 1.4500002}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6162682109658339429}
@@ -266,6 +267,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1891776409467361824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457561733160602199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6a1fcfd23f593489ca027c53cda5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9072164595221112875
 GameObject:
   m_ObjectHideFlags: 0
