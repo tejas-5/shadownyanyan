@@ -6,9 +6,9 @@ public class BridgeChecker : MonoBehaviour
 
     void Start()
     {
-        int completed = PlayerPrefs.GetInt("PuzzleCompleted", 0);
+        bool completed = GameManager.Instance != null && GameManager.Instance.puzzleCompleted;
         Debug.Log("BridgeChecker: PuzzleCompleted = " + completed);
 
-        bridge.SetActive(completed == 1);
+        bridge.SetActive(completed);
     }
 }
