@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public List<DialogueLine> lines;   // ใส่บทพูดพร้อมเลือก Speaker ใน Inspector
+    public List<DialogueLine> lines; // บทสนทนา
+
     private bool triggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -12,12 +13,20 @@ public class DialogueTrigger : MonoBehaviour
         {
             triggered = true;
 
-            // หา DialogueController ใน Scene และเริ่ม Dialogue
             DialogueController controller = FindFirstObjectByType<DialogueController>();
             if (controller != null)
-                controller.StartDialogue(lines);
+            {
+                GameObject player = other.gameObject;
+
+                // หา Shadow ใน scene (ให้ตั้ง Tag = "Shadow")
+                GameObject shadow = GameObject.FindWithTag("Shadow");
+
+                controller.StartDialogue(lines, player, shadow);
+            }
             else
+            {
                 Debug.LogError("DialogueController not found in scene!");
+            }
         }
     }
 }
