@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.47f1 (2ad1ed33fd3b) revision 2806253'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26100) 64bit Professional' Language: 'ja' Physical Memory: 65388 MB
+OS: 'Windows 11  (10.0.26100) 64bit Professional' Language: 'en' Physical Memory: 130813 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,19 +11,19 @@ C:\Program Files\Unity\Hub\Editor\6000.0.47f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/student/Documents/GitHub/shadownyanyan
+C:/Users/Ke5/Documents/GitHub/shadownyanyan
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57297
+64735
 -job-worker-count
-9
+7
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: C:/Users/student/Documents/GitHub/shadownyanyan
-C:/Users/student/Documents/GitHub/shadownyanyan
+Successfully changed project path to: C:/Users/Ke5/Documents/GitHub/shadownyanyan
+C:/Users/Ke5/Documents/GitHub/shadownyanyan
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -59,13 +59,13 @@ C:/Users/student/Documents/GitHub/shadownyanyan
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23492]  Target information:
+Player connection [16564]  Target information:
 
-Player connection [23492]  * "[IP] 172.16.1.41 [Port] 0 [Flags] 2 [Guid] 1874123596 [EditorId] 1874123596 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-KNJ04A6) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [16564]  * "[IP] 192.168.1.7 [Port] 0 [Flags] 2 [Guid] 2147209177 [EditorId] 2147209177 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-RUSDEQD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [23492] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [23492] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 9
+Player connection [16564] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [16564] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -76,59 +76,59 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 4.40 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 5.85 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.47f1 (2ad1ed33fd3b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/student/Documents/GitHub/shadownyanyan/Assets
+[Subsystems] Discovering subsystems at path C:/Users/Ke5/Documents/GitHub/shadownyanyan/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2216)
+    Renderer: NVIDIA GeForce RTX 4070 SUPER (ID=0x2783)
     Vendor:   NVIDIA
-    VRAM:     10053 MB
-    Driver:   32.0.15.6590
+    VRAM:     11999 MB
+    Driver:   32.0.15.6109
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56356
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.47f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002207 seconds.
-- Loaded All Assemblies, in  0.280 seconds
+Registered in 0.002059 seconds.
+- Loaded All Assemblies, in  0.414 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.243 seconds
-Domain Reload Profiling: 521ms
-	BeginReloadAssembly (96ms)
+- Finished resetting the current domain, in  0.425 seconds
+Domain Reload Profiling: 838ms
+	BeginReloadAssembly (116ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (112ms)
-		LoadAssemblies (93ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (197ms)
+		LoadAssemblies (115ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (110ms)
-			TypeCache.Refresh (109ms)
-				TypeCache.ScanAssembly (98ms)
+		AnalyzeDomain (193ms)
+			TypeCache.Refresh (191ms)
+				TypeCache.ScanAssembly (177ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (243ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (426ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (211ms)
+		SetupLoadedEditorAssemblies (359ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (19ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (40ms)
-			ProcessInitializeOnLoadAttributes (112ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (188ms)
+			ProcessInitializeOnLoadMethodAttributes (77ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -140,11 +140,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.657 seconds
+- Loaded All Assemblies, in  0.894 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.29 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 2.42 ms, found 8 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Package Manager log level set to [2]
@@ -155,279 +155,227 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.681 seconds
-Domain Reload Profiling: 1334ms
-	BeginReloadAssembly (122ms)
+- Finished resetting the current domain, in  0.918 seconds
+Domain Reload Profiling: 1810ms
+	BeginReloadAssembly (185ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (21ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (28ms)
-	LoadAllAssembliesAndSetupDomain (470ms)
-		LoadAssemblies (324ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (607ms)
+		LoadAssemblies (388ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (217ms)
-			TypeCache.Refresh (150ms)
-				TypeCache.ScanAssembly (135ms)
-			BuildScriptInfoCaches (54ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (681ms)
+		AnalyzeDomain (326ms)
+			TypeCache.Refresh (232ms)
+				TypeCache.ScanAssembly (212ms)
+			BuildScriptInfoCaches (73ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (919ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (572ms)
+		SetupLoadedEditorAssemblies (736ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
+			InitializePlatformSupportModulesInManaged (4ms)
 			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (150ms)
-			ProcessInitializeOnLoadAttributes (329ms)
-			ProcessInitializeOnLoadMethodAttributes (82ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (464ms)
+			ProcessInitializeOnLoadMethodAttributes (127ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 2.39 ms, found 8 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 3.21 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 231 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7214 unused Assets / (5.0 MB). Loaded Objects now: 7927.
-Memory consumption went from 188.6 MB to 183.6 MB.
-Total: 6.756500 ms (FindLiveObjects: 0.560600 ms CreateObjectMapping: 0.514600 ms MarkObjects: 3.664800 ms  DeleteObjects: 2.014500 ms)
+Unloading 7217 unused Assets / (4.3 MB). Loaded Objects now: 7927.
+Memory consumption went from 186.1 MB to 181.8 MB.
+Total: 19.149100 ms (FindLiveObjects: 1.789400 ms CreateObjectMapping: 2.839300 ms MarkObjects: 7.418500 ms  DeleteObjects: 7.094700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 247226.672261 seconds.
-  path: Assets/Animation/ShadowPlayer.controller
-  artifactKey: Guid(8c885eb6552c36448859af9d4fc1bb61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/ShadowPlayer.controller using Guid(8c885eb6552c36448859af9d4fc1bb61) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0836ec4cbdfa46cee0d5459b9dc0a6c0') in 0.0181037 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+  Time since last request: 2615.491151 seconds.
+  path: Assets/InputSystem_Actions.inputactions
+  artifactKey: Guid(2bcd2660ca9b64942af0de543d8d7100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/InputSystem_Actions.inputactions using Guid(2bcd2660ca9b64942af0de543d8d7100) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '53fe06f3af3dc15e3ab375079e7f9ec4') in 0.0389075 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.943204 seconds.
-  path: Assets/Graphic
-  artifactKey: Guid(8a387fae34cd08b4dbdc6e3a36ebf896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic using Guid(8a387fae34cd08b4dbdc6e3a36ebf896) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b279b547a89ecf0980c3c67f082686ad') in 0.0005444 seconds
+  Time since last request: 185.339845 seconds.
+  path: Assets/Jun/SNyNyBGM.ogg
+  artifactKey: Guid(0b0e425320c8e6c409bb2ddcb4e12ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Jun/SNyNyBGM.ogg using Guid(0b0e425320c8e6c409bb2ddcb4e12ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1c2376bc914faddc6743b1bf91138310') in 0.1076121 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.283706 seconds.
+  path: Assets/Jun/BGM_Script.cs
+  artifactKey: Guid(540903dd2cce61046ba9402a47913891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Jun/BGM_Script.cs using Guid(540903dd2cce61046ba9402a47913891) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17af8b6665e75e518701a1ff2d109a43') in 0.0005967 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.251549 seconds.
-  path: Assets/Graphic/kuro
-  artifactKey: Guid(40d85a36e45d6a841aa257ba6bc10399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/kuro using Guid(40d85a36e45d6a841aa257ba6bc10399) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bf6d98c43dfadaa50f031b761b5ec764') in 0.0004533 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+  Time since last request: 18.226322 seconds.
+  path: Assets/Jun/Audio Source.prefab
+  artifactKey: Guid(70712996ba5e64040a28aa0d3c5808cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Jun/Audio Source.prefab using Guid(70712996ba5e64040a28aa0d3c5808cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9e450f1ab9dd8a8eef9392193aa80db') in 0.01416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.028381 seconds.
-  path: Assets/Graphic/操作キャラクター
-  artifactKey: Guid(23d8f2b6c3fab7046b4cc6c8e9f2d114) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター using Guid(23d8f2b6c3fab7046b4cc6c8e9f2d114) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b01236d758fea4d174c6c78c8bff1edf') in 0.0004681 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.301393 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア
-  artifactKey: Guid(2d09a3908e7e4f441a37e3495e8c3cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア using Guid(2d09a3908e7e4f441a37e3495e8c3cc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '74df1e5137e1330ccedc05b2c36c1e69') in 0.0005215 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.711762 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/立ち
-  artifactKey: Guid(8e83aa1a9c33a244dbb86caf1b322860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/立ち using Guid(8e83aa1a9c33a244dbb86caf1b322860) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7d0b6419aca19b3dcba06f9336b7dba4') in 0.0004546 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.095389 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/立ち/スキア（白猫）_キャラ.png
-  artifactKey: Guid(08cf94bdec0d4ba42a8b2e2db84a5b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/立ち/スキア（白猫）_キャラ.png using Guid(08cf94bdec0d4ba42a8b2e2db84a5b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5f0e2ac3aa6e9c6b3a32c66b74873534') in 0.0705426 seconds
+  Time since last request: 30.505289 seconds.
+  path: Assets/rinkinnetsu/01/00001.png
+  artifactKey: Guid(20d7dda03dec68b4f99b8b5e4ac20f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/00001.png using Guid(20d7dda03dec68b4f99b8b5e4ac20f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '51aff08ba3debe43b4efbab7785e9cb2') in 0.0433176 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.311803 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/New Material.mat
-  artifactKey: Guid(25833731d3b1f97479473946d59182e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/New Material.mat using Guid(25833731d3b1f97479473946d59182e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0679d5be9cd3e687372b046cbe3f4a1f') in 0.3259521 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.162666 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel
-  artifactKey: Guid(27412d4d343be9742b804a316ac45017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel using Guid(27412d4d343be9742b804a316ac45017) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '07bac734a224824d756cad7498e2d169') in 0.000472 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.725447 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_1.png
-  artifactKey: Guid(d400ecfbad0a5bf42bf93a5bccbccb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_1.png using Guid(d400ecfbad0a5bf42bf93a5bccbccb16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '477349e45bdc4786360d028d6a450165') in 0.0172969 seconds
+  Time since last request: 0.000036 seconds.
+  path: Assets/rinkinnetsu/01/111111111.png
+  artifactKey: Guid(125be3e94a4da3a4c8a9ec3af78b86cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/111111111.png using Guid(125be3e94a4da3a4c8a9ec3af78b86cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9af6b47c33c1f87ce7084ccd7879fa8a') in 0.0373878 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.740977 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_2.png
-  artifactKey: Guid(361a3e2821e0e0945a703925ada33e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_2.png using Guid(361a3e2821e0e0945a703925ada33e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b857f5d42c778e46890e509d3b7f2f86') in 0.0213627 seconds
+  Time since last request: 0.000033 seconds.
+  path: Assets/rinkinnetsu/01/home2 1.png
+  artifactKey: Guid(f3c54a62316501943b19f3ab1a615312) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/home2 1.png using Guid(f3c54a62316501943b19f3ab1a615312) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c18caa14cca3fd0808fe45b035d992d6') in 0.0341418 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.411815 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_3.png
-  artifactKey: Guid(c6b52e79c022b2b45b65089864b8dea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_3.png using Guid(c6b52e79c022b2b45b65089864b8dea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2833f8bd64a80a81f478adaae40a5d5a') in 0.0224548 seconds
+  Time since last request: 0.000019 seconds.
+  path: Assets/rinkinnetsu/01/ssss.png
+  artifactKey: Guid(7c36eaf08ce21264ebeadc402cac803b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/ssss.png using Guid(7c36eaf08ce21264ebeadc402cac803b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c618278c82827ce9b115db8cf8e523b8') in 0.0371336 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.458674 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_4.png
-  artifactKey: Guid(af6e588c0b35f5247bd6426ded5f62f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_4.png using Guid(af6e588c0b35f5247bd6426ded5f62f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'da2eb91709d740f458000cf005623eb8') in 0.0189813 seconds
+  Time since last request: 0.000037 seconds.
+  path: Assets/rinkinnetsu/01/IMG_8293.png
+  artifactKey: Guid(fa7983fa5324f6443820de9d4e6c2336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/IMG_8293.png using Guid(fa7983fa5324f6443820de9d4e6c2336) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c3ab9638f6a22c561486baee95f4567') in 0.0314953 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.511881 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_5.png
-  artifactKey: Guid(c0454657301267448812e3d1216dec69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_5.png using Guid(c0454657301267448812e3d1216dec69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5378b0867bca20288d1c2169a5d1dad3') in 0.0171291 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.546647 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_6.png
-  artifactKey: Guid(dffc9d26c4901db4f8071a1426de3ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_6.png using Guid(dffc9d26c4901db4f8071a1426de3ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6e7bf7b70846be75257b8c9137bd0a9') in 0.0149448 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.399812 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_7.png
-  artifactKey: Guid(d98b3a92a97f1cd40beb3fe6d979d28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_7.png using Guid(d98b3a92a97f1cd40beb3fe6d979d28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47e5bd304aae6a12331063e961857865') in 0.0165086 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.573030 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_8.png
-  artifactKey: Guid(d6a5f059307a3994b9bc9c94d0397fac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_8.png using Guid(d6a5f059307a3994b9bc9c94d0397fac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1130b851240c60f6b127ce0ac9787896') in 0.0197049 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.616200 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_9.png
-  artifactKey: Guid(8a970bca901988c4a8b82f46e380bc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_9.png using Guid(8a970bca901988c4a8b82f46e380bc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '930d05ff3e6895e56402d366fa464c81') in 0.0149768 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.372874 seconds.
-  path: Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_10.png
-  artifactKey: Guid(47212093bb9bb054888e0f86579a79b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/白猫のスキア/Idel/cat_idle_10.png using Guid(47212093bb9bb054888e0f86579a79b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09748ff42a1798a9744a6b9e86f0c326') in 0.0125402 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.726721 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）
-  artifactKey: Guid(2805c08d0ce3af74381f6b053f6df046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影） using Guid(2805c08d0ce3af74381f6b053f6df046) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ba3058ad4b851afde30ed808b42421c2') in 0.0005434 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.928570 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き
-  artifactKey: Guid(0a3351961b865d94dbdaf0f9edde12cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き using Guid(0a3351961b865d94dbdaf0f9edde12cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4e3fba3fb1ae0cc3db53dd918b2332e0') in 0.0005041 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.718358 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き01.png
-  artifactKey: Guid(553dd395ac1bfae4aad33eda0bbc8f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き01.png using Guid(553dd395ac1bfae4aad33eda0bbc8f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e43b13b944a82f6c7fb00217022e956') in 0.0371057 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き06.png
-  artifactKey: Guid(8fcb829604433504c92af4c4f423413c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き06.png using Guid(8fcb829604433504c92af4c4f423413c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '761a67b2fa532077c48094827d890d70') in 0.027044 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000020 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き05.png
-  artifactKey: Guid(e5736fb0e2fa88844b055564751ac1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き05.png using Guid(e5736fb0e2fa88844b055564751ac1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '286e3cf08f1886be7d67c6eb105fb34b') in 0.0214937 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き08.png
-  artifactKey: Guid(d55038099fa05174e899a2b145fc6d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き08.png using Guid(d55038099fa05174e899a2b145fc6d56) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '07959f2c1c26570f61567a8130c6c843') in 0.0227561 seconds
+  path: Assets/rinkinnetsu/01/home2.png
+  artifactKey: Guid(91b979e97fdf544448ebbbe8cf368d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/home2.png using Guid(91b979e97fdf544448ebbbe8cf368d53) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '80c4a88dfd7e73bcc82257f868457aca') in 0.0271793 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き04.png
-  artifactKey: Guid(e404a4c20627c9840b3f273ad7e1acb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/歩き/黒猫歩き04.png using Guid(e404a4c20627c9840b3f273ad7e1acb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9ced8d56c08c313263cd7b1ec90a5297') in 0.0247846 seconds
+  Time since last request: 0.000038 seconds.
+  path: Assets/rinkinnetsu/01/Setting Screen.png
+  artifactKey: Guid(63a33d3ecf886ea499ce96f0eeae0396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/Setting Screen.png using Guid(63a33d3ecf886ea499ce96f0eeae0396) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fcffb615767c86f2f4a7c293698e555a') in 0.0382939 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.818467 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/ジャンプ
-  artifactKey: Guid(9ffa10dd5ed2d6f458d324dec3608fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/ジャンプ using Guid(9ffa10dd5ed2d6f458d324dec3608fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd447348ea315750044176b61856efb8a') in 0.0005732 seconds
+  Time since last request: 0.000028 seconds.
+  path: Assets/rinkinnetsu/01/logo.png
+  artifactKey: Guid(e2857e3c79c43d0439d44c33927f4e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/logo.png using Guid(e2857e3c79c43d0439d44c33927f4e24) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b226a9a34f5a3f7e82f6851c9e5e59d') in 0.0348867 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/rinkinnetsu/01/22222.png
+  artifactKey: Guid(23d9c5b40828b724db7ac457b7b30fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/22222.png using Guid(23d9c5b40828b724db7ac457b7b30fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '432574a455b3d91faeaceb84072cc5d2') in 0.0358694 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/rinkinnetsu/01/I444.png
+  artifactKey: Guid(ff8a50381af4e9f488d6de4f75a9645e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/I444.png using Guid(ff8a50381af4e9f488d6de4f75a9645e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6d4edcc53d74330049d5b5fb2009e4e') in 0.0328154 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.270435 seconds.
+  path: Assets/rinkinnetsu/01/Start.unity
+  artifactKey: Guid(25786c162be6fba4faeef14361e636d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rinkinnetsu/01/Start.unity using Guid(25786c162be6fba4faeef14361e636d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4835e48b0a273bcb8b2254f93e01a44d') in 0.0010257 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
-Received Import Request.
-  Time since last request: 11.142768 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/ジャンプ/黒猫ジャンプ02.png
-  artifactKey: Guid(8726180fc27f9fd42b51c4cb8242246a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/ジャンプ/黒猫ジャンプ02.png using Guid(8726180fc27f9fd42b51c4cb8242246a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8ca6b8674f3e01b2d6a874310e961e00') in 0.2035351 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 39
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.025 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.98 ms, found 8 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.073 seconds
+Domain Reload Profiling: 2097ms
+	BeginReloadAssembly (278ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (18ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (80ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (660ms)
+		LoadAssemblies (508ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (281ms)
+			TypeCache.Refresh (18ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (243ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1074ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (798ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (166ms)
+			ProcessInitializeOnLoadAttributes (513ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (19ms)
+Refreshing native plugins compatible for Editor in 6.92 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7215 unused Assets / (5.1 MB). Loaded Objects now: 7967.
+Memory consumption went from 156.0 MB to 150.9 MB.
+Total: 22.999300 ms (FindLiveObjects: 2.031200 ms CreateObjectMapping: 3.072900 ms MarkObjects: 10.452100 ms  DeleteObjects: 7.441200 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Graphic/操作キャラクター/黒猫のクロ（影）/ジャンプ/黒猫ジャンプ07.png
-  artifactKey: Guid(f6ac688a6b1990844934031a57dff1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Graphic/操作キャラクター/黒猫のクロ（影）/ジャンプ/黒猫ジャンプ07.png using Guid(f6ac688a6b1990844934031a57dff1f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1e950f2ed49bd6a2883a7df6b6ef966a') in 0.1851707 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 63
-
+Prepare: number of updated asset objects reloaded= 0
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
