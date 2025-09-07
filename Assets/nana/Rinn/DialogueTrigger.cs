@@ -3,29 +3,21 @@ using System.Collections.Generic;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public List<DialogueLine> lines; // บทสนทนา
-
+    public List<DialogueLine> lines;
     private bool triggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!triggered && other.CompareTag("Player"))
+        if (triggered) return;
+
+        if (other.CompareTag("Player"))
         {
             triggered = true;
 
-            DialogueController controller = FindFirstObjectByType<DialogueController>();
-            if (controller != null)
+            DialogueControllerUI controller = FindObjectOfType<DialogueControllerUI>();
+            if (controller != null && lines.Count > 0)
             {
-                GameObject player = other.gameObject;
-
-                // หา Shadow ใน scene (ให้ตั้ง Tag = "Shadow")
-                GameObject shadow = GameObject.FindWithTag("Shadow");
-
-                controller.StartDialogue(lines, player, shadow);
-            }
-            else
-            {
-                Debug.LogError("DialogueController not found in scene!");
+                controller.StartDialogue(lines); // ส่งบทพูดไปให้ Controller
             }
         }
     }
