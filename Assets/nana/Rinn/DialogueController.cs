@@ -8,22 +8,21 @@ public class DialogueController : MonoBehaviour
     public GameObject playerBubblePrefab;
     public GameObject shadowBubblePrefab;
 
-    [Header("Speaker References")]
-    public GameObject playerObject;
-    public GameObject shadowObject;
-
-    [Header("Text Position Offsets")]
-    public Vector3 playerTextOffset = new Vector3(0, 2f, 0);
-    public Vector3 shadowTextOffset = new Vector3(0, 2f, 0);
-
     [Header("UI Root")]
-    public Canvas uiCanvas;   // ✅ assign Canvas หลักใน Inspector
+    public Canvas uiCanvas;
 
     private List<DialogueLine> dialogues;
     private int currentIndex = 0;
     private bool isActive = false;
 
+    private GameObject currentPlayer;
+    private GameObject currentShadow;
+
     private List<GameObject> activeBubbles = new List<GameObject>();
+
+    // BubblePoint Transforms (บนตัวละคร)
+    private Transform playerBubblePoint;
+    private Transform shadowBubblePoint;
 
     void Update()
     {
@@ -34,24 +33,54 @@ public class DialogueController : MonoBehaviour
             NextDialogue();
         }
 
-        // อัพเดทตำแหน่ง Bubble ให้ตามตัวละคร
-        foreach (var bubble in activeBubbles)
+        // อัพเดทตำแหน่ง Bubble
+        for (int i = activeBubbles.Count - 1; i >= 0; i--)
         {
-            if (bubble == null) continue;
-
-            var follow = bubble.GetComponent<DialogueBubble>();
-            if (follow != null)
+            GameObject bubble = activeBubbles[i];
+            if (bubble == null)
             {
-                follow.UpdatePosition();
+                activeBubbles.RemoveAt(i);
+                continue;
             }
+
+            DialogueBubble follow = bubble.GetComponent<DialogueBubble>();
+            if (follow != null)
+                follow.UpdatePosition();
         }
     }
 
-    public void StartDialogue(List<DialogueLine> lines)
+    public void StartDialogue(List<DialogueLine> lines, GameObject player, GameObject shadow)
     {
+        if (lines == null || lines.Count == 0)
+        {
+            Debug.LogWarning("No dialogues to start!");
+            return;
+        }
+
+        if (uiCanvas == null)
+        {
+            Debug.LogError("UI Canvas is not assigned!");
+            return;
+        }
+
+        EndDialogue(); // ลบ bubble เก่า
+
         dialogues = lines;
         currentIndex = 0;
         isActive = true;
+
+        currentPlayer = player;
+        currentShadow = shadow;
+
+        // หา BubblePoint บนตัวละคร
+        playerBubblePoint = currentPlayer.transform.Find("BubblePoint");
+        shadowBubblePoint = currentShadow.transform.Find("BubblePoint");
+
+        if (playerBubblePoint == null)
+            Debug.LogWarning("Player does not have BubblePoint!");
+        if (shadowBubblePoint == null)
+            Debug.LogWarning("Shadow does not have BubblePoint!");
+
         ShowDialogue();
     }
 
@@ -66,35 +95,58 @@ public class DialogueController : MonoBehaviour
 
     void ShowDialogue()
     {
-        // ลบ Bubble ก่อนหน้า
-        foreach (var bubble in activeBubbles)
-            if (bubble != null) Destroy(bubble);
-        activeBubbles.Clear();
+        if (dialogues == null || currentIndex >= dialogues.Count)
+            return;
 
         DialogueLine currentLine = dialogues[currentIndex];
 
+        // ลบ Bubble เก่า
+        for (int i = activeBubbles.Count - 1; i >= 0; i--)
+        {
+            if (activeBubbles[i] != null)
+                Destroy(activeBubbles[i]);
+            activeBubbles.RemoveAt(i);
+        }
+
+        // เลือก prefab และ target
+        GameObject prefab = null;
+        Transform target = null;
+
         if (currentLine.speaker == DialogueLine.Speaker.Player)
         {
-            GameObject bubble = Instantiate(playerBubblePrefab, uiCanvas.transform); // ✅ ใต้ Canvas
-            bubble.GetComponent<DialogueBubble>()
-                .Initialize(playerObject, playerTextOffset, currentLine.text);
-            activeBubbles.Add(bubble);
+            prefab = playerBubblePrefab;
+            target = playerBubblePoint;
         }
-        else
+        else if (currentLine.speaker == DialogueLine.Speaker.Shadow)
         {
-            GameObject bubble = Instantiate(shadowBubblePrefab, uiCanvas.transform); // ✅ ใต้ Canvas
-            bubble.GetComponent<DialogueBubble>()
-                .Initialize(shadowObject, shadowTextOffset, currentLine.text);
-            activeBubbles.Add(bubble);
+            prefab = shadowBubblePrefab;
+            target = shadowBubblePoint;
         }
+
+        // ตรวจสอบ null ปลอดภัย
+        if (prefab == null || target == null)
+        {
+            Debug.LogError("Prefab or BubblePoint is null for speaker: " + currentLine.speaker);
+            return;
+        }
+
+        // Instantiate Bubble
+        GameObject newBubble = Instantiate(prefab, uiCanvas.transform);
+        DialogueBubble bubbleScript = newBubble.GetComponent<DialogueBubble>();
+        if (bubbleScript != null)
+            bubbleScript.Initialize(target, currentLine.text);
+
+        activeBubbles.Add(newBubble);
     }
 
     void EndDialogue()
     {
-        foreach (var bubble in activeBubbles)
-            if (bubble != null) Destroy(bubble);
+        for (int i = activeBubbles.Count - 1; i >= 0; i--)
+        {
+            if (activeBubbles[i] != null)
+                Destroy(activeBubbles[i]);
+        }
         activeBubbles.Clear();
-
         isActive = false;
     }
 }
