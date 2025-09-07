@@ -1,28 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ElevatorPlatform : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D collision)
+    public float speed = 2f;
+    public float stopY = 5f;
+    public string nextSceneName;
+
+    private bool isMoving = false;
+
+    public void ActivateLift()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (!isMoving && gameObject.activeInHierarchy)
         {
-            collision.transform.SetParent(transform); // ติดลิฟต์
+            isMoving = true;
+            StartCoroutine(MoveLift());
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    private IEnumerator MoveLift()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        while (transform.position.y < stopY)
         {
-            StartCoroutine(DetachAfterFrame(collision.transform)); // ถอดหลังจาก 1 เฟรม
+            transform.Translate(Vector2.up * speed * Time.deltaTime);
+            yield return null;
+        }
+
+        isMoving = false;
+
+        if (!string.IsNullOrEmpty(nextSceneName))
+            SceneManager.LoadScene(nextSceneName);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // ปลอดภัย: เรียก Coroutine เฉพาะตอน Active
+        if (collision.gameObject.CompareTag("Player") && gameObject.activeInHierarchy)
+        {
+            StartCoroutine(MoveLift());
         }
     }
-
-    IEnumerator DetachAfterFrame(Transform player)
-    {
-        yield return null; // ป้องกัน error จากการ set active
-        player.SetParent(null);
-    }
-
 }

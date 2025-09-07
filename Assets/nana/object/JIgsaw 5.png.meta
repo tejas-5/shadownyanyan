@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: f5c1575695bc7334faf940488363fbfd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8042399172452729628
+    second: JIgsaw 5_0
+  - first:
+      213: 811282239786909058
+    second: JIgsaw 5_1
+  - first:
+      213: -4853746020367437191
+    second: JIgsaw 5_2
+  - first:
+      213: -6871247071672254910
+    second: JIgsaw 5_3
+  - first:
+      213: -2072551119801706223
+    second: JIgsaw 5_4
+  - first:
+      213: 7577012424275527313
+    second: JIgsaw 5_5
+  - first:
+      213: -8158944436087816069
+    second: JIgsaw 5_6
+  - first:
+      213: -4067283608947166069
+    second: JIgsaw 5_7
+  - first:
+      213: -8493714553657996974
+    second: JIgsaw 5_8
+  - first:
+      213: -8664512113022892601
+    second: JIgsaw 5_9
+  - first:
+      213: -4895880729617599880
+    second: JIgsaw 5_10
+  - first:
+      213: -7399796184882372661
+    second: JIgsaw 5_11
+  - first:
+      213: 3327109098384849127
+    second: JIgsaw 5_12
+  - first:
+      213: 317613401041360861
+    second: JIgsaw 5_13
+  - first:
+      213: 6561366934554796115
+    second: JIgsaw 5_14
+  - first:
+      213: 9086432515639267819
+    second: JIgsaw 5_15
+  - first:
+      213: 9093401500721821368
+    second: JIgsaw 5_16
+  - first:
+      213: 4912845830446222507
+    second: JIgsaw 5_17
+  - first:
+      213: 8942486856839796161
+    second: JIgsaw 5_18
+  - first:
+      213: -7230834916799197451
+    second: JIgsaw 5_19
+  - first:
+      213: 1991048030876856077
+    second: JIgsaw 5_20
+  - first:
+      213: -823620247708740866
+    second: JIgsaw 5_21
+  - first:
+      213: 3379889487544317407
+    second: JIgsaw 5_22
+  - first:
+      213: -7250941667089513936
+    second: JIgsaw 5_23
+  - first:
+      213: 3603611969288811126
+    second: JIgsaw 5_24
+  - first:
+      213: -4982010248951261303
+    second: JIgsaw 5_25
+  - first:
+      213: -8498258201477914037
+    second: JIgsaw 5_26
+  - first:
+      213: -7427676639962648214
+    second: JIgsaw 5_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JIgsaw 5_15
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 300
+        width: 353
+        height: 441
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1dc322b3e791e70800000000000000
+      internalID: 9086432515639267819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1e756835898eab4488af28142a2f6af1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JIgsaw 5_0: -2083402086
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
