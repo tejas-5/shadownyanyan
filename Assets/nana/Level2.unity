@@ -1558,7 +1558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669329837369955798, guid: 08f99a3ad90f38b49bbef523cf66e4b0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 734
+      value: 1223
       objectReference: {fileID: 0}
     - target: {fileID: 2669329837369955798, guid: 08f99a3ad90f38b49bbef523cf66e4b0, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1583,7 +1583,7 @@ PrefabInstance:
     - target: {fileID: 6173846237057294391, guid: 08f99a3ad90f38b49bbef523cf66e4b0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1627051506402554805, guid: 48f7873a38361bb45b25909d5b3fa598, type: 3}
+      objectReference: {fileID: 7162259806386540199, guid: e623cd8c2790d2a43ae5fe477b5029fa, type: 3}
     - target: {fileID: 6173846237057294391, guid: 08f99a3ad90f38b49bbef523cf66e4b0, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -2652,7 +2652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2098304804290896065, guid: c49c9c1a72d6b2e429fc84a240a9da9d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 740
+      value: 1172
       objectReference: {fileID: 0}
     - target: {fileID: 2098304804290896065, guid: c49c9c1a72d6b2e429fc84a240a9da9d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2673,7 +2673,7 @@ PrefabInstance:
     - target: {fileID: 3925377412696491219, guid: c49c9c1a72d6b2e429fc84a240a9da9d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1627051506402554805, guid: 48f7873a38361bb45b25909d5b3fa598, type: 3}
+      objectReference: {fileID: 7162259806386540199, guid: e623cd8c2790d2a43ae5fe477b5029fa, type: 3}
     - target: {fileID: 3925377412696491219, guid: c49c9c1a72d6b2e429fc84a240a9da9d, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -7079,10 +7079,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBubblePrefab: {fileID: 361593961}
   shadowBubblePrefab: {fileID: 750077738}
-  playerObject: {fileID: 357784544}
-  shadowObject: {fileID: 194580123}
-  playerTextOffset: {x: 0, y: 2, z: 0}
-  shadowTextOffset: {x: 0, y: 2, z: 0}
   uiCanvas: {fileID: 1974375480}
 --- !u!1 &1793255051
 GameObject:
@@ -7478,10 +7474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
