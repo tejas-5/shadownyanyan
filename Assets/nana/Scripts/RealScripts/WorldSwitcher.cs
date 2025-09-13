@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WorldSwitcher : MonoBehaviour
 {
@@ -8,8 +7,6 @@ public class WorldSwitcher : MonoBehaviour
     public CameraFollow cameraFollow;
 
     private bool isControllingReal = true;
-    private bool isFollowing = true;
-    private bool hasSeparated = false;
 
     void Start()
     {
@@ -19,61 +16,27 @@ public class WorldSwitcher : MonoBehaviour
         realPlayer.SetActive(true);
         shadowPlayer.SetActive(true);
 
-        // 👉 วางเงาไว้ข้างหน้าผู้เล่นนิดหน่อย
+        // เริ่มให้ Shadow อยู่ข้าง ๆ Player
         shadowPlayer.transform.position = realPlayer.transform.position + Vector3.right * 1.5f;
 
-        // เริ่มต้นควบคุมผู้เล่นจริง
         SetPlayerControl(realPlayer, true);
         SetPlayerControl(shadowPlayer, false);
 
-        if (cameraFollow != null)
-            cameraFollow.SetTarget(realPlayer.transform);
+        cameraFollow?.SetTarget(realPlayer.transform);
 
-        // ❌ ห้าม Player จริง ชนกับกล่องเงา
-        IgnoreCollisionByTag("Player", "ShadowBox");
-
-        // ✅ เพิ่มบรรทัดนี้ ป้องกันผู้เล่นกับเงาชนกัน
+        // ป้องกันการชนกัน
         Collider2D realCol = realPlayer.GetComponent<Collider2D>();
         Collider2D shadowCol = shadowPlayer.GetComponent<Collider2D>();
         if (realCol != null && shadowCol != null)
-        {
             Physics2D.IgnoreCollision(realCol, shadowCol, true);
-        }
-    }
-
-    void IgnoreCollisionByTag(string tagA, string tagB)
-    {
-        GameObject[] objsA = GameObject.FindGameObjectsWithTag(tagA);
-        GameObject[] objsB = GameObject.FindGameObjectsWithTag(tagB);
-
-        foreach (var objA in objsA)
-        {
-            var colA = objA.GetComponent<Collider2D>();
-            if (colA == null) continue;
-
-            foreach (var objB in objsB)
-            {
-                var colB = objB.GetComponent<Collider2D>();
-                if (colB == null) continue;
-
-                Physics2D.IgnoreCollision(colA, colB, true);
-            }
-        }
     }
 
     void Update()
     {
-        // เงาตามตัวจริงก่อนแยกร่าง
-        //if (isFollowing)
-        {
-            //shadowPlayer.transform.position = realPlayer.transform.position;
-        }//
-
         // SPACE = สลับร่าง
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isControllingReal = !isControllingReal;
-
             GameObject activePlayer = isControllingReal ? realPlayer : shadowPlayer;
             GameObject inactivePlayer = isControllingReal ? shadowPlayer : realPlayer;
 
@@ -82,21 +45,11 @@ public class WorldSwitcher : MonoBehaviour
 
             cameraFollow?.SetTarget(activePlayer.transform);
         }
-        
 
-        // R = รีเซ็ตร่าง
+        // R = รีเซ็ตตำแหน่ง
         if (Input.GetKeyDown(KeyCode.R))
         {
-            isFollowing = true;
-            hasSeparated = false;
-            isControllingReal = true;
-
-            shadowPlayer.transform.position = realPlayer.transform.position;
-
-            SetPlayerControl(realPlayer, true);
-            SetPlayerControl(shadowPlayer, false);
-
-            cameraFollow?.SetTarget(realPlayer.transform);
+            ResetPlayers();
         }
     }
 
@@ -105,48 +58,29 @@ public class WorldSwitcher : MonoBehaviour
         var pc = obj.GetComponent<PlayerController>();
         if (pc != null) pc.enabled = active;
 
-        // ❌ อย่าปิด Rigidbody2D.simulated เพราะจะทำให้ Collider หายไป!
-        // Rigidbody2D ยังเปิดไว้เพื่อไม่ให้ตกทะลุ platform/lift
+        var rb = obj.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.isKinematic = !active;   // ตัวที่ไม่ควบคุมจะหยุดนิ่ง
+        }
     }
 
-    // 🎯 ป้องกันการชนกับกล่องชั่วคราวหลังสลับร่าง
-    IEnumerator TemporarilyIgnoreBoxCollision(GameObject player)
+    void ResetPlayers()
     {
-        Collider2D playerCol = player.GetComponent<Collider2D>();
-        if (playerCol == null)
-        {
-            Debug.LogWarning("⚠️ Player ไม่มี Collider2D!");
-            yield break;
-        }
+        realPlayer.transform.position = Vector3.zero;
+        shadowPlayer.transform.position = realPlayer.transform.position + Vector3.right * 1.5f;
 
-        // ✅ หากเป็น Player จริง (ไม่ใช่เงา) ให้ Ignore กล่องชั่วคราว
-        if (player.CompareTag("Player"))
-        {
-            GameObject[] boxes = GameObject.FindGameObjectsWithTag("PushableBox");
+        Rigidbody2D rb1 = realPlayer.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb2 = shadowPlayer.GetComponent<Rigidbody2D>();
+        if (rb1 != null) rb1.linearVelocity = Vector2.zero;
+        if (rb2 != null) rb2.linearVelocity = Vector2.zero;
 
-            foreach (GameObject box in boxes)
-            {
-                if (box == null) continue;
+        isControllingReal = true;
 
-                Collider2D boxCol = box.GetComponent<Collider2D>();
-                if (boxCol != null)
-                {
-                    Physics2D.IgnoreCollision(playerCol, boxCol, true);
-                }
-            }
+        SetPlayerControl(realPlayer, true);
+        SetPlayerControl(shadowPlayer, false);
 
-            yield return new WaitForSeconds(0.1f); // ปรับเวลาได้
-
-            foreach (GameObject box in boxes)
-            {
-                if (box == null) continue;
-
-                Collider2D boxCol = box.GetComponent<Collider2D>();
-                if (boxCol != null)
-                {
-                    Physics2D.IgnoreCollision(playerCol, boxCol, false);
-                }
-            }
-        }
+        cameraFollow?.SetTarget(realPlayer.transform);
     }
 }

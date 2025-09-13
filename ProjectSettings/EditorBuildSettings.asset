@@ -27,8 +27,8 @@ EditorBuildSettings:
     path: Assets/nana/ScriptsLevel3/PuzzleScene.unity
     guid: b18e22b14e17c164db9271d1cc024402
   - enabled: 1
-    path: Assets/nana/map.unity
-    guid: f5b9b4321b11c4a43ad5cf93f76cd04c
+    path: Assets/rinkinnetsu/01/33Congratulation.unity
+    guid: de2e762a715111c4ab9c03a9dffdfdf5
   - enabled: 1
     path: Assets/rinkinnetsu/01/Congratulation1.unity
     guid: 8f2e3f17c774ab84a90c538359a2bd13

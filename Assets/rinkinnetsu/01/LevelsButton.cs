@@ -16,7 +16,7 @@ public class LevelsButton : MonoBehaviour
     public void sannGameBotton()
     {
         Debug.Log("3");
-        SceneManager.LoadScene("map");
+        SceneManager.LoadScene("Level3");
     }
     public void returnButton()
     {

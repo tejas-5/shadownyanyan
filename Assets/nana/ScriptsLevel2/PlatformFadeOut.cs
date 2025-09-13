@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class PlatformFadeOut : MonoBehaviour
 {
@@ -63,9 +63,31 @@ public class PlatformFadeOut : MonoBehaviour
             }
         }
 
-        // ✅ ปิด Collider หลังจากจางหมดแล้ว
+        // ปิด Collider หลังจากจางหมดแล้ว
         if (col != null) col.enabled = false;
 
         piece.SetActive(false); // หรือ Destroy(piece);
+    }
+
+    // ✅ เพิ่มฟังก์ชัน Reset ให้เรียกสร้าง Platform ใหม่
+    public void ResetPlatforms()
+    {
+        foreach (GameObject piece in platformPieces)
+        {
+            if (piece == null) continue;
+
+            SpriteRenderer sr = piece.GetComponent<SpriteRenderer>();
+            Collider2D col = piece.GetComponent<Collider2D>();
+
+            if (sr != null)
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
+
+            if (col != null)
+                col.enabled = true;
+
+            piece.SetActive(true);
+        }
+
+        isErasing = false;
     }
 }
