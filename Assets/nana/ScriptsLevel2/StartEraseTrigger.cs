@@ -5,7 +5,7 @@ public class StartEraseTrigger : MonoBehaviour
     public PlatformFadeOut eraser;
     public Transform player;
 
-    private bool triggered = false;
+    [HideInInspector] public bool triggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,5 +14,11 @@ public class StartEraseTrigger : MonoBehaviour
             triggered = true;
             eraser.StartErasing();
         }
+    }
+
+    // Called when player respawns to make the trigger usable again
+    public void ResetTrigger()
+    {
+        triggered = false;
     }
 }

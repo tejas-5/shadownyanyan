@@ -2,38 +2,71 @@
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;            // Player หรือ Shadow
-    public float smoothSpeed = 10f;     // ค่ายิ่งมาก = กล้องตามเร็วขึ้น
-    public float fixedZ = -10f;         // กล้อง 2D ปกติ Z=-10
-
-    [Header("Y Options")]
-    public bool lockY = false;          // true = กล้องไม่ตาม Y
-    public float fixedY = -6.5f;
+    public Transform target;
+    public float smoothSpeed = 5f;
+    public float fixedZ = -10f;
 
     [Header("Limit X Movement")]
     public bool limitX = true;
     public float minX = 0f;
     public float maxX = 30f;
 
+    private Vector3 extraOffset = Vector3.zero;
+    private Vector3 zoneOffset = Vector3.zero; // current zone offset
+    private bool shadowInZone = false;
+
     void LateUpdate()
     {
-        if (target == null) return;
+        if (target == null)
+        {
+            Debug.LogWarning("CameraFollow: No target assigned!");
+            return;
+        }
 
         float targetX = target.position.x;
-        float targetY = lockY ? fixedY : target.position.y;
+        if (limitX) targetX = Mathf.Clamp(targetX, minX, maxX);
 
-        if (limitX)
-            targetX = Mathf.Clamp(targetX, minX, maxX);
+        Vector3 desiredPosition = new Vector3(
+            target.position.x + 3 + extraOffset.x,
+            target.position.y + 3 + extraOffset.y,
+            fixedZ + extraOffset.z
+        );
 
-        Vector3 desiredPosition = new Vector3(targetX, targetY, fixedZ);
+        Vector3 smoothedPosition = Vector3.Lerp(
+            transform.position,
+            desiredPosition,
+            smoothSpeed * Time.deltaTime
+        );
 
-        // กล้องเลื่อนตามอย่างนุ่มนวล
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
+        transform.position = smoothedPosition;
     }
 
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
-        Debug.Log("CameraFollow: Target set to " + (target != null ? target.name : "null"));
+
+        if (target != null && target.CompareTag("Player"))
+        {
+            // Real player → no offset
+            extraOffset = Vector3.zero;
+        }
+        else if (target != null && target.CompareTag("Shadow"))
+        {
+            // Shadow player → apply zone offset if inside
+            extraOffset = shadowInZone ? zoneOffset : Vector3.zero;
+        }
+
+        Debug.Log("CameraFollow: Set target to " + (target != null ? target.name : "null"));
+    }
+
+    public void SetZoneOffset(Vector3 offset, bool insideZone)
+    {
+        shadowInZone = insideZone;
+        zoneOffset = offset;
+
+        if (target != null && target.CompareTag("Shadow"))
+        {
+            extraOffset = insideZone ? zoneOffset : Vector3.zero;
+        }
     }
 }
