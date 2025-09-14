@@ -20,7 +20,7 @@ public class CameraZone : MonoBehaviour
     {
         if (other.CompareTag("Shadow"))
         {
-            cameraFollow?.SetZoneOffset(zoneOffset, true);
+            //cameraFollow?.SetZoneOffset(zoneOffset, true);
         }
     }
 
@@ -28,7 +28,7 @@ public class CameraZone : MonoBehaviour
     {
         if (other.CompareTag("Shadow"))
         {
-            cameraFollow?.SetZoneOffset(Vector3.zero, false);
+            //cameraFollow?.SetZoneOffset(Vector3.zero, false);
         }
     }
 }

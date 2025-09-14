@@ -10,7 +10,7 @@ public class ShadowSwitch3 : MonoBehaviour
     {
         if (Input.GetKeyDown(activateKey) && switchTrigger.bounds.Contains(transform.position))
         {
-            lift.ActivateLift();
+            //lift.ActivateLift();
         }
     }
 }
