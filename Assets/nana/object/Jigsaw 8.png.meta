@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jigsaw 8_0: 1786176526588325766
+      Jigsaw 8_1: -2045224389535721518
+      Jigsaw 8_2: -7886226570293311311
+      Jigsaw 8_3: -936079469461435037
+      Jigsaw 8_4: 205994681363520996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
