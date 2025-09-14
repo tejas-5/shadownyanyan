@@ -16,8 +16,13 @@ public class PlatformFadeOut : MonoBehaviour
     {
         if (!isErasing)
         {
+            Debug.Log("▶ PlatformFadeOut: StartErasing called!");
             isErasing = true;
             StartCoroutine(FadeOutPlatforms());
+        }
+        else
+        {
+            Debug.Log("⚠ PlatformFadeOut: Already erasing, ignored.");
         }
     }
 
@@ -41,6 +46,10 @@ public class PlatformFadeOut : MonoBehaviour
             StartCoroutine(FadeOutPiece(piece));
             yield return new WaitForSeconds(delayBetweenPieces);
         }
+
+        // ✅ erasing จบแล้ว
+        isErasing = false;
+        Debug.Log("✅ PlatformFadeOut: Finished erasing all pieces");
     }
 
     private IEnumerator FadeOutPiece(GameObject piece)
@@ -64,10 +73,9 @@ public class PlatformFadeOut : MonoBehaviour
 
         if (col != null) col.enabled = false;
         piece.SetActive(false);
-        isErasing = false; // allow next erasing
+        Debug.Log($"❌ Piece disabled: {piece.name}");
     }
 
-    // Reset platforms to original state
     public void ResetPlatforms()
     {
         StopAllCoroutines();
@@ -84,13 +92,14 @@ public class PlatformFadeOut : MonoBehaviour
 
             if (sr != null)
             {
-                Color c = sr.color;
-                sr.color = new Color(c.r, c.g, c.b, 1f); // full opacity
+                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
             }
             if (col != null)
             {
                 col.enabled = true;
             }
+
+            Debug.Log($"✅ Reset piece: {piece.name}");
         }
     }
 }

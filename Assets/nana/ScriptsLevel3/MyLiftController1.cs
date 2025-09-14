@@ -3,28 +3,48 @@ using UnityEngine.SceneManagement;
 
 public class MyLiftController1 : MonoBehaviour
 {
-    
+
     [Header("ตั้งค่า Elevator")]
-    public float speed = 2f;              // ความเร็วลิฟท์
-    public float stopY = 5f;              // จุดสูงสุดที่ลิฟท์หยุด
-    public string nextSceneName;          // ชื่อ Scene ถัดไป (ถ้าว่างจะไม่เปลี่ยน Scene)
+    public float speed = 2f;
+    public float stopY = 5f;
+    public string nextSceneName;
 
     [Header("Trigger และ Key")]
-    public Collider2D switchTrigger;      // พื้นที่ที่กดได้ (Trigger)
     public KeyCode activateKey = KeyCode.E;
 
-    private bool isMoving = false;        // เช็คลิฟท์กำลังเคลื่อน
-    private Transform player;             // ผู้เล่นที่เข้ามาในโซน
+    private bool isMoving = false;
+    private bool canActivate = false;
+    private Transform realPlayer;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // ตรวจเฉพาะ RealPlayer
+        if (collision.CompareTag("Player"))
+        {
+            canActivate = true;
+            realPlayer = collision.transform;
+            Debug.Log($"🚪 RealPlayer entered lift trigger: {realPlayer.name}");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            canActivate = false;
+            realPlayer = null;
+            Debug.Log("🚪 RealPlayer exited lift trigger");
+        }
+    }
 
     void Update()
     {
-        // ถ้า Player อยู่ใน trigger + กดปุ่ม → เริ่มลิฟท์
-        if (player != null && Input.GetKeyDown(activateKey) && !isMoving)
+        if (canActivate && Input.GetKeyDown(activateKey) && !isMoving)
         {
             isMoving = true;
+            Debug.Log("▶ Elevator activated by RealPlayer!");
         }
 
-        // ถ้าลิฟท์กำลังเคลื่อน → ยกขึ้น
         if (isMoving)
         {
             transform.Translate(Vector2.up * speed * Time.deltaTime);
@@ -32,6 +52,7 @@ public class MyLiftController1 : MonoBehaviour
             if (transform.position.y >= stopY)
             {
                 isMoving = false;
+                Debug.Log("🏁 Elevator reached stopY");
                 LoadNextScene();
             }
         }
@@ -41,24 +62,8 @@ public class MyLiftController1 : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(nextSceneName))
         {
+            Debug.Log($"🌐 Loading scene: {nextSceneName}");
             SceneManager.LoadScene(nextSceneName);
-        }
-    }
-
-    // ตรวจจับว่า Player เข้ามาใน trigger
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player = collision.transform;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player = null;
         }
     }
 }

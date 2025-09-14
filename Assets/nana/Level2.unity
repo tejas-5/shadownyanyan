@@ -1630,8 +1630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 1378030334}
-  eraser: {fileID: 0}
-  eraseTrigger: {fileID: 0}
+  eraser: {fileID: 977296756}
+  eraseTrigger: {fileID: 142590532}
+  respawnOffset: {x: 0, y: 0.5, z: 0}
 --- !u!61 &264084524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2713,6 +2714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7168465643919754163, guid: fd44916e440efec41a897a3d83407f65, type: 3}
+      propertyPath: holdPoint
+      value: 
+      objectReference: {fileID: 908252948}
     - target: {fileID: 9093014960622849804, guid: fd44916e440efec41a897a3d83407f65, type: 3}
       propertyPath: m_Name
       value: RealPlayer
@@ -2753,8 +2758,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 1052689941}
-  eraser: {fileID: 0}
-  eraseTrigger: {fileID: 0}
+  eraser: {fileID: 977296756}
+  eraseTrigger: {fileID: 142590532}
+  respawnOffset: {x: 0, y: 0.5, z: 0}
 --- !u!61 &690388657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2824,6 +2830,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4167438093603046630, guid: 95d01e683faab6d45b11a3fcf980bb01, type: 3}
+      propertyPath: holdPoint
+      value: 
+      objectReference: {fileID: 1256899046}
     - target: {fileID: 5457561733160602199, guid: 95d01e683faab6d45b11a3fcf980bb01, type: 3}
       propertyPath: m_Name
       value: ShadowPlayer
@@ -7780,6 +7790,7 @@ MonoBehaviour:
   respawnPoint: {fileID: 1052689941}
   eraser: {fileID: 977296756}
   eraseTrigger: {fileID: 142590532}
+  respawnOffset: {x: 0, y: 0.5, z: 0}
 --- !u!61 &1638984272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7835,7 +7846,7 @@ Transform:
   m_GameObject: {fileID: 1638984270}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.53, y: -5.1, z: -0.14300205}
+  m_LocalPosition: {x: 42.53, y: -5.08, z: -0.14300205}
   m_LocalScale: {x: 1.83, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9079,6 +9090,7 @@ MonoBehaviour:
   shadowStartPoint: {fileID: 546094566}
   eraser: {fileID: 977296756}
   eraseTrigger: {fileID: 142590532}
+  respawnOffset: {x: 0, y: 1, z: 0}
 --- !u!61 &2033049484
 BoxCollider2D:
   m_ObjectHideFlags: 0

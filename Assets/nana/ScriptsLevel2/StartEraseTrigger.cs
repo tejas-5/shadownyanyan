@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StartEraseTrigger : MonoBehaviour
 {
@@ -9,16 +9,23 @@ public class StartEraseTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log($"🚪 StartEraseTrigger: OnTriggerEnter with {other.name}");
+
         if (!triggered && other.transform == player)
         {
             triggered = true;
+            Debug.Log("▶ StartEraseTrigger: Triggered, start erasing!");
             eraser.StartErasing();
+        }
+        else if (triggered)
+        {
+            Debug.Log("⚠ StartEraseTrigger: Already triggered, ignoring.");
         }
     }
 
-    // Called when player respawns to make the trigger usable again
     public void ResetTrigger()
     {
         triggered = false;
+        Debug.Log("🔄 StartEraseTrigger: ResetTrigger called!");
     }
 }
