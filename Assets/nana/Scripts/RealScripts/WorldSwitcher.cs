@@ -62,7 +62,13 @@ public class WorldSwitcher : MonoBehaviour
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
-            rb.isKinematic = !active;   // ตัวที่ไม่ควบคุมจะหยุดนิ่ง
+
+            // ❌ อย่าปิดฟิสิกส์ตัวที่ไม่ควบคุม
+            // rb.isKinematic = !active;
+
+            // ✅ ปล่อยให้ Physics ทำงานทั้งคู่
+            // (ตัวที่ไม่ได้บังคับจะหยุดเองเพราะ PlayerController ถูกปิด)
+            rb.isKinematic = false;
         }
     }
 
